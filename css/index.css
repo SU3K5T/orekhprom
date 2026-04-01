@@ -5942,26 +5942,97 @@ input[type=checkbox]:checked {
   height: 1px;
   background-color: rgba(31, 32, 34, 0.1019607843);
 }
-@media (min-width: 992px) {
-  .facts.js-facts-section {
-    height: 400vh;
+.facts.js-facts-section {
+  height: 400vh;
+}
+.facts .js-facts-container {
+  position: sticky;
+  top: 0;
+}
+
+.facts-1 {
+  grid-area: l;
+}
+.facts-2 {
+  grid-area: t;
+}
+@media (max-width: 991.98px) {
+  .facts-2 {
+    order: -1 !important;
   }
-  .facts .js-facts-container {
-    position: sticky;
-    top: 0;
+}
+@media (max-width: 575.98px) {
+  .facts-2 {
+    height: 100vh;
+  }
+}
+@media (max-width: 575.98px) {
+  .facts__center-block {
+    flex-grow: 1;
+  }
+}
+.facts__center-block .swiper {
+  display: none;
+}
+@media (max-width: 575.98px) {
+  .facts__center-block .swiper {
+    display: block;
+    height: 300px;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 575.98px) {
+  .facts__center-block .swiper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+  }
+  .facts__center-block .swiper .swiper-slide img {
+    height: 300px;
+    flex-grow: 1;
+  }
+}
+.facts-3 {
+  grid-area: r;
+}
+@media (max-width: 991.98px) {
+  .facts-1, .facts-3 {
+    align-self: stretch;
+    height: auto;
+    width: 100%;
+    display: flex !important;
+    flex-direction: column;
+  }
+}
+@media (max-width: 575.98px) {
+  .facts-1, .facts-3 {
+    display: none !important;
+  }
+}
+.facts .js-facts-container {
+  height: 100vh;
+}
+@media (max-width: 991.98px) {
+  .facts .js-facts-container .row {
+    row-gap: 30px;
+    display: grid;
+    grid-template-areas: "t t" "l r";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  .facts-section__inner {
+    height: 300px !important;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 991.98px) {
+  .facts__center-block {
+    height: unset !important;
   }
 }
 
-@media (max-width: 991.98px) {
-  .facts-section {
-    height: 400vh;
-    position: relative;
-  }
-  .facts-section__inner {
-    position: sticky;
-    top: 0;
-  }
-}
 .flavors__title {
   font-family: "Musticapro";
   font-style: normal;
@@ -6862,3 +6933,5 @@ input[type=checkbox]:checked {
   text-align: center;
   text-transform: uppercase;
 }
+
+/*# sourceMappingURL=index.css.map */

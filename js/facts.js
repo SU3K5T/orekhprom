@@ -171,68 +171,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  if (window.matchMedia('(max-width: 991px').matches) {
-    desktopST.kill();
-    const mobileSTFirstSection = ScrollTrigger.create({
-      trigger: '.js-facts-mobile-first-section',
-      start: 'top 1px',
-      end: 'bottom bottom',
-      onEnter: () => {
+  // if (window.matchMedia('(max-width: 991px').matches) {
+  //   desktopST.kill();
+  //   const mobileSTFirstSection = ScrollTrigger.create({
+  //     trigger: '.js-facts-mobile-first-section',
+  //     start: 'top 1px',
+  //     end: 'bottom bottom',
+  //     onEnter: () => {
 
-        const section = document.querySelector('.js-facts-section');
-        const title = section.querySelector('.facts__title');
-        const text = section.querySelector('.facts__center-block-text');
-        const sliders = section.querySelectorAll('.facts__slider');
+  //       const section = document.querySelector('.js-facts-section');
+  //       const title = section.querySelector('.facts__title');
+  //       const text = section.querySelector('.facts__center-block-text');
+  //       const sliders = section.querySelectorAll('.facts__slider');
 
-        if (title) title.classList.add('facts__title--transition');
-        if (text) text.classList.add('facts__center-block-text--transition');
+  //       if (title) title.classList.add('facts__title--transition');
+  //       if (text) text.classList.add('facts__center-block-text--transition');
 
-        if (sliders) {
-          sliders.forEach(slider => {
-            slider.classList.add('facts__slider--transition');
-          });
-        }
+  //       if (sliders) {
+  //         sliders.forEach(slider => {
+  //           slider.classList.add('facts__slider--transition');
+  //         });
+  //       }
 
-        if (instance) {
-          instance.init();
-        }
-      },
-      onUpdate: (self) => {
-        const currentSegment = Math.floor(self.progress * 4);
-        if (currentSegment !== lastSegment) {
-          if (self.direction === 1 && currentSegment > lastSegment) {
-            instance.nextSlide(['tl', 'bl']);
-          } else if (self.direction === -1 && currentSegment < lastSegment) {
-            instance.prevSlide(['tl', 'bl']);
-          }
-          lastSegment = currentSegment;
-        }
-      }
-    });
+  //       if (instance) {
+  //         instance.init();
+  //       }
+  //     },
+  //     onUpdate: (self) => {
+  //       const currentSegment = Math.floor(self.progress * 4);
+  //       if (currentSegment !== lastSegment) {
+  //         if (self.direction === 1 && currentSegment > lastSegment) {
+  //           instance.nextSlide(['tl', 'bl']);
+  //         } else if (self.direction === -1 && currentSegment < lastSegment) {
+  //           instance.prevSlide(['tl', 'bl']);
+  //         }
+  //         lastSegment = currentSegment;
+  //       }
+  //     }
+  //   });
 
-    const mobileSTSecondSection = ScrollTrigger.create({
-      trigger: '.js-facts-mobile-second-section',
-      start: 'top 1px',
-      end: 'bottom bottom',
-      onEnter: () => {
+  //   const mobileSTSecondSection = ScrollTrigger.create({
+  //     trigger: '.js-facts-mobile-second-section',
+  //     start: 'top 1px',
+  //     end: 'bottom bottom',
+  //     onEnter: () => {
 
 
-        if (instance) {
-          instance.init();
-        }
-      },
-      onUpdate: (self) => {
-        const currentSegment = Math.floor(self.progress * 4);
-        if (currentSegment !== lastSegment) {
-          if (self.direction === 1 && currentSegment > lastSegment) {
-            instance.nextSlide(['tr', 'br']);
-          } else if (self.direction === -1 && currentSegment < lastSegment) {
-            instance.prevSlide(['tr', 'br']);
-          }
-          lastSegment = currentSegment;
-        }
-      }
-    });
-  }
+  //       if (instance) {
+  //         instance.init();
+  //       }
+  //     },
+  //     onUpdate: (self) => {
+  //       const currentSegment = Math.floor(self.progress * 4);
+  //       if (currentSegment !== lastSegment) {
+  //         if (self.direction === 1 && currentSegment > lastSegment) {
+  //           instance.nextSlide(['tr', 'br']);
+  //         } else if (self.direction === -1 && currentSegment < lastSegment) {
+  //           instance.prevSlide(['tr', 'br']);
+  //         }
+  //         lastSegment = currentSegment;
+  //       }
+  //     }
+  //   });
+  // }
 
 });

@@ -101,26 +101,109 @@
     background-color: $color-gray-dark;
   }
 
-  @include media-breakpoint-up(lg) {
-    &.js-facts-section {
-      height: 400vh;
-    }
+  &.js-facts-section {
+    height: 400vh;
+  }
 
-    .js-facts-container {
-      position: sticky;
-      top: 0;
-    }
+  .js-facts-container {
+    position: sticky;
+    top: 0;
   }
 }
 
-@include media-breakpoint-down(lg) {
-  .facts-section {
-    height: 400vh;
-    position: relative;
 
-    &__inner {
-      position: sticky;
-      top: 0;
+.facts {
+  &-1 {
+    grid-area: l;
+  }
+
+  &-2 {
+    grid-area: t;
+
+    @include media-breakpoint-down(lg) {
+      order: -1 !important;
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: 100vh;
     }
   }
+
+  &__center-block {
+    @include media-breakpoint-down(sm) {
+      flex-grow: 1;
+    }
+  }
+  
+  &__center-block .swiper {
+    display: none;
+    
+    @include media-breakpoint-down(sm) {
+      display: block;
+      height: 300px;
+      flex-grow: 1;
+    }
+
+    .swiper-slide {
+      @include media-breakpoint-down(sm) {
+        display: flex;
+        flex-direction: column;
+
+        img {
+          height: 300px;
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+
+  &-3 {
+    grid-area: r;
+  }
+
+  &-1,
+  &-3 {
+    @include media-breakpoint-down(lg) {
+      align-self: stretch;
+      height: auto;
+      width: 100%;
+      display: flex !important;
+      flex-direction: column;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none !important;
+    }
+  }
+
+  .js-facts-container {
+    height: 100vh;
+    
+    .row {
+      @include media-breakpoint-down(lg) {
+        row-gap: 30px;
+        display: grid;
+        grid-template-areas: 't t'
+        'l r'
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        height: 100%;
+      }
+    }
+  }
+
+  &-section__inner {
+    @include media-breakpoint-down(lg) {
+      height: 300px !important;
+      flex-grow: 1;
+    }
+  }
+
+  &__center-block {
+    @include media-breakpoint-down(lg) {
+      height: unset !important;
+    }
+  }
+
 }
