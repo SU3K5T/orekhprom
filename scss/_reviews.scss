@@ -1,0 +1,118 @@
+.reviews {
+  &__title {
+    @include typography-accent-title;
+  }
+
+  &__description {
+    @include typography("Geologica", normal, 400, 17px, 17x);
+  }
+
+  &__slider {
+    margin-top: 80px;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 30px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-top: 15px;
+    }
+
+    &-wrapper {
+      transition-timing-function: linear !important;
+    }
+  }
+
+  &-slide {
+    padding: 40px;
+    width: 926px;
+    background-color: $color-light;
+    position: relative;
+    gap: 160px;
+
+    @include media-breakpoint-down(lg) {
+      gap: 60px;
+      width: 684px;
+    }
+
+    @include media-breakpoint-down(md) {
+      gap: 60px;
+      width: 484px;
+      padding: 30px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      gap: 60px;
+      width: 364px;
+      padding: 20px;
+    }
+
+    &::before {
+      z-index: 2;
+      content: '';
+      position: absolute;
+      width: 126px;
+      height: 126px;
+      left: 20%;
+      top: 15%;
+      transform: translateY(-50%);
+      background-image: url('../img/quotes.svg');
+      background-size: cover;
+    }
+
+    &::after {
+      z-index: 2;
+      content: '';
+      position: absolute;
+      width: 126px;
+      height: 126px;
+      left: 32%;
+      top: 15%;
+      transform: translateY(-50%);
+      background-image: url('../img/quotes.svg');
+      background-size: cover;
+    }
+
+    &::before,
+    &::after {
+      @include media-breakpoint-down(lg) {
+        width: 86px;
+        height: 86px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        width: 46px;
+        height: 46px;
+      }
+    }
+
+
+    &__mark {
+      z-index: 4;
+      @include typography("Geologica", normal, 250, 140px, 140px);
+
+      @include media-breakpoint-down(md) {
+        @include typography("Geologica", normal, 250, 80px, 80px);
+      }
+    }
+
+    &__star {
+      margin-top: 55px;
+      width: 47px;
+      height: 47px;
+    }
+
+    &__text {
+      z-index: 4;
+      @include typography-title;
+
+      @include media-breakpoint-down(md) {
+        @include typography-accent;
+      }
+    }
+
+    &__author {
+      @include typography-caption
+    }
+  }
+}

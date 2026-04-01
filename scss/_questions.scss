@@ -1,0 +1,73 @@
+.questions {
+  &__title {
+    @include typography-accent-title;
+  }
+
+  &__accordion {
+    margin-top: 100px;
+    @include media-breakpoint-down(md) {
+      margin-top: 40px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: 20px;
+    }
+  }
+
+  &__accordion-title {
+    @include typography-title;
+    color: $color-dark;
+  }
+
+  &__accordion-item {
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid $color-light-dark !important;
+    border-radius: 0;
+  }
+
+  &__accordion-header {
+    border: none !important;
+  }
+
+  &__accordion-button {
+    padding: 0;
+    background-color: transparent !important;
+    outline-color: transparent !important;
+    box-shadow: none !important;
+
+    &::after {
+      border-radius: 100%;
+      border: 1px solid $color-light-dark;
+      padding: 39px;
+      background-image: url('../img/arrow.svg') !important;
+      background-position: center;
+      margin-left: 20px;
+
+    }
+
+    &:hover {
+      &::after {
+        border-color: $color-dark;
+      }
+    }
+  }
+
+  &__accordion-tag {
+    @include typography-body;
+    color: $color-light-dark;
+  }
+
+  &__accordion-body {
+    width: 50%;
+    margin-left: auto;
+    @include typography-caption;
+    font-size: 17px;
+    line-height: 17px;
+    letter-spacing: -5%;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      padding: 20px 0;
+    }
+  }
+}

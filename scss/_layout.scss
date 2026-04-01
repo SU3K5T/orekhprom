@@ -1,0 +1,234 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textarea without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  margin-right: var(--modal-scrollbar-compensate);
+  background-color: $color-gray;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  box-shadow: none !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: $color-dark;
+}
+
+.offcanvas-header,
+.offcanvas-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar-toggler,
+.btn-close,
+.nav-link {
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+.button {
+  color: $color-dark;
+}
+
+@include font('Geologica', normal, 600, '../fonts/Geologica-SemiBold');
+@include font('Geologica', normal, 300, '../fonts/Geologica-Light');
+@include font('Geologica', normal, 400, '../fonts/Geologica-Regular');
+@include font('Geologica', normal, 250, '../fonts/Geologica-Thin');
+@include font('Musticapro', normal, 600, '../fonts/Musticapro-Semibold');
+
+.typography-h1 {
+  @include typography-h1;
+}
+
+.typography-h2 {
+  @include typography-h2;
+}
+
+.typography-h3 {
+  @include typography-h3;
+}
+
+.typography-caption {
+  @include typography-caption;
+}
+
+.typography-title {
+  @include typography-title
+}
+
+.typography-accent {
+  @include typography-accent;
+}
+
+.typography-body {
+  @include typography-body;
+}
+
+.typography-label {
+  @include typography-label;
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  @include media-breakpoint-up(xl) {
+    --bs-gutter-x: 20px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .container-fluid {
+    max-width: 1420px;
+  }
+}
+
+
+.layout {
+  &-pt {
+    @include layout-pt;
+  }
+
+  &-pb {
+    @include layout-pb;
+  }
+
+  &-mt {
+    @include layout-mt;
+  }
+
+  &-mb {
+    @include layout-mb;
+  }
+}
+
+.button {
+
+  border-radius: 100px;
+  border: 1px solid $color-dark;
+
+  transition: 0.3s background-color ease-in-out;
+
+  &.disabled {
+    background-color: $color-dark-light;
+  }
+
+  &--dark {
+    background-color: $color-dark;
+    color: $color-light;
+
+    &:hover {
+      background-color: $color-accent;
+    }
+  }
+
+  &--light {
+    background-color: $color-light;
+    color: $color-dark;
+  }
+}

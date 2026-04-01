@@ -1,0 +1,121 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 30;
+  transition: transform 0.3s ease-in-out;
+  background-color: $color-gray;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+
+  .dropdown-menu {
+    border-radius: 0;
+    background-color: $color-gray;
+
+    .dropdown-item:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  &.js-header--hidden {
+    transform: translateY(-100%);
+    overflow: hidden;
+  }
+
+  &__address {
+    &-description {
+      @include typography("Geologica", normal, 400, 16px, 24px);
+      margin-bottom: 0;
+    }
+
+    &-info {
+      @include typography-accent;
+    }
+  }
+
+  &__phone {
+    @include typography-h1
+  }
+
+  .navbar-nav {
+    gap: 10px
+  }
+
+  .nav-link {
+    @include typography("Geologica", normal, 300, 16px, 16px);
+
+    &::after {
+      content: "";
+      background-image: url('../img/arrow-dropdown.svg');
+      transform: translateY(50%);
+      background-repeat: no-repeat;
+      width: 10px;
+      height: 10px;
+      border: none;
+      background-size: 100%;
+    }
+
+    color: $color-dark;
+    letter-spacing: -2%;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 30px;
+      line-height: 45px;
+    }
+  }
+
+
+
+  .lang-switcher {
+    margin-left: 26px;
+    display: flex;
+    background-color: $color-light;
+    border-radius: 100px;
+
+    @include media-breakpoint-down(lg) {
+      margin-left: 0;
+    }
+
+    .lang-link {
+      display: block;
+      padding: 12px 16px;
+      color: $color-dark;
+
+      &.active {
+        background-color: $color-dark;
+        color: $color-gray;
+        border-radius: 100px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    .header-divider {
+      height: 1px;
+      width: 40px;
+      background-color: $color-dark;
+      margin-left: 10px;
+    }
+  }
+
+  .button {
+    margin-left: 10px;
+    padding: 12px 20px;
+
+    @include media-breakpoint-down(lg) {
+      margin: 0;
+      border-radius: 0;
+      font-size: 25px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 20px;
+    }
+  }
+
+}

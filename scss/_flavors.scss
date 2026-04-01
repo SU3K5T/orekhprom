@@ -1,0 +1,75 @@
+.flavors {
+  &__title {
+    @include typography-accent-title;
+  }
+
+  &__slider {
+    margin-top: 80px;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 30px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-top: 15px;
+    }
+
+    &-wrapper {
+      transition-timing-function: ease-out !important;
+    }
+  }
+
+
+  &-slide {
+    background-color: $color-light;
+    max-width: 453px;
+    padding: 40px 28px 0 28px;
+    height: 700px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-top: 2px solid $color-dark;
+      border-bottom: 2px solid $color-dark;
+    }
+
+    @include media-breakpoint-down(md) {
+      height: 600px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 32px 25px 0 25px;
+    }
+
+    &__title {
+      @include typography-title;
+    }
+
+    &__description {
+      margin-top: 26px;
+      @include typography-caption;
+    }
+
+    &__option {
+      padding: 14px;
+      background-color: $color-gray;
+      border-radius: 100px;
+      @include typography-caption;
+    }
+
+    .divider {
+      flex-grow: 1;
+      height: 1px;
+      background-color: $color-gray-dark;
+    }
+
+    .button {
+      padding: 13px 16px;
+
+      @include media-breakpoint-down(md) {
+        padding: 10px 10px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,98 @@
+.feedback {
+    background-image: url('../img/feedback/feedback-background.png');
+    background-size: 44% auto;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    @include media-breakpoint-down(xxl) {
+        background-size: auto 100%;
+    }
+
+    @include media-breakpoint-down(lg) {
+        background-color: rgba(255, 255, 255, .75);
+        background-blend-mode: overlay;
+
+    }
+
+    &__title {
+        @include typography-accent-title;
+    }
+
+    &__form {
+        margin-top: 80px;
+
+        @include media-breakpoint-down(lg) {
+            margin-top: 30px;
+        }
+
+        &-label {
+            textarea {
+                margin-top: 10px;
+                border: 1px solid $color-gray-dark;
+
+                &:focus {
+                    outline: none;
+                    border-color: $color-dark;
+                }
+            }
+        }
+
+        &-input {
+            padding: 28px 20px 20px 20px;
+            border: none;
+            border-bottom: 1px solid $color-gray-dark;
+            background-color: transparent;
+            color: $color-dark;
+            @include typography-caption;
+
+            &::placeholder {
+                color: $color-dark;
+                opacity: 1;
+            }
+
+            &:focus {
+                outline: none;
+                border-bottom-color: $color-dark;
+            }
+        }
+
+        &-check {
+            margin-top: 70px;
+
+            @include media-breakpoint-down(lg) {
+                margin-top: 40px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 30px;
+            }
+        }
+
+        &-button {
+            @include typography-body;
+            text-transform: uppercase;
+            padding: 23px 10px;
+            margin-top: 40px;
+        }
+    }
+
+    &__notes {
+        margin-top: 20px;
+        gap: 20px;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 25px;
+            gap: 10px;
+        }
+    }
+
+    &__note {
+        width: 50%;
+        padding: 24px 10px;
+        border: 1px solid $color-gray-dark;
+        border-radius: 100px;
+        @include typography-caption;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}

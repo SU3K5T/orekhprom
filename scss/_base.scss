@@ -1,0 +1,331 @@
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../bootstrap/maps";
+@import "../bootstrap/mixins";
+@import "../bootstrap/utilities";
+
+$utilities: map-merge($utilities, ("width": map-merge(map-get($utilities, "width"), (responsive: true)),
+      "height": map-merge(map-get($utilities, "height"), (responsive: true)),
+      "overflow-y": map-merge(map-get($utilities, "overflow-y"), (responsive: true)),
+      "viewport-height": map-merge(map-get($utilities, "viewport-height"), (responsive: true)),
+    ));
+
+$container-max-widths: (
+  sm: 570px,
+  md: 760px,
+  lg: 990px,
+  xl: 1180px,
+  xxl: 1390px
+);
+
+@import "../bootstrap/utilities/api";
+@import "../bootstrap/containers";
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    font-family: $fname;
+    font-style: $fstyle;
+    font-display: swap;
+    font-weight: $fweight;
+    src: url($furl+'.ttf') format('truetype');
+  }
+}
+
+$color-dark: #1F2022;
+$color-dark-light: #ADADAD;
+$color-light: #fff;
+$color-gray: #F7F7F7;
+$color-gray-dark: #1F20221A;
+$color-light-dark: #1F202229;
+
+$color-accent: #3A3B3D;
+
+@mixin typography($family, $style, $weight, $size, $height) {
+  font-family: $family;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+//
+//
+//
+//
+
+@mixin typography-desktop-h1 {
+  @include typography("Geologica", normal, 600, 72px, 72px);
+}
+
+@mixin typography-desktop-h2 {
+  @include typography("Geologica", normal, 600, 32px, 32px);
+}
+
+@mixin typography-desktop-h3 {
+  @include typography("Geologica", normal, 600, 17px, 17px);
+}
+
+@mixin typography-desktop-caption {
+  @include typography("Geologica", normal, 400, 15px, 15px);
+}
+
+//
+//
+//
+
+@mixin typography-tablet-h1 {
+  @include typography("Geologica", normal, 600, 48px, 52px);
+}
+
+@mixin typography-tablet-h2 {
+  @include typography("Geologica", normal, 600, 28px, 32px);
+}
+
+@mixin typography-tablet-h3 {
+  @include typography("Geologica", normal, 600, 17px, 17px);
+}
+
+@mixin typography-tablet-caption {
+  @include typography("Geologica", normal, 400, 14px, 14px);
+}
+
+
+@mixin typography-mobile-h1 {
+  @include typography("Geologica", normal, 600, 32px, 36px);
+}
+
+@mixin typography-mobile-h2 {
+  @include typography("Geologica", normal, 600, 24px, 28px);
+}
+
+@mixin typography-mobile-h3 {
+  @include typography("Geologica", normal, 600, 15px, 17px);
+}
+
+@mixin typography-mobile-caption {
+  @include typography("Geologica", normal, 400, 12px, 14px);
+}
+
+
+@mixin typography-h1 {
+  @include typography-desktop-h1();
+
+  @include media-breakpoint-down(lg) {
+    @include typography-tablet-h1();
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include typography-mobile-h1();
+  }
+}
+
+@mixin typography-h2 {
+  @include typography-desktop-h2();
+
+  @include media-breakpoint-down(lg) {
+    @include typography-tablet-h2();
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include typography-mobile-h2();
+  }
+}
+
+@mixin typography-h3 {
+  @include typography-desktop-h3();
+
+  @include media-breakpoint-down(lg) {
+    @include typography-tablet-h3();
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include typography-mobile-h3();
+  }
+}
+
+
+@mixin typography-caption {
+  @include typography-desktop-caption();
+
+
+  @include media-breakpoint-down(lg) {
+    @include typography-tablet-caption();
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include typography-mobile-caption();
+  }
+}
+
+//
+//
+//
+
+@mixin typography-desktop-accent-title {
+  @include typography("Musticapro", normal, 600, 72px, 72px);
+}
+
+@mixin typography-desktop-title {
+  @include typography("Musticapro", normal, 600, 32px, 32px);
+}
+
+@mixin typography-desktop-accent {
+  @include typography("Musticapro", normal, 600, 20px, 20px);
+}
+
+@mixin typography-desktop-body {
+  @include typography("Musticapro", normal, 600, 18px, 18px);
+}
+
+@mixin typography-desktop-label {
+  @include typography("Musticapro", normal, 400, 52px, 52px);
+}
+
+//
+
+@mixin typography-tablet-accent-title {
+  @include typography("Musticapro", normal, 600, 56px, 60px);
+}
+
+@mixin typography-tablet-title {
+  @include typography("Musticapro", normal, 600, 28px, 32px);
+}
+
+@mixin typography-tablet-accent {
+  @include typography("Musticapro", normal, 600, 18px, 22px);
+}
+
+@mixin typography-tablet-body {
+  @include typography("Musticapro", normal, 600, 16px, 20px);
+}
+
+@mixin typography-tablet-label {
+  @include typography("Musticapro", normal, 400, 42px, 46px);
+}
+
+
+//
+
+@mixin typography-mobile-accent-title {
+  @include typography("Musticapro", normal, 600, 36px, 40px);
+}
+
+@mixin typography-mobile-title {
+  @include typography("Musticapro", normal, 600, 24px, 28px);
+}
+
+@mixin typography-mobile-accent {
+  @include typography("Musticapro", normal, 600, 16px, 20px);
+}
+
+@mixin typography-mobile-body {
+  @include typography("Musticapro", normal, 600, 14px, 18px);
+}
+
+@mixin typography-mobile-label {
+  @include typography("Musticapro", normal, 400, 32px, 36px);
+}
+
+
+
+@mixin typography-accent-title {
+  @include typography-desktop-accent-title();
+
+  @include media-breakpoint-down(lg) {
+    @include typography-tablet-accent-title
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include typography-mobile-accent-title();
+  }
+}
+
+@mixin typography-title {
+  @include typography-desktop-title();
+
+  @include media-breakpoint-down(lg) {
+    @include typography-tablet-title
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include typography-mobile-title();
+  }
+}
+
+@mixin typography-accent {
+  @include typography-desktop-accent();
+
+  @include media-breakpoint-down(lg) {
+    @include typography-tablet-accent
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include typography-mobile-accent();
+  }
+}
+
+@mixin typography-body {
+  @include typography-desktop-body();
+
+  @include media-breakpoint-down(lg) {
+    @include typography-tablet-body
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include typography-mobile-body();
+  }
+}
+
+@mixin typography-label {
+  @include typography-desktop-label();
+
+  @include media-breakpoint-down(lg) {
+    @include typography-tablet-label
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include typography-mobile-label();
+  }
+}
+
+@mixin layout-pt {
+  padding-top: 120px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 42px;
+  }
+}
+
+@mixin layout-pb {
+  padding-bottom: 80px;
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 32px;
+  }
+}
+
+@mixin layout-mt {
+  margin-top: 40px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 22px;
+  }
+}
+
+@mixin layout-mb {
+  margin-bottom: 40px;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 22px;
+  }
+}
+
+@mixin form-group_vertical {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+@mixin form-group_horizontal {
+  flex-direction: row;
+  align-items: center;
+}

@@ -1,0 +1,119 @@
+.reasons {
+  &__title {
+    @include typography-accent-title;
+    color: $color-light-dark;
+
+    &.active {
+      color: $color-dark;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 45px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 31px;
+    }
+  }
+
+  &__line {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 0;
+
+    @include media-breakpoint-down(md) {
+      text-align: left;
+    }
+  }
+
+  &__magnet-text {
+    position: absolute;
+    transition: transform 0.4s cubic-bezier(0.34, 1.5, 0.64, 1);
+    left: 0;
+    top: 0;
+    transform: translateY(0);
+    color: $color-dark;
+  }
+
+  &__inner {
+    margin-top: 100px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 80px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-top: 40px;
+    }
+  }
+
+  &__blocks {
+    gap: 1px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 40px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-top: 30px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 20px;
+    }
+  }
+
+  &__block {
+    background-color: $color-dark;
+    padding: 32px 32px 32px 28px;
+    color: $color-light;
+
+    &-metricks {
+      @include typography("Musticapro", normal, 600, 52px, 52px);
+
+      @include media-breakpoint-down(lg) {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+
+    &-text {
+      margin-top: 52px;
+      @include typography("Musticapro", normal, 600, 20px, 20px);
+    }
+  }
+
+  &__content {
+    display: none;
+    @include typography-accent;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__buttons {
+    gap: 20px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 40px;
+    }
+  }
+
+  &__button {
+    background-color: transparent;
+    padding: 23px;
+    text-transform: uppercase;
+
+    @include typography-body;
+
+    @include media-breakpoint-down(md) {
+      padding: 12px;
+    }
+
+    &:hover {
+      background-color: $color-dark;
+      color: $color-light;
+    }
+  }
+}

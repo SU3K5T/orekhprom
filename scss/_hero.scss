@@ -1,0 +1,106 @@
+.hero {
+
+    &__video {
+        height: 638px;
+        margin-bottom: 1px;
+
+        video {
+            backface-visibility: hidden;
+            transform: translateZ(0);
+            box-shadow: 0 0 0 1px $color-gray;
+        }
+
+        @include media-breakpoint-down(lg) {
+            height: 438px;
+        }
+
+    }
+
+    &__stock {
+        padding: 10px 0;
+        border-top: 1px solid $color-gray-dark;
+        border-bottom: 1px solid $color-gray-dark;
+    }
+
+    &__slider-wrapper {
+        display: flex;
+        gap: 10px;
+
+        @include media-breakpoint-down(lg) {
+            gap: 0;
+        }
+
+    }
+
+    &__slide {
+        padding: 20px;
+        width: calc(33.33% - 10px);
+        height: 133px;
+        background-color: $color-light;
+
+        @include media-breakpoint-down(lg) {
+            width: 294px;
+        }
+
+        &-badge {
+            @include typography-caption;
+            background-color: $color-gray;
+            padding: 10px 14px;
+            border-radius: 100px;
+        }
+
+        &-title {
+            @include typography-accent;
+        }
+
+        &-img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__buttons {
+        gap: 10px;
+
+        @include media-breakpoint-down(xl) {
+            margin-top: 20px;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        @include typography-body;
+        text-transform: uppercase;
+
+        @include media-breakpoint-down(xl) {
+            padding: 12px;
+            width: calc(50% - 10px);
+        }
+    }
+
+    &__ticker {
+        cursor: default;
+
+        &-wrapper {
+            transition-timing-function: linear !important;
+        }
+
+        &-slide {
+            margin-top: -50px;
+            width: auto;
+            color: $color-dark;
+            vertical-align: top;
+            display: flex;
+            @include typography("Musticapro", normal, 600, 170px, 100%);
+
+            @include media-breakpoint-down(md) {
+                margin-top: -30px;
+                font-size: 120px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 80px;
+            }
+        }
+    }
+}
