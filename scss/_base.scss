@@ -103,7 +103,7 @@ $color-accent: #3A3B3D;
 }
 
 @mixin typography-mobile-caption {
-  @include typography("Geologica", normal, 400, 12px, 14px);
+  @include typography("Geologica", normal, 400, 15px, 15px);
 }
 
 
@@ -207,15 +207,15 @@ $color-accent: #3A3B3D;
 //
 
 @mixin typography-mobile-accent-title {
-  @include typography("Musticapro", normal, 600, 36px, 40px);
+  @include typography("Musticapro", normal, 600, 32px, 40px);
 }
 
 @mixin typography-mobile-title {
-  @include typography("Musticapro", normal, 600, 24px, 28px);
+  @include typography("Musticapro", normal, 600, 20px, 20px);
 }
 
 @mixin typography-mobile-accent {
-  @include typography("Musticapro", normal, 600, 16px, 20px);
+  @include typography("Musticapro", normal, 600, 17px, 20px);
 }
 
 @mixin typography-mobile-body {
@@ -308,7 +308,7 @@ $color-accent: #3A3B3D;
   margin-top: 40px;
 
   @include media-breakpoint-down(md) {
-    margin-top: 22px;
+    margin-top: 32px;
   }
 }
 

@@ -4,18 +4,20 @@
   }
 
   &__description {
-    @include typography("Geologica", normal, 400, 17px, 17x);
+    @include typography-h3;
+    font-weight: 400;
+
+    @include media-breakpoint-down(md) {
+      margin: 24px auto 0 auto;
+      width: 174px;
+    }
   }
 
   &__slider {
     margin-top: 80px;
 
     @include media-breakpoint-down(md) {
-      margin-top: 30px;
-    }
-
-    @include media-breakpoint-down(md) {
-      margin-top: 15px;
+      margin-top: 40px;
     }
 
     &-wrapper {
@@ -29,6 +31,7 @@
     background-color: $color-light;
     position: relative;
     gap: 160px;
+    pointer-events: none;
 
     @include media-breakpoint-down(lg) {
       gap: 60px;
@@ -37,14 +40,8 @@
 
     @include media-breakpoint-down(md) {
       gap: 60px;
-      width: 484px;
-      padding: 30px;
-    }
-
-    @include media-breakpoint-down(sm) {
-      gap: 60px;
-      width: 364px;
-      padding: 20px;
+      width: 330px;
+      padding: 16.89px 24px 16.89px 16.89px;
     }
 
     &::before {
@@ -80,7 +77,8 @@
         height: 86px;
       }
 
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-down(md) {
+        top: 10%;
         width: 46px;
         height: 46px;
       }
@@ -92,7 +90,7 @@
       @include typography("Geologica", normal, 250, 140px, 140px);
 
       @include media-breakpoint-down(md) {
-        @include typography("Geologica", normal, 250, 80px, 80px);
+        @include typography("Geologica", normal, 250, 60px, 60px);
       }
     }
 
@@ -100,19 +98,29 @@
       margin-top: 55px;
       width: 47px;
       height: 47px;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 101px;
+        width: 20px;
+        height: 20px;
+      }
     }
 
     &__text {
       z-index: 4;
-      @include typography-title;
+      @include typography-desktop-title;
 
       @include media-breakpoint-down(md) {
-        @include typography-accent;
+        @include typography-caption;
       }
     }
 
     &__author {
-      @include typography-caption
+      @include typography-caption;
+
+      @include media-breakpoint-down(md) {
+        font-size: 8px;
+      }
     }
   }
 }

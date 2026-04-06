@@ -1,13 +1,19 @@
 .questions {
   &__title {
     @include typography-accent-title;
+
+    @include media-breakpoint-down(md) {
+      text-align: end;
+    }
   }
 
   &__accordion {
     margin-top: 100px;
+
     @include media-breakpoint-down(md) {
       margin-top: 40px;
     }
+
     @include media-breakpoint-down(sm) {
       margin-top: 20px;
     }
@@ -16,6 +22,10 @@
   &__accordion-title {
     @include typography-title;
     color: $color-dark;
+
+    @include media-breakpoint-down(md) {
+      width: 125px;
+    }
   }
 
   &__accordion-item {
@@ -35,9 +45,15 @@
     outline-color: transparent !important;
     box-shadow: none !important;
 
+    @include media-breakpoint-down(md) {
+      padding: 16px 0;
+    }
+
     &::after {
       border-radius: 100%;
       border: 1px solid $color-light-dark;
+      height: 100px;
+      width: 100px;
       padding: 39px;
       background-image: url('../img/arrow.svg') !important;
       background-position: center;
@@ -55,6 +71,10 @@
   &__accordion-tag {
     @include typography-body;
     color: $color-light-dark;
+
+    @include media-breakpoint-down(md) {
+      width: 85px;
+    }
   }
 
   &__accordion-body {
@@ -65,9 +85,13 @@
     line-height: 17px;
     letter-spacing: -5%;
 
+    @include media-breakpoint-up(lg) {
+      padding: 40px 20px 48px 0;
+    }
+
     @include media-breakpoint-down(md) {
       width: 100%;
-      padding: 20px 0;
+      padding: 24px 0;
     }
   }
 }

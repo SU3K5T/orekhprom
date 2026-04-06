@@ -14,12 +14,20 @@
             height: 438px;
         }
 
+        @include media-breakpoint-down(md) {
+            height: 245px;
+        }
+
     }
 
     &__stock {
         padding: 10px 0;
         border-top: 1px solid $color-gray-dark;
         border-bottom: 1px solid $color-gray-dark;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 56px;
+        }
     }
 
     &__slider-wrapper {
@@ -80,6 +88,10 @@
 
     &__ticker {
         cursor: default;
+
+        & * {
+            pointer-events: none;
+        }
 
         &-wrapper {
             transition-timing-function: linear !important;

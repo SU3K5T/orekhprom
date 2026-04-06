@@ -11,7 +11,7 @@
     }
 
     @include media-breakpoint-down(md) {
-      margin-top: 15px;
+      margin-top: 24px;
     }
 
     &-wrapper {
@@ -22,6 +22,7 @@
 
   &-slide {
     background-color: $color-light;
+    width: calc(33.33% - 10px);
     max-width: 453px;
     padding: 40px 28px 0 28px;
     height: 700px;
@@ -33,12 +34,18 @@
       border-bottom: 2px solid $color-dark;
     }
 
-    @include media-breakpoint-down(md) {
-      height: 600px;
+
+    @include media-breakpoint-down(xl) {
+      height: 506px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      height: 456px;
+      width: 267px;
     }
 
     @include media-breakpoint-down(sm) {
-      padding: 32px 25px 0 25px;
+      padding: 24px 24px 0 24px;
     }
 
     &__title {
@@ -48,6 +55,10 @@
     &__description {
       margin-top: 26px;
       @include typography-caption;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 16px;
+      }
     }
 
     &__option {

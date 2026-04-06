@@ -10,19 +10,33 @@ class ReviewsSlider {
 
     this.swiper = new Swiper(this.slider, {
       slidesPerView: 'auto',
-      spaceBetween: 20,
       loop: true,
       speed: 8000,
+
       simulateTouch: false,
       allowTouchMove: false,
+      touchStartPreventDefault: false,
+      touchMoveStopPropagation: false,
+
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
-        pauseOnMouseEnter: false,
+        pauseOnMouseEnter: false, 
       },
-      preventClicks: false,
-      freeMode: true,
-      touchStartPreventDefault: false,
+      freeMode: {
+        enabled: true,
+        momentum: false, 
+      },
+
+      breakpoints: {
+        0: {
+          spaceBetween: 8,
+        },
+        768: {
+          spaceBetween: 20,
+        }
+      }
+
     });
   }
 }

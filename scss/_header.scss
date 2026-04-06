@@ -8,6 +8,10 @@
   border-bottom-right-radius: 40px;
   border-bottom-left-radius: 40px;
 
+  &__navbar-toggler {
+    border: none;
+  }
+
   .dropdown-menu {
     border-radius: 0;
     background-color: $color-gray;

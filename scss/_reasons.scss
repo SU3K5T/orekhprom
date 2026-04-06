@@ -1,6 +1,7 @@
 .reasons {
   &__title {
     @include typography-accent-title;
+    letter-spacing: -5%;
     color: $color-light-dark;
 
     &.active {
@@ -33,34 +34,57 @@
     top: 0;
     transform: translateY(0);
     color: $color-dark;
+
+    @include media-breakpoint-down(md) {
+      width: 50%;
+      padding-right: 12px;
+    }
   }
 
   &__inner {
     margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    justify-items: stretch;
+    column-gap: 138px;
+
+    grid-template-areas:
+      'A B'
+      'A C'
+    ;
 
     @include media-breakpoint-down(lg) {
       margin-top: 80px;
+      column-gap: 24px;
+      grid-template-areas:
+        'A B'
+        'A B'
+        'C C'
+      ;
     }
 
     @include media-breakpoint-down(md) {
       margin-top: 40px;
+    }
+  }
+
+  &__element {
+    &-1 {
+      grid-area: A;
+    }
+
+    &-2 {
+      grid-area: B;
+    }
+
+    &-3 {
+      grid-area: C;
     }
   }
 
   &__blocks {
     gap: 1px;
-
-    @include media-breakpoint-down(lg) {
-      margin-top: 40px;
-    }
-
-    @include media-breakpoint-down(md) {
-      margin-top: 30px;
-    }
-
-    @include media-breakpoint-down(sm) {
-      margin-top: 20px;
-    }
   }
 
   &__block {
@@ -68,24 +92,33 @@
     padding: 32px 32px 32px 28px;
     color: $color-light;
 
-    &-metricks {
-      @include typography("Musticapro", normal, 600, 52px, 52px);
+    @include media-breakpoint-down(md) {
+      padding: 24px;
+    }
 
-      @include media-breakpoint-down(lg) {
-        font-size: 40px;
-        line-height: 40px;
-      }
+    &-metricks {
+      @include typography-label;
     }
 
     &-text {
       margin-top: 52px;
-      @include typography("Musticapro", normal, 600, 20px, 20px);
+      @include typography-accent;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 24px;
+        font-weight: 400;
+      }
     }
   }
 
   &__content {
     display: none;
-    @include typography-accent;
+    @include typography-desktop-accent;
+
+    @include media-breakpoint-down(md) {
+      @include typography-caption;
+      line-height: 120% !important;
+    }
 
     &.active {
       display: block;
@@ -97,6 +130,10 @@
 
     @include media-breakpoint-down(lg) {
       margin-top: 40px;
+    }
+
+    @include media-breakpoint-down(md) {
+      gap: 8px;
     }
   }
 

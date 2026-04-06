@@ -1,5 +1,4 @@
 .facts {
-
   &__title {
     @include typography("Musticapro", normal, 600, 36px, 36px);
 
@@ -12,6 +11,9 @@
       }
     }
 
+    @include media-breakpoint-down(md) {
+      margin-top: auto;
+    }
   }
 
   &__title,
@@ -49,22 +51,55 @@
         align-items: start;
       }
     }
-
+  }
+  
+  [class^="facts__slide-img-"] {
+    object-fit: cover;
   }
 
-  &__slide:not(:has(img)) {
-    padding: 20px 0;
+  &__slide {
+    
+    &-img {
+      
+      &-1 {
+        width: 283px;
+        height: 338px;
+      }
+
+      &-2 {
+        width: 283px;
+        height: 303px;
+      }
+
+      &-3 {
+        width: 283px;
+        height: 340px;
+      }
+
+      &-4 {
+        width: 283px;
+        height: 340px;
+      }
+    }
   }
 
   &__center-block {
-    gap: 20px;
     height: 54%;
+
+    hr {
+      margin: 16px 0;
+    }
   }
 
-
   &__center-block-text {
-    gap: 20px;
+    display: grid;
+    grid-template-areas:
+      'A B'
+      'C D';
+    column-gap: 20px;
+    align-content: space-between;
     opacity: 0;
+
     @include typography-caption;
 
     @media (prefers-reduced-motion: no-preference) {
@@ -73,6 +108,39 @@
 
     &--transition {
       opacity: 1;
+    }
+
+    @include media-breakpoint-down(md) {
+      grid-template-areas:
+        'A B'
+        'C C'
+        'D D';
+    }
+
+    &-item {
+      &-1 {
+        grid-area: A;
+      }
+
+      &-2 {
+        grid-area: B;
+      }
+
+      &-3 {
+        grid-area: C;
+
+        @include media-breakpoint-down(md) {
+          margin-top: 40px;
+        }
+      }
+
+      &-4 {
+        grid-area: D;
+
+        @include media-breakpoint-down(md) {
+          margin-top: 8px;
+        }
+      }
     }
   }
 
@@ -87,11 +155,11 @@
   &__button {
     padding: 23px 5px;
     text-transform: uppercase;
+
     @include typography-body;
 
     @include media-breakpoint-down(lg) {
       padding: 10px 5px;
-      margin-top: 10px;
     }
   }
 
@@ -109,9 +177,14 @@
     position: sticky;
     top: 0;
   }
+
+  &__photo-slide {
+    height: 340px;
+    width: 100vw;
+  }
 }
 
-
+// Дополнительные стили для модификаторов и адаптива
 .facts {
   &-1 {
     grid-area: l;
@@ -126,34 +199,6 @@
 
     @include media-breakpoint-down(sm) {
       height: 100vh;
-    }
-  }
-
-  &__center-block {
-    @include media-breakpoint-down(sm) {
-      flex-grow: 1;
-    }
-  }
-  
-  &__center-block .swiper {
-    display: none;
-    
-    @include media-breakpoint-down(sm) {
-      display: block;
-      height: 300px;
-      flex-grow: 1;
-    }
-
-    .swiper-slide {
-      @include media-breakpoint-down(sm) {
-        display: flex;
-        flex-direction: column;
-
-        img {
-          height: 0px;
-          flex-grow: 1;
-        }
-      }
     }
   }
 
@@ -176,16 +221,64 @@
     }
   }
 
+  &__center-block {
+    &-swiper {
+      &--top {
+        .swiper-slide {
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+
+      &--bottom {
+        .swiper-slide {
+          display: flex;
+          align-items: flex-start;
+        }
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-grow: 1;
+    }
+  }
+
+  &__center-block .swiper {
+    display: none;
+    pointer-events: none;
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+      height: 90px;
+    }
+
+    &-photos {
+      margin: 0 calc(var(--bs-gutter-x) * -0.5);
+      display: none;
+      pointer-events: none;
+      height: 340px;
+      width: 100vw;
+
+      .swiper-slide {
+        width: 100vw;
+        height: 100%;
+      }
+
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+    }
+  }
+
   .js-facts-container {
     height: 100vh;
-    
+
     .row {
       @include media-breakpoint-down(lg) {
         row-gap: 30px;
         display: grid;
         grid-template-areas: 't t'
-        'l r'
-        ;
+          'l r';
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto 1fr;
         height: 100%;
@@ -205,5 +298,4 @@
       height: unset !important;
     }
   }
-
 }

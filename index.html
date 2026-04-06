@@ -19,8 +19,9 @@
           <img src="img/logo.svg" alt="ОРЕХПРОМ">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas"
-          aria-controls="navbarOffcanvas" aria-expanded="false" aria-label="Выпадающее меню">
+        <button class="navbar-toggler header__navbar-toggler" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false"
+          aria-label="Выпадающее меню">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -106,7 +107,7 @@
   <section class="hero js-hero-section">
     <div class="hero__video">
       <video src="videos/hero.mp4" poster="img/hero.png" type="video/mp4"
-        class="h-100 w-100 object-fit-cover position-relative" autoplay muted loop></video>
+        class="h-100 w-100 object-fit-cover position-relative" autoplay muted loop playsinline></video>
     </div>
     <div class="hero__stock">
       <div class="container-fluid">
@@ -175,10 +176,10 @@
     </div>
   </section>
   <main>
-    <section class="facts position-relative layout-pt js-facts-section">
+    <section class="facts position-relative js-facts-section">
       <div class="container-fluid vh-lg-100 js-facts-container">
         <div class="row">
-          <div class="facts-1 vh-lg-100 col-6 col-lg-4 d-block facts-section">
+          <div class="facts-1 py-2 vh-lg-100 col-6 col-lg-4 d-block facts-section">
             <div class="vh-100 h-lg-100 facts-section__inner">
               <div class="h-50">
                 <div class="swiper js-facts-slider facts__slider facts__slider--transition facts__slider--tl h-100">
@@ -191,7 +192,7 @@
                         принять решение и добавить товар в корзину без раздумий.</p>
                     </div>
                     <div class="swiper-slide facts__slide">
-  
+
                     </div>
                     <div class="swiper-slide facts__slide">
                       <img class="w-100 h-100 object-fit-cover" src="img/facts/facts-slider-tl.png" alt="">
@@ -208,14 +209,15 @@
                         привычный перекус в маленькое открытие.</p>
                     </div>
                     <div class="swiper-slide d-flex align-items-start facts__slide">
-                      <p class="text-lowercase typography-title">импульсивная доля <br> покупок орехов <br> составляет 41%
+                      <p class="text-lowercase typography-title">импульсивная доля <br> покупок орехов <br> составляет
+                        41%
                       </p>
                     </div>
                     <div class="swiper-slide facts__slide">
                       <img class="w-100 h-100 object-fit-cover" src="img/facts/facts-slider-bl.png" alt="">
                     </div>
                     <div class="swiper-slide facts__slide">
-  
+
                     </div>
                   </div>
                 </div>
@@ -224,52 +226,83 @@
 
           </div>
 
-          <div class="facts-2 vh-lg-100 order-2 order-lg-0 col-12 col-lg-4 d-flex flex-column">
+          <div class="facts-2 py-2 vh-lg-100 col-12 col-lg-4 d-flex flex-column overflow-hidden">
             <div class="mt-lg-auto d-flex flex-column facts__center-block">
-              <h2 class="facts__title facts__title--transition">снэковый <br> рынок растет</h2>
-              <div class="swiper js-facts-slider">
+              <div class="swiper js-facts-slider facts__slider--tl facts__center-block-swiper--top">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide facts__slide">
-                    <img class="w-100 object-fit-cover" src="img/facts/facts-slider-br.png" alt="">
-                    <p class="text-lowercase typography-title">рост интереса к гастроснэкам 22%</p>
-                    <p class="typography-caption">Пряные, сладкие, солёные и смелые миксы создают настроение и делают
-                      выбор не рациональным, а чувственным.</p>
+                    <p class="typography-title mt-2">выигрывают те,
+                      кто удивляют</p>
                   </div>
                   <div class="swiper-slide facts__slide">
-                    <img class="w-100 object-fit-cover" src="img/facts/facts-slider-br.png" alt="">
-                    <p class="text-lowercase typography-title">рост интереса к гастроснэкам 22%</p>
-                    <p class="typography-caption">Пряные, сладкие, солёные и смелые миксы создают настроение и делают
-                      выбор не рациональным, а чувственным.</p>
+                    <p class="text-lowercase typography-caption">Заметная выкладка, понятные вкусы и удобная фасовка помогают быстро принять решение и добавить товар в корзину без раздумий.</p>
                   </div>
                   <div class="swiper-slide facts__slide">
-                    <img class="w-100 object-fit-cover" src="img/facts/facts-slider-br.png" alt="">
-                    <p class="text-lowercase typography-title">рост интереса к гастроснэкам 22%</p>
-                    <p class="typography-caption">Пряные, сладкие, солёные и смелые миксы создают настроение и делают
-                      выбор не рациональным, а чувственным.</p>
+                    <p class="typography-title mt-2">покупатели выбирают эмоцию во вкусе 22%</p>
+                  </div>
+                  <div class="swiper-slide facts__slide">
+                    <p class="text-lowercase typography-caption">Орехи с акцентом на гастрономию — это уже не просто перекус, а часть вкусового опыта, который конкурирует с десертами и закусками.</p>
                   </div>
                 </div>
               </div>
-              
-              <div class="d-flex flex-wrap flex-md-nowrap h-lg-100 facts__center-block-text">
-                <div class="w-100 w-md-50 d-flex flex-wrap justify-content-between">
+              <hr>
+              <div class="swiper js-facts-slider facts__center-block-swiper--bottom">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide facts__slide facts__slide--bottom">
+                    <p class="typography-caption mt-2">Необычные сочетания, яркие вкусы и нестандартная подача
+                      превращают привычный перекус в маленькое открытие.</p>
+                  </div>
+                  <div class="swiper-slide facts__slide facts__slide--bottom">
+                    <p class="text-lowercase typography-title">импульсивная доля покупок орехов составляет 41%</p>
+                  </div>
+                  <div class="swiper-slide facts__slide facts__slide--bottom">
+                    <p class="typography-caption mt-2">Пряные, сладкие, солёные и смелые миксы создают настроение
+                      и делают выбор не рациональным, а чувственным.</p>
+                  </div>
+                  <div class="swiper-slide facts__slide facts__slide--bottom">
+                    <p class="text-lowercase typography-title">рост интереса к гастро-снэкам выше 18%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper js-facts-slider swiper-photos">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide facts__photo-slide d-flex align-items-end justify-content-start">
+                    <img src="img/facts/facts-slider-tl.png" alt="" class="facts__slide-img-1">
+                  </div>
+                  <div class="swiper-slide facts__photo-slide d-flex align-items-end justify-content-end">
+                     <img src="img/facts/facts-slider-bl.png" alt="" class="facts__slide-img-2">
+                  </div>
+                  <div class="swiper-slide facts__photo-slide d-flex align-items-end justify-content-start">
+                     <img src="img/facts/facts-slider-tr.png" alt="" class="facts__slide-img-3">
+                  </div>
+                  <div class="swiper-slide facts__photo-slide d-flex align-items-end justify-content-center">
+                     <img src="img/facts/facts-slider-br.png" alt="" class="facts__slide-img-4">
+                  </div>
+                </div>
+              </div>
+              <h2 class="facts__title facts__title--transition">снэковый <br> рынок растет</h2>
+              <div class="d-none d-md-grid mt-3 mt-md-0 h-lg-100 facts__center-block-text">
+                <div class="facts__center-block-text-item-1">
                   <p class="facts__text facts__text--transition">
                     Потребители ищут новые вкусы, эмоции и гастроно-мические открытия.
                   </p>
-                  <button class="js-form-create-order w-100 mt-lg-auto button button--dark facts__button">Сделать
-                    заказ</button>
                 </div>
-                <div class="w-100 w-md-50 mt-3 mt-lg-0 d-flex flex-wrap justify-content-between">
+                <div class="facts__center-block-text-item-2">
                   <p class="facts__text facts__text--transition">
                     Снэки c необычными, но понятными профилями вкуса дают покупателю повод взять продукт здесь и сейчас.
                   </p>
-                  <button class="js-form-get-price w-100 mt-lg-auto button button--light facts__button">Получить
-                    прайс</button>
                 </div>
+                <button
+                  class="js-form-create-order button button--dark facts__button facts__center-block-text-item-3">Сделать
+                  заказ</button>
+                <button
+                  class="js-form-get-price button button--light facts__button facts__center-block-text-item-4">Получить
+                  прайс</button>
               </div>
             </div>
           </div>
 
-          <div class="facts-3 vh-lg-100 col-6 col-lg-4 d-block facts-section">
+          <div class="facts-3 py-2 vh-lg-100 col-6 col-lg-4 d-block facts-section">
             <div class="vh-100 h-lg-100 facts-section__inner">
               <div class="h-50">
                 <div class="swiper js-facts-slider facts__slider facts__slider--transition facts__slider--tr h-100">
@@ -311,75 +344,91 @@
         </div>
       </div>
     </section>
-    <section class="layout-pt flavors js-flavors-section">
+    <section class="layout-pt flavors js-flavors-section overflow-hidden">
       <div class="container">
+        <div class="d-md-none mt-3 mt-md-0 h-lg-100 facts__center-block-text">
+          <div class="facts__center-block-text-item-1">
+            <p class="facts__text facts__text--transition">
+              Потребители ищут новые вкусы, эмоции и гастроно-мические открытия.
+            </p>
+          </div>
+          <div class="facts__center-block-text-item-2">
+            <p class="facts__text facts__text--transition">
+              Снэки c необычными, но понятными профилями вкуса дают покупателю повод взять продукт здесь и сейчас.
+            </p>
+          </div>
+          <button class="js-form-create-order button button--dark facts__button facts__center-block-text-item-3">Сделать
+            заказ</button>
+          <button class="js-form-get-price button button--light facts__button facts__center-block-text-item-4">Получить
+            прайс</button>
+        </div>
         <div class="row">
           <div class="col-lg-9 offset-lg-1">
             <h2 class="text-lowercase flavors__title">Ассортимент вкусов</h2>
           </div>
         </div>
-      </div>
-      <div class="swiper flavors__slider js-flavors-slider">
-        <div class="swiper-wrapper flavors__slider-wrapper">
-          <div class="swiper-slide flavors-slide">
-            <h3 class="flavors-slide__title">Лисички в сметане</h3>
-            <p class="flavors-slide__description">
-              Нежный лесной акцент, который превращает орех в уютный гастро-момент
-            </p>
-            <div class="d-flex align-items-center layout-mt">
-              <div class="d-flex flavors-slide__options">
-                <div class="d-flex align-items-center justify-content-center flavors-slide__option">
-                  <span>50г</span>
+        <div class="flavors__slider js-flavors-slider">
+          <div class="swiper-wrapper flavors__slider-wrapper justify-content-lg-center">
+            <div class="swiper-slide flavors-slide">
+              <h3 class="flavors-slide__title">Лисички в сметане</h3>
+              <p class="flavors-slide__description">
+                Нежный лесной акцент, который превращает орех в уютный гастро-момент
+              </p>
+              <div class="d-flex align-items-center layout-mt">
+                <div class="d-flex flavors-slide__options">
+                  <div class="d-flex align-items-center justify-content-center flavors-slide__option">
+                    <span>50г</span>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center flavors-slide__option">
+                    <span>180г</span>
+                  </div>
                 </div>
-                <div class="d-flex align-items-center justify-content-center flavors-slide__option">
-                  <span>180г</span>
-                </div>
+                <div class="divider"></div>
+                <button class="js-form-create-order button button--dark"
+                  data-product-name="lisichki-v-smetane">Заказать</button>
               </div>
-              <div class="divider"></div>
-              <button class="js-form-create-order button button--dark"
-                data-product-name="lisichki-v-smetane">Заказать</button>
+              <img src="img/flavors/flavor-2.png" alt="Вкус 1" class="flavors-slide__image layout-mt">
             </div>
-            <img src="img/flavors/flavor-2.png" alt="Вкус 1" class="flavors-slide__image layout-mt">
-          </div>
-          <div class="swiper-slide flavors-slide">
-            <h3 class="flavors-slide__title">Гребешки в чесночном соусе</h3>
-            <p class="flavors-slide__description">
-              Соленая морская нота и ароматное чесночное масло — ресторанный эффект прямо в пачке
-            </p>
-            <div class="d-flex align-items-center layout-mt">
-              <div class="d-flex flavors-slide__options">
-                <div class="d-flex align-items-center justify-content-center flavors-slide__option">
-                  <span>50г</span>
+            <div class="swiper-slide flavors-slide">
+              <h3 class="flavors-slide__title">Гребешки в чесночном соусе</h3>
+              <p class="flavors-slide__description">
+                Соленая морская нота и ароматное чесночное масло — ресторанный эффект прямо в пачке
+              </p>
+              <div class="d-flex align-items-center layout-mt">
+                <div class="d-flex flavors-slide__options">
+                  <div class="d-flex align-items-center justify-content-center flavors-slide__option">
+                    <span>50г</span>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center flavors-slide__option">
+                    <span>180г</span>
+                  </div>
                 </div>
-                <div class="d-flex align-items-center justify-content-center flavors-slide__option">
-                  <span>180г</span>
-                </div>
+                <div class="divider"></div>
+                <button class="js-form-create-order button button--dark"
+                  data-product-name="lisichki-v-smetane">Заказать</button>
               </div>
-              <div class="divider"></div>
-              <button class="js-form-create-order button button--dark"
-                data-product-name="lisichki-v-smetane">Заказать</button>
+              <img src="img/flavors/flavor-1.png" alt="Вкус 1" class="flavors-slide__image layout-mt">
             </div>
-            <img src="img/flavors/flavor-1.png" alt="Вкус 1" class="flavors-slide__image layout-mt">
-          </div>
-          <div class="swiper-slide flavors-slide">
-            <h3 class="flavors-slide__title">Белые грибы</h3>
-            <p class="flavors-slide__description">
-              Глубокий, благородный грибной вкус с высокой узнаваемостью
-            </p>
-            <div class="d-flex align-items-center layout-mt">
-              <div class="d-flex flavors-slide__options">
-                <div class="d-flex align-items-center justify-content-center flavors-slide__option">
-                  <span>50г</span>
+            <div class="swiper-slide flavors-slide">
+              <h3 class="flavors-slide__title">Белые грибы</h3>
+              <p class="flavors-slide__description">
+                Глубокий, благородный грибной вкус с высокой узнаваемостью
+              </p>
+              <div class="d-flex align-items-center layout-mt">
+                <div class="d-flex flavors-slide__options">
+                  <div class="d-flex align-items-center justify-content-center flavors-slide__option">
+                    <span>50г</span>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center flavors-slide__option">
+                    <span>180г</span>
+                  </div>
                 </div>
-                <div class="d-flex align-items-center justify-content-center flavors-slide__option">
-                  <span>180г</span>
-                </div>
+                <div class="divider"></div>
+                <button class="js-form-create-order button button--dark"
+                  data-product-name="lisichki-v-smetane">Заказать</button>
               </div>
-              <div class="divider"></div>
-              <button class="js-form-create-order button button--dark"
-                data-product-name="lisichki-v-smetane">Заказать</button>
+              <img src="img/flavors/flavor-3.png" alt="Вкус 1" class="flavors-slide__image layout-mt">
             </div>
-            <img src="img/flavors/flavor-3.png" alt="Вкус 1" class="flavors-slide__image layout-mt">
           </div>
         </div>
       </div>
@@ -402,8 +451,8 @@
             </div>
           </div>
         </div>
-        <div class="row reasons__inner">
-          <div class="col-lg-5 col-xl-4 offset-xl-1 order-2 order-lg-1 d-flex flex-column reasons__blocks">
+        <div class="reasons__inner">
+          <div class="d-flex flex-column reasons__blocks reasons__element-1">
             <div class="d-flex flex-column reasons__block">
               <p class="reasons__block-metricks">+1,7 сек</p>
               <p class="align-self-end reasons__block-text">внимания</p>
@@ -413,19 +462,21 @@
               <p class="align-self-end reasons__block-text">к среднему чеку</p>
             </div>
           </div>
-          <div class="col-lg-5 col-xl-4 offset-lg-1 order-1 order-lg-2 d-flex flex-column">
+          <div class="d-flex flex-column reasons__element-2">
             <div class="reasons__content js-reasons__content active" data-reasons-content="1">
               высокий вау- эффект <br>
               понятная гастрономичность <br>
               рост импульсных продаж
             </div>
             <div class="reasons__content js-reasons__content" data-reasons-content="2">
-              Новинки с нестандартным, но понятным вкусом но понятным вкусом но понятным вкусом...
+              Новинки с нестандартными, но понятными вкусами привлекают внимание покупателей и увеличивают поток к полке
+              за счет яркого визуального и гастрономического контраста с привычными продуктами. Такие SKU помогают сети
+              выделяться на фоне конкурентов и обеспечивают дополнительный рост продаж за счет импульсных покупок.
             </div>
-            <div class="mt-lg-auto d-flex flex-column reasons__buttons">
-              <button class="button reasons__button">получить коммерческое предложение</button>
-              <button class="button reasons__button">обсудить условия поставок</button>
-            </div>
+          </div>
+          <div class="mt-lg-auto d-flex flex-column reasons__buttons reasons__element-3">
+            <button class="button reasons__button">получить коммерческое предложение</button>
+            <button class="button reasons__button">обсудить условия поставок</button>
           </div>
     </section>
     <section class="layout-pt reviews js-reviews-section">
@@ -525,7 +576,7 @@
                 <span class="questions__accordion-title">
                   Чем ваши вкусы отличаются от обычного кешью?
                 </span>
-                <span class="d-none d-xl-block ms-auto text-uppercase questions__accordion-tag">
+                <span class="text-end ms-auto text-uppercase questions__accordion-tag">
                   смотреть ответ
                 </span>
               </button>
@@ -546,7 +597,7 @@
                 <span class="questions__accordion-title">
                   Какие варианты фасовок доступны?
                 </span>
-                <span class="d-none d-xl-block ms-auto text-uppercase questions__accordion-tag">
+                <span class="text-end ms-auto text-uppercase questions__accordion-tag">
                   смотреть ответ
                 </span>
               </button>
@@ -567,7 +618,7 @@
                 <span class="questions__accordion-title">
                   Как быстро возможна поставка?
                 </span>
-                <span class="d-none d-xl-block ms-auto text-uppercase questions__accordion-tag">
+                <span class="text-end ms-auto text-uppercase questions__accordion-tag">
                   смотреть ответ
                 </span>
               </button>
@@ -588,7 +639,7 @@
                 <span class="questions__accordion-title">
                   Можно ли получить образцы?
                 </span>
-                <span class="d-none d-xl-block ms-auto text-uppercase questions__accordion-tag">
+                <span class="text-end ms-auto text-uppercase questions__accordion-tag">
                   смотреть ответ
                 </span>
               </button>
@@ -643,7 +694,7 @@
 
               <div class="mx-auto feedback__form-check">
                 <label class="form-check-label d-flex align-items-center">
-                  <input type="checkbox" name="consent" role="button" class="form-check-input me-2" required>
+                  <input type="checkbox" name="consent" role="button" class=" me-2" required>
                   <span>Даю согласие на обработку <a href="#" target="_blank"
                       class="text-decoration-underline">персональных данных</a></span>
                 </label>
@@ -737,7 +788,7 @@
 
             <div class="mx-auto feedback__form-check">
               <label class="form-check-label d-flex align-items-center">
-                <input type="checkbox" name="consent" role="button" class="form-check-input me-2" required>
+                <input type="checkbox" name="consent" role="button" class=" me-2" required>
                 <span>Даю согласие на обработку <a href="#" target="_blank"
                     class="text-decoration-underline">персональных данных</a></span>
               </label>
@@ -787,7 +838,7 @@
 
             <div class="mx-auto feedback__form-check">
               <label class="form-check-label d-flex align-items-center">
-                <input type="checkbox" name="consent" role="button" class="form-check-input me-2" required>
+                <input type="checkbox" name="consent" role="button" class=" me-2" required>
                 <span>Даю согласие на обработку <a href="#" target="_blank"
                     class="text-decoration-underline">персональных данных</a></span>
               </label>

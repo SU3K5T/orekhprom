@@ -70,16 +70,21 @@ class HeroTicker {
       spaceBetween: 30,
       loop: true,
       speed: 29000,
+
       simulateTouch: false,
       allowTouchMove: false,
+      touchStartPreventDefault: false,
+      touchMoveStopPropagation: false,
+
       autoplay: {
         delay: 0,
+        disableOnInteraction: false,
         pauseOnMouseEnter: false,
-        disableOnInteraction: false
       },
-      preventClicks: true,
-      freeMode: true,
-      touchStartPreventDefault: false,
+      freeMode: {
+        enabled: true,
+        momentum: false,
+      },
     });
   }
 }

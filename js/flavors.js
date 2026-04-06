@@ -11,8 +11,6 @@ class FlavorsSlider {
     this.swiper = new Swiper(this.slider, {
       slidesPerView: 'auto',
       spaceBetween: 30,
-      loop: true,
-      speed: 700,
       freeMode: false,
       autoplay: {
         delay: 3000,
@@ -20,13 +18,12 @@ class FlavorsSlider {
       },
       breakpoints: {
         0: {
+          enabled: true,
           autoplay: false,
-          centeredSlides: true,
+          spaceBetween: 10,
         },
         992: {
-          autoplay: {
-            delay: 3000,
-          },
+          enabled: false,
         },
       }
     });

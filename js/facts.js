@@ -25,87 +25,59 @@ class FactsSlider {
       const isTopSlider = slider.classList.contains('facts__slider--tl') ||
         slider.classList.contains('facts__slider--tr');
 
-      this.swipers.push(
-        new Swiper(slider, {
-          slidesPerView: 1,
-          direction: 'vertical',
-          speed: 1000,
-          freeMode: false,
-          simulateTouch: false,
-          allowTouchMove: false,
-          mouseWheel: false,
-          effect: "creative",
-          creativeEffect: {
-            prev: {
-              shadow: false,
-              translate: isTopSlider ? [0, '100%', 0] : [0, '-100%', 0],
-              opacity: 0,
+      if (!slider.classList.contains('swiper-photos')) {
+        this.swipers.push(
+          new Swiper(slider, {
+            slidesPerView: 1,
+            direction: 'vertical',
+            speed: 1000,
+            freeMode: false,
+            simulateTouch: false,
+            allowTouchMove: false,
+            mouseWheel: false,
+            effect: "creative",
+            creativeEffect: {
+              prev: {
+                shadow: false,
+                translate: isTopSlider ? [0, '100%', 0] : [0, '-100%', 0],
+                opacity: 0,
+              },
+              next: {
+                shadow: false,
+                translate: isTopSlider ? [0, '100%', 0] : [0, '-100%', 0],
+                opacity: 0,
+              },
             },
-            next: {
-              shadow: false,
-              translate: isTopSlider ? [0, '100%', 0] : [0, '-100%', 0],
-              opacity: 0,
-            },
-          },
-          // initialSlide: this.currentIndex
-        })
-      );
+          })
+        );
+      } else {
+        this.swipers.push(
+          new Swiper(slider, {
+            slidesPerView: 1,
+            direction: 'horizontal',
+            speed: 1000,
+            spaceBetween: 340,
+            freeMode: false,
+            simulateTouch: false,
+            allowTouchMove: false,
+            mouseWheel: false,
+            centeredSlides: true,
+          })
+        );
+      }
     });
 
     this.initialized = true;
   }
 
-  nextSlide(swipersToSlide = []) {
-    if (!this.swipers.length) return false;
-    this.swipers.forEach(swiper => {
-      if (swipersToSlide.length === 0) {
-        swiper.slideNext();
-      } else {
-        swipersToSlide.forEach(type => {
-          if (swiper.el.classList.contains(`facts__slider--${type}`)) {
-            swiper.slideNext();
-          }
-        })
-      }
-    });
-
-  }
-
-  prevSlide(swipersToSlide = []) {
+  slideTo(idx) {
     if (!this.swipers.length) return false;
 
-    this.swipers.forEach(swiper => {
-      if (swipersToSlide.length === 0) {
-        swiper.slidePrev();
-      } else {
-        swipersToSlide.forEach(type => {
-          if (swiper.el.classList.contains(`facts__slider--${type}`)) {
-            swiper.slidePrev();
-          }
-        })
-      }
-    });
-
+    this.swipers.forEach((swiper) => {
+      swiper.slideTo(idx);
+    })
   }
 
-  disableSliders() {
-    if (this.swipers) {
-      this.swipers.forEach(swiper => {
-        swiper.destroy(true, true);
-      })
-    }
-    this.swipers = [];
-    this.totalSlides = 0;
-    this.initialized = false;
-  }
-
-  canGoNext() {
-    return this.currentIndex < this.totalSlides - 1;
-  }
-
-  canGoPrev() {
-    return this.currentIndex > 0;
-  }
 }
 
 
@@ -131,9 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const instance = sliderInstances.find(inst => inst.target === document.querySelector('.js-facts-section'));
 
-  let lastSegment = 0;
 
-  const desktopST = ScrollTrigger.create({
+  ScrollTrigger.create({
     trigger: '.js-facts-section',
     start: 'top top',
     end: 'bottom bottom',
@@ -157,82 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     onUpdate: (self) => {
       const currentSegment = Math.floor(self.progress * 4);
-
-      if (currentSegment !== lastSegment) {
-        if (self.direction === 1 && currentSegment > lastSegment) {
-          instance.nextSlide();
-        } else if (self.direction === -1 && currentSegment < lastSegment) {
-          instance.prevSlide();
-        }
-        lastSegment = currentSegment;
-      }
+      instance.slideTo(currentSegment);
     }
   });
 
-
-
-  // if (window.matchMedia('(max-width: 991px').matches) {
-  //   desktopST.kill();
-  //   const mobileSTFirstSection = ScrollTrigger.create({
-  //     trigger: '.js-facts-mobile-first-section',
-  //     start: 'top 1px',
-  //     end: 'bottom bottom',
-  //     onEnter: () => {
-
-  //       const section = document.querySelector('.js-facts-section');
-  //       const title = section.querySelector('.facts__title');
-  //       const text = section.querySelector('.facts__center-block-text');
-  //       const sliders = section.querySelectorAll('.facts__slider');
-
-  //       if (title) title.classList.add('facts__title--transition');
-  //       if (text) text.classList.add('facts__center-block-text--transition');
-
-  //       if (sliders) {
-  //         sliders.forEach(slider => {
-  //           slider.classList.add('facts__slider--transition');
-  //         });
-  //       }
-
-  //       if (instance) {
-  //         instance.init();
-  //       }
-  //     },
-  //     onUpdate: (self) => {
-  //       const currentSegment = Math.floor(self.progress * 4);
-  //       if (currentSegment !== lastSegment) {
-  //         if (self.direction === 1 && currentSegment > lastSegment) {
-  //           instance.nextSlide(['tl', 'bl']);
-  //         } else if (self.direction === -1 && currentSegment < lastSegment) {
-  //           instance.prevSlide(['tl', 'bl']);
-  //         }
-  //         lastSegment = currentSegment;
-  //       }
-  //     }
-  //   });
-
-  //   const mobileSTSecondSection = ScrollTrigger.create({
-  //     trigger: '.js-facts-mobile-second-section',
-  //     start: 'top 1px',
-  //     end: 'bottom bottom',
-  //     onEnter: () => {
-
-
-  //       if (instance) {
-  //         instance.init();
-  //       }
-  //     },
-  //     onUpdate: (self) => {
-  //       const currentSegment = Math.floor(self.progress * 4);
-  //       if (currentSegment !== lastSegment) {
-  //         if (self.direction === 1 && currentSegment > lastSegment) {
-  //           instance.nextSlide(['tr', 'br']);
-  //         } else if (self.direction === -1 && currentSegment < lastSegment) {
-  //           instance.prevSlide(['tr', 'br']);
-  //         }
-  //         lastSegment = currentSegment;
-  //       }
-  //     }
-  //   });
-  // }
 
 });
