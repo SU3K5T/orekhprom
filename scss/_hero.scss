@@ -77,12 +77,16 @@
 
     &__button {
         width: 100%;
+        flex: 1;
         @include typography-body;
         text-transform: uppercase;
 
         @include media-breakpoint-down(xl) {
             padding: 12px;
-            width: calc(50% - 10px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 15px;
         }
     }
 
@@ -111,7 +115,7 @@
             }
 
             @include media-breakpoint-down(sm) {
-                font-size: 80px;
+                font-size: 110px;
             }
         }
     }

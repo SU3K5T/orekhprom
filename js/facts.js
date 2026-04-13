@@ -86,9 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const factsTitle = document.querySelector('.facts__title');
   const factsText = document.querySelector('.facts__center-block-text');
   const factsSliders = document.querySelectorAll('.facts__slider');
+  const factsDivider = document.querySelector('.facts__center-block-divider');
 
   if (factsTitle) factsTitle.classList.remove('facts__title--transition');
   if (factsText) factsText.classList.remove('facts__center-block-text--transition');
+  if (factsDivider) factsDivider.classList.remove('facts__center-block-divider--transition')
 
   factsSliders.forEach(slider => {
     slider.classList.remove('facts__slider--transition');
@@ -103,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const instance = sliderInstances.find(inst => inst.target === document.querySelector('.js-facts-section'));
 
+  const title = document.querySelector('.facts__title');
 
   ScrollTrigger.create({
     trigger: '.js-facts-section',
@@ -110,18 +113,21 @@ document.addEventListener('DOMContentLoaded', () => {
     end: 'bottom bottom',
     onEnter: () => {
       const section = document.querySelector('.js-facts-section');
-      const title = section.querySelector('.facts__title');
-      const text = section.querySelector('.facts__center-block-text');
-      const sliders = section.querySelectorAll('.facts__slider');
+      const text = document.querySelector('.facts__center-block-text');
+      const sliders = section.querySelectorAll('.swiper');
+
 
       if (title) title.classList.add('facts__title--transition');
       if (text) text.classList.add('facts__center-block-text--transition');
+      if (factsDivider) factsDivider.classList.add('facts__center-block-divider--transition')
 
       if (sliders) {
         sliders.forEach(slider => {
-          slider.classList.add('facts__slider--transition');
+          slider.classList.add('swiper--transition');
         });
       }
+
+
       if (instance) {
         instance.init();
       }

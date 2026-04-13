@@ -3,11 +3,19 @@
     @include typography("Musticapro", normal, 600, 36px, 36px);
 
     &--transition {
-      font-size: 60px;
-      line-height: 60px;
+      transform: scale(1.6);
+      transform-origin: bottom left;
+
+      @include media-breakpoint-down(lg) {
+        transform: scale(1.1);
+      }
 
       @media (prefers-reduced-motion: no-preference) {
-        transition: font-size 2.5s ease, line-height 2.5s ease;
+        transition: transform 2.5s ease;
+      }
+
+      @include media-breakpoint-down(sm) {
+        transform: scale(1.5);
       }
     }
 
@@ -16,24 +24,11 @@
     }
   }
 
-  &__title,
-  &__title--transition {
-    @include media-breakpoint-down(md) {
-      transition: none;
-      font-size: 48px;
-      line-height: 48px;
-    }
-  }
-
   &__slider {
-    opacity: 0;
+    padding: 10px 0;
 
-    &--transition {
-      opacity: 1;
-
-      @media (prefers-reduced-motion: no-preference) {
-        transition: opacity 5s ease;
-      }
+    @include media-breakpoint-down(md) {
+      padding: 0;
     }
 
     &--tl,
@@ -52,33 +47,33 @@
       }
     }
   }
-  
+
   [class^="facts__slide-img-"] {
     object-fit: cover;
   }
 
   &__slide {
-    
+
     &-img {
-      
+
       &-1 {
         width: 283px;
-        height: 338px;
+
       }
 
       &-2 {
         width: 283px;
-        height: 303px;
+
       }
 
       &-3 {
         width: 283px;
-        height: 340px;
+
       }
 
       &-4 {
         width: 283px;
-        height: 340px;
+
       }
     }
   }
@@ -86,9 +81,15 @@
   &__center-block {
     height: 54%;
 
-    hr {
-      margin: 16px 0;
+    &-divider {
+      opacity: 0 !important;
+      
+      &--transition {
+        transition: opacity 2.3s ease;
+        opacity: .25 !important;
+      }
     }
+
   }
 
   &__center-block-text {
@@ -99,6 +100,10 @@
     column-gap: 20px;
     align-content: space-between;
     opacity: 0;
+
+    &--mobile {
+      margin-top: 24px;
+    }
 
     @include typography-caption;
 
@@ -144,13 +149,6 @@
     }
   }
 
-  &__center-block-text,
-  &__center-block-text--transition {
-    @include media-breakpoint-down(md) {
-      transition: none;
-      opacity: 1;
-    }
-  }
 
   &__button {
     padding: 23px 5px;
@@ -159,7 +157,8 @@
     @include typography-body;
 
     @include media-breakpoint-down(lg) {
-      padding: 10px 5px;
+      padding: 15px 5px;
+      margin-top: 10px;
     }
   }
 
@@ -181,11 +180,36 @@
   &__photo-slide {
     height: 340px;
     width: 100vw;
+
+    &-1 {
+      justify-content: start;
+    }
+    &-2 {
+      justify-content: end;
+    }
+    &-3 {
+      justify-content: start;
+    }
+    &-4 {
+      justify-content: center;
+    }
   }
 }
 
 // Дополнительные стили для модификаторов и адаптива
 .facts {
+  .swiper {
+    opacity: 0;
+
+    &--transition {
+      opacity: 1;
+
+      @media (prefers-reduced-motion: no-preference) {
+        transition: opacity 2.5s ease;
+      }
+    }
+  }
+
   &-1 {
     grid-area: l;
   }
@@ -200,6 +224,8 @@
     @include media-breakpoint-down(sm) {
       height: 100vh;
     }
+
+
   }
 
   &-3 {
@@ -252,12 +278,34 @@
       height: 90px;
     }
 
+    overflow: visible;
+
+    .swiper-slide {
+      overflow: visible;
+    }
+
     &-photos {
       margin: 0 calc(var(--bs-gutter-x) * -0.5);
       display: none;
       pointer-events: none;
       height: 340px;
       width: 100vw;
+
+      @media (max-height: 799px) {
+        margin-top: auto;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      @media (max-height: 667px) {
+        height: 240px;
+      }
+
+      @media (min-height: 800px) {
+        flex: 1;
+      }
 
       .swiper-slide {
         width: 100vw;
@@ -275,7 +323,7 @@
 
     .row {
       @include media-breakpoint-down(lg) {
-        row-gap: 30px;
+        row-gap: 0;
         display: grid;
         grid-template-areas: 't t'
           'l r';

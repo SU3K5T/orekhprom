@@ -1,6 +1,10 @@
 .flavors {
   &__title {
     @include typography-accent-title;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 56px;
+    }
   }
 
   &__slider {

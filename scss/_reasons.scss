@@ -91,6 +91,7 @@
     background-color: $color-dark;
     padding: 32px 32px 32px 28px;
     color: $color-light;
+    max-width: 454px;
 
     @include media-breakpoint-down(md) {
       padding: 24px;
@@ -102,6 +103,7 @@
 
     &-text {
       margin-top: 52px;
+      text-align: end;
       @include typography-accent;
 
       @include media-breakpoint-down(md) {
@@ -141,6 +143,7 @@
     background-color: transparent;
     padding: 23px;
     text-transform: uppercase;
+    max-width: 454px;
 
     @include typography-body;
 

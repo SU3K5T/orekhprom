@@ -1,0 +1,217 @@
+.footer {
+    padding-top: 120px;
+    padding-bottom: 57px;
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 70px;
+    }
+
+    &__top {
+        @include media-breakpoint-down(lg) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__nav {
+        justify-self: start;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            margin-top: 24px;
+            border-bottom: 1px solid $color-gray-dark;
+            padding-bottom: 24px;
+            order: 2;
+        }
+    }
+
+    &__list {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto auto auto;
+        justify-content: start;
+        row-gap: 34px;
+        column-gap: 86px;
+        @include typography-caption;
+
+        @include media-breakpoint-down(md) {
+            column-gap: 47px;
+            row-gap: 20px;
+        }
+    }
+
+    &__nav-item {
+        width: fit-content;
+    }
+
+    &__contacts {
+        margin-left: 86px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        max-width: 180px;
+        @include typography-caption;
+
+        @include media-breakpoint-down(sm) {
+            margin-left: 0;
+            max-width: unset;
+        }
+
+        &-data {
+            color: #D4D4D4;
+            margin-top: 20px;
+            gap: 8px;
+
+            @media (hover: hover) {
+                a:hover {
+                    color: $color-dark;
+                }
+            }
+        }
+
+        &-label {
+            @include media-breakpoint-down(sm) {
+                text-transform: lowercase;
+                @include typography-mobile-accent-title;
+            }
+        }
+
+        &-phone {
+            color: $color-dark;
+            white-space: nowrap;
+
+            @include media-breakpoint-down(sm) {
+                margin-right: 20px;
+                @include typography-mobile-title;
+            }
+        }
+
+        &-address {
+            margin-bottom: 0;
+            gap: 8px;
+
+            @include media-breakpoint-down(sm) {
+                color: $color-dark;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__socials {
+        margin-left: auto;
+        align-self: flex-end;
+        display: flex;
+        gap: 20px;
+
+        @include media-breakpoint-down(lg) {
+            align-self: start;
+            margin-left: 0;
+            margin-top: 20px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            gap: 0;
+            justify-content: space-between;
+            align-self: center;
+            margin-top: 24px;
+            padding: 24px 0;
+            border-top: 1px solid $color-gray-dark;
+            border-bottom: 1px solid $color-gray-dark;
+        }
+
+        &-item {
+            height: 100px;
+            width: 100px;
+            border: 1px solid $color-dark;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-link {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media (hover: hover) {
+                &:hover {
+                    background-color: $color-dark-light;
+                }
+            }
+        }
+    }
+
+    &__banner {
+        margin-top: 80px;
+
+        @include media-breakpoint-down(md) {
+            margin-top: 40px;
+        }
+        
+        @include media-breakpoint-down(sm) {
+            margin-top: 24px;
+        }
+    }
+
+    &__bottom {
+        margin-top: 44px;
+        @include typography-caption;
+
+        @include media-breakpoint-down(lg) {
+            align-items: center;
+            gap: 15px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            align-items: start;
+            gap: 4px;
+        }
+
+        &-item {
+            color: #D4D4D4;
+            letter-spacing: -5%;
+
+            @include media-breakpoint-down(lg) {
+                text-align: center;
+            }
+
+            @include media-breakpoint-down(lg) {
+                text-align: start;
+            }
+
+            &-2 {
+                margin-left: 65px;
+
+                @include media-breakpoint-down(lg) {
+                    margin-left: 0;
+                }
+            }
+
+            &-3 {
+                margin-left: 65px;
+
+                @include media-breakpoint-down(lg) {
+                    margin-left: 0;
+                }
+            }
+
+            &-4 {
+                margin-left: auto;
+                color: $color-dark;
+
+                @include media-breakpoint-down(lg) {
+                    margin-left: 0;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    margin-top: 20px;
+                }
+
+            }
+        }
+    }
+}

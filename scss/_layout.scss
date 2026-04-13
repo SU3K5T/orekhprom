@@ -231,6 +231,10 @@ input[type="checkbox"] {
   @include typography-accent;
 }
 
+.typography-accent-title {
+  @include typography-accent-title;
+}
+
 .typography-body {
   @include typography-body;
 }
