@@ -15,12 +15,14 @@
       }
 
       @include media-breakpoint-down(sm) {
-        transform: scale(1.5);
+        transform: scale(1);
+        font-size: 54px;
+        line-height: 46px;
       }
     }
 
     @include media-breakpoint-down(md) {
-      margin-top: auto;
+      margin-top: 40px;
     }
   }
 
@@ -58,22 +60,25 @@
 
       &-1 {
         width: 283px;
+        height: 338px;
 
       }
 
       &-2 {
         width: 283px;
+        height: 303px;
 
       }
 
       &-3 {
         width: 283px;
+        height: 340px;
 
       }
 
       &-4 {
         width: 283px;
-
+        height: 340px;
       }
     }
   }
@@ -81,14 +86,28 @@
   &__center-block {
     height: 54%;
 
+    @include media-breakpoint-down(sm) {
+      &-swiper--top {
+        height: 70px;
+      }
+      &-swiper--botom {
+        height: 105px;
+      }
+    }
+
     &-divider {
       opacity: 0 !important;
-      
+
+      @include media-breakpoint-down(sm) {
+        margin: 16px 0 0 0;
+      }
+
       &--transition {
         transition: opacity 2.3s ease;
         opacity: .25 !important;
       }
     }
+
 
   }
 
@@ -135,7 +154,7 @@
         grid-area: C;
 
         @include media-breakpoint-down(md) {
-          margin-top: 40px;
+          margin-top: 40px !important;
         }
       }
 
@@ -160,6 +179,14 @@
       padding: 15px 5px;
       margin-top: 10px;
     }
+
+    @include media-breakpoint-down(sm) {
+      height: 48px;
+
+      &.button--light {
+        background-color: transparent;
+      }
+    }
   }
 
   .divider {
@@ -169,7 +196,27 @@
   }
 
   &.js-facts-section {
-    height: 400vh;
+    height: 3000px;
+
+    @include media-breakpoint-down(sm) {
+      height: auto;
+    }
+
+    .js-facts-mobile-next {
+      position: absolute;
+      transition: transform 0.5s ease-in-out;
+      transform: translateY(300px);
+      border-radius: 100%;
+      border: 1px solid #1F2022;
+      height: 118px;
+      width: 118px;
+      padding: 39px;
+      background-image: url("../img/arrow-right.svg") !important;
+      background-repeat: no-repeat;
+      background-color: #F7F7F7;
+      background-position: center;
+      z-index: 11;
+    }
   }
 
   .js-facts-container {
@@ -184,19 +231,21 @@
     &-1 {
       justify-content: start;
     }
+
     &-2 {
       justify-content: end;
     }
+
     &-3 {
       justify-content: start;
     }
+
     &-4 {
       justify-content: center;
     }
   }
 }
 
-// Дополнительные стили для модификаторов и адаптива
 .facts {
   .swiper {
     opacity: 0;
@@ -222,7 +271,8 @@
     }
 
     @include media-breakpoint-down(sm) {
-      height: 100vh;
+      height: auto;
+      
     }
 
 
@@ -257,6 +307,7 @@
       }
 
       &--bottom {
+        height: 105px;
         .swiper-slide {
           display: flex;
           align-items: flex-start;
@@ -275,7 +326,6 @@
 
     @include media-breakpoint-down(sm) {
       display: block;
-      height: 90px;
     }
 
     overflow: visible;
@@ -291,21 +341,6 @@
       height: 340px;
       width: 100vw;
 
-      @media (max-height: 799px) {
-        margin-top: auto;
-
-        img {
-          height: 100%;
-        }
-      }
-
-      @media (max-height: 667px) {
-        height: 240px;
-      }
-
-      @media (min-height: 800px) {
-        flex: 1;
-      }
 
       .swiper-slide {
         width: 100vw;
@@ -320,6 +355,10 @@
 
   .js-facts-container {
     height: 100vh;
+
+    @include media-breakpoint-down(sm) {
+      height: auto;
+    }
 
     .row {
       @include media-breakpoint-down(lg) {

@@ -103,7 +103,7 @@ $color-accent: #3A3B3D;
 }
 
 @mixin typography-mobile-caption {
-  @include typography("Geologica", normal, 400, 15px, 15px);
+  @include typography("Geologica", normal, 400, 15px, 110%);
 }
 
 
@@ -207,7 +207,7 @@ $color-accent: #3A3B3D;
 //
 
 @mixin typography-mobile-accent-title {
-  @include typography("Musticapro", normal, 600, 32px, 40px);
+  @include typography("Musticapro", normal, 600, 32px, 110%);
 }
 
 @mixin typography-mobile-title {

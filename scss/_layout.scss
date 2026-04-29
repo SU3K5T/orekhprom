@@ -206,6 +206,7 @@ input[type="checkbox"] {
 @include font('Geologica', normal, 400, '../fonts/Geologica-Regular');
 @include font('Geologica', normal, 250, '../fonts/Geologica-Thin');
 @include font('Musticapro', normal, 600, '../fonts/Musticapro-Semibold');
+@include font('Inter', normal, 400, '../fonts/Inter_18pt-Regular');
 
 .typography-h1 {
   @include typography-h1;
@@ -300,7 +301,11 @@ input[type="checkbox"] {
   }
 
   &--light {
-    background-color: $color-light;
+    background-color: transparent;
     color: $color-dark;
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: 48px;
   }
 }

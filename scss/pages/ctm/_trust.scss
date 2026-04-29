@@ -1,0 +1,181 @@
+.page-ctm-trust {
+    overflow: hidden;
+    padding-top: 120px;
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 100px;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding-top: 56px;
+    }
+
+    &__title {
+        @include typography("Musticapro", normal, 600, 72px, 85%);
+
+        @include media-breakpoint-down(lg) {
+            font-size: 60px;
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: 32px;
+            line-height: 110%;
+            margin-top: 24px;
+        }
+    }
+
+    &__block {
+        height: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        position: relative;
+
+        @include media-breakpoint-down(md) {
+            padding-bottom: 24px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 473px;
+            height: 1px;
+            background-color: $color-gray-dark;
+        }
+
+        &--left {
+            &::after {
+                right: 0;
+
+                @include media-breakpoint-down(lg) {
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
+
+        &--right {
+            &::after {
+                left: -30px;
+            }
+        }
+    }
+
+    &__text {
+        max-width: 386px;
+        @include typography("Inter", normal, 400, 17px, 120%);
+    }
+
+    &__list {
+        margin-top: 27px;
+        row-gap: 30px;
+        column-gap: 40px;
+        align-items: center;
+
+        @include media-breakpoint-down(md) {
+            position: relative;
+            margin-top: 24px;
+            padding-bottom: 20px;
+            justify-content: space-between;
+            column-gap: 33px;
+            row-gap: 16px;
+        }
+    }
+
+    &__slider {
+        margin-top: 120px;
+        pointer-events: none;
+
+        @include media-breakpoint-down(lg) {
+            margin-top: 80px;
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-top: 0;
+            padding-top: 56px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                height: 1px;
+                background-color: $color-gray-dark;
+                width: 100vw;
+            }
+        }
+
+        &-wrapper {
+            transition-timing-function: linear !important;
+        }
+    }
+
+    &__slide {
+        position: relative;
+        width: 690px;
+        height: 280px;
+        padding: 40px;
+        background-color: #fff;
+
+        @include media-breakpoint-down(lg) {
+            width: 500px;
+            padding: 30px;
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 330px;
+            height: 196px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url('../../../img/ctm/trust/comma.svg');
+            background-repeat: no-repeat;
+            bottom: -10px;
+            right: 77px;
+            width: 157px;
+            height: 126px;
+
+            @include media-breakpoint-down(md) {
+                bottom: -40px;
+                right: -13px;
+            }
+        }
+
+        &-content {
+            position: relative;
+            z-index: 11;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &-text {
+            @include typography("Musticapro", normal, 600, 20px, 100%);
+            letter-spacing: -0.4%;
+
+            @include media-breakpoint-down(lg) {
+                font-size: 17px;
+                letter-spacing: -5%;
+            }
+
+            @include media-breakpoint-down(md) {
+                font-size: 16px;
+                line-height: 120%;
+            }
+        }
+
+        &-subtext {
+            @include typography("Geologica", normal, 400, 15px, 100%);
+            letter-spacing: -5%;
+            max-width: 360px;
+
+            @include media-breakpoint-down(lg) {
+                font-size: 14px;
+                line-height: 120%;
+            }
+        }
+    }
+
+}

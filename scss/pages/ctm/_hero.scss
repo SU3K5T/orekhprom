@@ -1,0 +1,183 @@
+.page-ctm-hero {
+    margin-top: 60px;
+    padding-bottom: 78px;
+
+    background-image: url('../../../img/ctm/ctm-bg.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-color: #fff;
+
+    position: relative;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 0;
+        padding-top: 53px;
+        padding-bottom: 56px;
+
+        background-position: left bottom;
+    }
+
+    &__decoration {
+        position: absolute;
+
+        &--desktop {
+            &-1 {
+                top: 114px;
+                right: 339px;
+            }
+
+            &-2 {
+                top: 53px;
+                right: 193px;
+            }
+
+            &-3 {
+                top: 174px;
+                right: 10px;
+            }
+
+            &-4 {
+                right: 107px;
+                top: 173px;
+            }
+
+            &-5 {
+                top: 346px;
+                right: 30px;
+            }
+        }
+
+        &--mobile {
+            &-1{
+                top: -65px;
+                right: 70px;
+                z-index: 81;
+            }
+            &-2{
+                right: 30px;
+                top: 122px;
+                z-index: 77;
+            }
+
+            &-3{
+                right: 80px;
+                top: 102px;
+                z-index: 75;
+            }
+        }
+    }
+
+    &__ticker {
+        cursor: default;
+        pointer-events: none;
+
+        &-wrapper {
+            transition-timing-function: linear !important;
+        }
+
+        &-slide {
+            height: 170px;
+            @include typography("Musticapro", normal, 600, 220px, 22%);
+            width: auto;
+            text-transform: lowercase;
+
+            @include media-breakpoint-down(md) {
+                height: 120px;
+                font-size: 150px;
+            }
+        }
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 22;
+        margin-top: 81px;
+        display: flex;
+        align-items: flex-start;
+        gap: 23px;
+
+        @include media-breakpoint-down(md) {
+            padding: 0 22px;
+            margin-top: 0;
+        }
+    }
+
+    &__secondary-text-block {
+        max-width: 325px;
+        @include typography("Geologica", normal, 400, 16px, 120%);
+        padding-right: 64px;
+        padding-bottom: 22px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 350px;
+            height: 1px;
+            background-color: $color-gray-dark;
+        }
+
+
+    }
+
+    &__title {
+        margin-top: 16px;
+        max-width: 631px;
+        @include typography("Musticapro", normal, 600, 52px, 100%);
+        letter-spacing: 0.85%;
+
+        @include media-breakpoint-down(md) {
+            font-size: 32px;
+            line-height: 110%;
+            letter-spacing: -5%;
+        }
+    }
+
+    &__description {
+        margin-top: 30px;
+        gap: 40px;
+        @include typography("Geologica", normal, 400, 16px, 120%);
+
+        @include media-breakpoint-down(md) {
+            margin-top: 24px;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &-1 {
+            max-width: 339px;
+        }
+
+        &-2 {
+            max-width: 366px;
+        }
+
+    }
+
+    &__footer {
+        margin-top: 90px;
+        gap: 10px;
+
+        @include media-breakpoint-down(md) {
+            margin-top: 40px;
+        }
+    }
+
+    &__button {
+        max-width: 260px;
+        height: 60px;
+        text-transform: uppercase;
+        &--light {
+            background-color: #F7F7F7;
+        }
+
+        @include typography-body;
+
+        @include media-breakpoint-down(md) {
+            max-width: none;
+            height: 48px;
+        }
+    }
+}

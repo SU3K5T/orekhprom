@@ -1,0 +1,123 @@
+.page-ctm-categories {
+    padding-top: 80px;
+
+    @include media-breakpoint-down(md) {
+        padding-top: 56px;
+    }
+
+    @include media-breakpoint-down(xl) {
+        .container {
+            max-width: 1164px;
+        }
+    }
+
+
+    &__inner {
+        padding: 43px 0;
+        position: relative;
+
+        @include media-breakpoint-down(md) {
+            padding: 0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 596px;
+            height: 1px;
+            background-color: #D4D4D4;
+
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 596px;
+            height: 1px;
+            background-color: #D4D4D4;
+
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        max-width: 270px;
+        @include typography("Musticapro", normal, 600, 52px, 100%);
+        letter-spacing: 0.85%;
+
+        @include media-breakpoint-down(md) {
+            font-size: 32px;
+            line-height: 110%;
+            letter-spacing: -5%;
+        }
+    }
+
+    &__nav-list {
+        margin-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        @include media-breakpoint-down(md) {
+            margin-top: 24px;
+        }
+    }
+
+    &__nav-item {
+        cursor: pointer;
+        border: 1px solid $color-dark;
+        border-radius: 100px;
+        padding: 12px 11px;
+        letter-spacing: -0.32%;
+        @include typography("Geologica", normal, 400, 16px, 120%);
+
+        @media (hover: hover) {            
+            &:hover {
+                background-color: $color-dark;
+                color: #ffffff;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: 15px;
+            line-height: 100%;
+            letter-spacing: -5%;
+        }
+
+        &.active {
+            background-color: $color-dark;
+            color: #ffffff;
+        }
+    }
+
+    &__slider {
+        height: 100%;
+
+        @include media-breakpoint-down(md) {
+            height: 418px;
+            margin-top: 40px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+
+        &-img {
+            height: 100%;
+            object-fit: cover;
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+.page-ctm-promo {
+    .container {
+        max-width: 1164px;
+    }
+
+    padding-top: 120px;
+
+    @include media-breakpoint-down(md) {
+        padding-top: 56px;
+    }
+
+
+    &__title {
+        width: 1019px;
+        margin-left: auto;
+        text-align: end;
+        @include typography-accent-title;
+
+        @include media-breakpoint-down(xl) {
+            width: auto;
+        }
+    }
+
+    &__text {
+        max-width: 500px;
+        margin: 80px auto 0 auto;
+        @include typography('Inter', normal, 400, 17px, 120%);
+        letter-spacing: -0.85%;
+
+        @include media-breakpoint-down(md) {
+            margin: 0;
+            margin-top: 24px;
+            @include typography('Geologica', normal, 400, 15px, 100%);
+        }
+    }
+
+    &__list {
+        margin-top: 40px;
+        gap: 20px;
+
+        @include media-breakpoint-down(md) {
+            gap: 8px;
+        }
+    }
+
+    &__item {
+        flex: 1;
+        background-color: #fff;
+        padding: 32px 28px;
+
+        &-icon {
+            width: 80px;
+            height: 80px;
+            margin-left: 35px;
+
+            @include media-breakpoint-down(lg) {
+                margin-left: 0;
+                width: 56px;
+                height: 56px;
+            }
+        }
+
+        &-title {
+            max-width: 300px;
+            margin-top: 25px;
+            @include typography("Musticapro", normal, 600, 32px, 110%);
+
+
+
+            @include media-breakpoint-down(lg) {
+                max-width: none;
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 110%;
+                letter-spacing: -5%;
+                
+            }
+            
+            @include media-breakpoint-down(md) {
+                margin-top: -10px;
+                margin-left: 24px;
+            }
+        }
+
+        &-body {
+            max-width: 300px;
+            margin-top: 24px;
+            letter-spacing: -0.32%;
+            @include typography('Geologica', normal, 400, 16px, 120%);
+
+            @include media-breakpoint-down(lg) {
+                max-width: none;
+            }
+
+            @include media-breakpoint-down(md) {
+                @include typography('Inter', normal, 400, 17px, 120%);
+            }
+        }
+    }
+}

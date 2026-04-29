@@ -86,7 +86,10 @@
         }
 
         @include media-breakpoint-down(sm) {
-            padding: 15px;
+            padding: 14px;
+            &.button--light {
+                background-color: transparent;
+            }
         }
     }
 

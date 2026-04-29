@@ -1,4 +1,37 @@
 .reasons {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('../img/reasons/reasons-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+
+  @include media-breakpoint-down(sm) {
+    background: none;
+    background-repeat: no-repeat;
+
+    &::before {
+      top: 210px;
+      right: 25%;
+      width: 487px;
+      height: 309px;
+      background-image: url('../img/reasons/reasons-mobile.png');
+      background-position: left;
+      background-size: cover;
+      background-size: cover;
+      transform: rotate(256deg);
+      
+    }
+  }
+
   &__title {
     @include typography-accent-title;
     letter-spacing: -5%;
@@ -14,6 +47,12 @@
 
     @include media-breakpoint-down(sm) {
       font-size: 31px;
+    }
+  }
+
+  #line2 {
+    @include media-breakpoint-down(sm) {
+      margin-top: 16px;
     }
   }
 
@@ -149,6 +188,7 @@
 
     @include media-breakpoint-down(md) {
       padding: 12px;
+      height: 48px;
     }
 
     &:hover {

@@ -9,7 +9,7 @@
 
     @include media-breakpoint-down(md) {
       margin: 24px auto 0 auto;
-      width: 174px;
+      width: 176px;
     }
   }
 
@@ -18,6 +18,10 @@
 
     @include media-breakpoint-down(md) {
       margin-top: 40px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: 196px;
     }
 
     &-wrapper {
@@ -104,6 +108,10 @@
         width: 20px;
         height: 20px;
       }
+
+      @include media-breakpoint-down(sm) {
+        margin-top: 0;
+      }
     }
 
     &__text {
@@ -111,7 +119,7 @@
       @include typography-desktop-title;
 
       @include media-breakpoint-down(md) {
-        @include typography-caption;
+        @include typography("Musticapro", normal, 600, 16px, 110%);
       }
     }
 
@@ -119,7 +127,7 @@
       @include typography-caption;
 
       @include media-breakpoint-down(md) {
-        font-size: 8px;
+        font-size: 14px;
       }
     }
   }

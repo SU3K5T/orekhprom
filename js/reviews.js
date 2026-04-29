@@ -11,7 +11,7 @@ class ReviewsSlider {
     this.swiper = new Swiper(this.slider, {
       slidesPerView: 'auto',
       loop: true,
-      speed: 8000,
+      speed: 14000,
 
       simulateTouch: false,
       allowTouchMove: false,

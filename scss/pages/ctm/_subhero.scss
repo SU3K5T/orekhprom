@@ -1,0 +1,42 @@
+.page-ctm-subhero {
+    padding-top: 10px;
+
+    &__swiper-slide {
+        width: 340px;
+        padding: 32px;
+        background-color: #fff;
+        @include typography("Musticapro", normal, 600, 20px, 100%);
+        letter-spacing: -0.4%;
+    }
+
+    &__button {
+        padding: 20px 80px;
+        margin-top: 38px;
+        text-transform: uppercase;
+        @include typography("Musticapro", normal, 600, 18px, 120%);
+        letter-spacing: 0.36%;
+    }
+
+    &-mobile {
+        padding-top: 66px;
+
+        &__title {
+            @include typography("Musticapro", normal, 600, 52px, 100%);
+            letter-spacing: 0.85%;
+        }
+
+        &__text {
+            margin-top: 24px;
+            max-width: 201px;
+            @include typography("Geologica", normal, 400, 15px, 100%);
+            letter-spacing: -5%;
+        }
+
+        &__button {
+            margin-top: 40px;
+            text-transform: uppercase;
+            height: 48px;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,109 @@
+.page-ctm-cycle {
+    padding-top: 120px;
+    position: relative;
+    z-index: 8;
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 100px;
+    }
+    
+    @include media-breakpoint-down(md) {
+        padding-top: 30px;
+    }
+
+    &__title {
+        max-width: 512px;
+        @include typography("Musticapro", normal, 600, 52px, 100%);
+        letter-spacing: 0.85%;
+
+        @include media-breakpoint-down(md) {
+            font-size: 32px;
+            line-height: 110%;
+            letter-spacing: -5%;
+        }
+    }
+
+    &__list {
+        margin-top: 41px;
+        margin-left: 94px;
+        display: grid;
+        grid-template-columns: repeat(2, 200px);
+        row-gap: 20px;
+        column-gap: 60px;
+
+        @include media-breakpoint-down(xl) {
+            margin-left: 20px;
+            column-gap: 40px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 24px;
+            justify-content: space-between
+        }
+    }
+
+    &__item {
+        @include typography("Geologica", normal, 400, 16px, 100%);
+        letter-spacing: -0.32%;
+        position: relative;
+
+        @include media-breakpoint-down(md) {
+            font-size: 15px;
+            line-height: 100%;
+            letter-spacing: -5%;
+        }
+
+        &::before {
+            content: "";
+            background-image: url('../../../img/ctm/list-marker-small.svg');
+            width: 13px;
+            height: 14px;
+            position: absolute;
+            left: -20px;
+        }
+    }
+
+    &__img-block {
+        justify-content: end;
+        gap: 20px;
+
+        @include media-breakpoint-down(lg) {
+            justify-content: start;
+            margin-top: 40px;
+        }
+
+        @include media-breakpoint-down(md) {
+            justify-content: space-between;
+        }
+    }
+
+    &__img {
+        width: 217px;
+        height: 241px;
+        object-fit: cover;
+
+        @include media-breakpoint-down(sm) {
+            height: 178px;
+            width: 100%;
+        }
+    }
+
+    &__text {
+        margin-top: 40px;
+        text-align: end;
+        @include typography("Musticapro", normal, 600, 32px, 100%);
+        letter-spacing: 1.1%;
+
+        @include media-breakpoint-down(lg) {
+            text-align: start;
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-top: 24px;
+            font-size: 20px;
+            letter-spacing: -0.4%;
+        }
+    }
+
+}
