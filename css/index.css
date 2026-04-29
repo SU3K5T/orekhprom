@@ -7697,7 +7697,7 @@ input[type=checkbox]:checked::after {
 .page-ctm-hero {
   margin-top: 60px;
   padding-bottom: 78px;
-  background-image: url("../../../img/ctm/ctm-bg.png");
+  background-image: url("../img/ctm/ctm-bg.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-color: #fff;
@@ -8795,7 +8795,6 @@ input[type=checkbox]:checked::after {
 .page-ctm-slogan {
   padding: 177px 0;
   position: relative;
-  overflow: clip visible;
 }
 @media (max-width: 991.98px) {
   .page-ctm-slogan {
