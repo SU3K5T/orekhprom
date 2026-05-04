@@ -7498,7 +7498,7 @@ input[type=checkbox]:checked::after {
   .feedback {
     display: flex;
     align-items: end;
-    height: 1202px;
+    height: 1102px;
     background-size: 282px 451px;
     background-position: top right;
     background-color: unset;
@@ -7507,13 +7507,6 @@ input[type=checkbox]:checked::after {
 }
 .feedback__ctm {
   background-image: url("../img/ctm/feedback-ctm-background.jpg");
-  background-size: 592px;
-}
-@media (max-width: 575.98px) {
-  .feedback__ctm {
-    background-size: 282px 451px;
-    height: 1102px;
-  }
 }
 .feedback__title {
   font-family: "Musticapro";
@@ -8942,7 +8935,7 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 767.98px) {
   .page-ctm-cycle {
-    padding-top: 30px;
+    padding-top: 190px;
   }
 }
 .page-ctm-cycle__title {
@@ -9321,7 +9314,6 @@ input[type=checkbox]:checked::after {
 @media (max-width: 767.98px) {
   .page-ctm-format-types {
     margin-top: 56px;
-    overflow: hidden;
   }
 }
 .page-ctm-format-types__title {

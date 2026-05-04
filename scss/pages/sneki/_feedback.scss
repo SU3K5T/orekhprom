@@ -16,7 +16,7 @@
     @include media-breakpoint-down(sm) {
         display: flex;
         align-items: end;
-        height: 1202px;
+        height: 1102px;
         background-size: 282px 451px;
         background-position: top right;
         background-color: unset;
@@ -24,13 +24,7 @@
     }
 
     &__ctm {
-        background-image: url('../img/ctm/feedback-ctm-background.jpg');
-        background-size: 592px;
-
-         @include media-breakpoint-down(sm) {
-            background-size: 282px 451px;
-            height: 1102px;
-         }
+        background-image: url('../img/ctm/feedback-ctm-background.jpg');        
     }
 
 
