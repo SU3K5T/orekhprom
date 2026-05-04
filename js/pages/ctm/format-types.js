@@ -4,6 +4,7 @@ class FormatTypesScrollTrigger {
     this.texts = [];
     this.activeIndex = 0;
     this.pointer = document.querySelector('.js-page-ctm-format-types__list-pointer');
+    this.itemsBlock = document.querySelector('.page-ctm-format-types__list');
     this.init();
   }
 
@@ -17,15 +18,26 @@ class FormatTypesScrollTrigger {
 
     this.switchTo(0);
 
+    let progressMultiplier = 4;
+
+    let mm = gsap.matchMedia();
+    mm.add("(max-width: 767px", () => {
+      progressMultiplier = 4;
+    });
+
+    mm.add("(min-width: 767px", () => {
+      progressMultiplier = 9;
+    });
+
     const st2 = ScrollTrigger.create({
       trigger,
       start: 'top top+=200',
-      end: '+=1600',          
-      pin: true,     
+      end: '+=2000',
+      pin: true,
       scrub: true,
       onUpdate: ({ progress }) => {
-        const idx = Math.min(Math.floor(progress * 4), 4);
-        if (idx !== this.activeIndex) {
+        const idx = Math.floor(progress * progressMultiplier);
+        if (idx !== this.activeIndex && idx < this.items.length) {
           this.switchTo(idx);
         }
       }
@@ -40,7 +52,9 @@ class FormatTypesScrollTrigger {
     newItem?.classList.add('active');
     this.activeIndex = index;
 
-    this.pointer.style.transform = `translateY(${newItem.offsetTop - 30}px)`;
+
+    const elTransformer = this.itemsBlock.clientHeight * 0.2;
+    this.itemsBlock.style.transform = `translateY(-${elTransformer * index + index * 2}px)`;
   }
 }
 

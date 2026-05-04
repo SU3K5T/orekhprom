@@ -31,6 +31,7 @@
         position: relative;
 
         @include media-breakpoint-down(md) {
+            padding-top: 0;
             padding-bottom: 24px;
         }
 
@@ -64,6 +65,11 @@
     &__text {
         max-width: 386px;
         @include typography("Inter", normal, 400, 17px, 120%);
+
+        @include media-breakpoint-down(md) {
+            @include typography("Geologica", normal, 400, 15px, 100%);
+            letter-spacing: -5%;
+        }
     }
 
     &__list {

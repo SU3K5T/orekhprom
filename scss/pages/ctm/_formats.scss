@@ -3,6 +3,8 @@
 
     @include media-breakpoint-down(md) {
         padding-top: 56px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #D4D4D4;
     }
 
     @include media-breakpoint-down(xl) {
@@ -80,7 +82,7 @@
         letter-spacing: -0.32%;
         @include typography("Geologica", normal, 400, 16px, 120%);
 
-        @media (hover: hover) {            
+        @media (hover: hover) {
             &:hover {
                 background-color: $color-dark;
                 color: #ffffff;

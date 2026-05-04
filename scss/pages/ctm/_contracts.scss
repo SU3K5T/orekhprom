@@ -20,7 +20,7 @@
         left: 0;
 
         @include media-breakpoint-down(md) {
-            top: -410px;
+            top: -360px;
             width: 290px;
             object-fit: contain
         }

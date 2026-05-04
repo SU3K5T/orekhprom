@@ -3,6 +3,9 @@
 
     @include media-breakpoint-down(md) {
         padding-top: 56px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #D4D4D4;
+
     }
 
     @include media-breakpoint-down(xl) {
@@ -55,6 +58,7 @@
         letter-spacing: 0.85%;
 
         @include media-breakpoint-down(md) {
+            max-width: none;
             font-size: 32px;
             line-height: 110%;
             letter-spacing: -5%;

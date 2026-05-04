@@ -17,6 +17,17 @@ class MistakesScrollTrigger {
 
     this.switchTo(0);
 
+    let progressMultiplier = 4;
+
+    let mm = gsap.matchMedia();
+    mm.add("(max-width: 767px", () => {
+      progressMultiplier = 3;
+    });
+
+    mm.add("(min-width: 767px", () => {
+      progressMultiplier = 4;
+    });
+
     const st1 = ScrollTrigger.create({
       trigger,
       start: 'center top',
@@ -24,8 +35,8 @@ class MistakesScrollTrigger {
       pin: true,     
       scrub: true,
       onUpdate: ({ progress }) => {
-        const idx = Math.min(Math.floor(progress * 4), 3);
-        if (idx !== this.activeIndex) {
+        const idx = Math.floor(progress * progressMultiplier);
+        if (idx !== this.activeIndex && idx < this.items.length) {
           this.switchTo(idx);
         }
       }

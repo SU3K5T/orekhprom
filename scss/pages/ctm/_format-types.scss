@@ -1,9 +1,10 @@
 .page-ctm-format-types {
-    padding-top: 120px;
+    margin-top: 120px;
 
 
     @include media-breakpoint-down(md) {
-        padding-top: 56px;
+        margin-top: 56px;
+        overflow: hidden;
     }
 
     &__title {
@@ -20,6 +21,13 @@
             max-width: 221px;
         }
     }
+
+    &__header {
+        position: relative;
+        z-index: 11;
+        background-color: $color-gray;
+    }
+
 
     &__inner {
         position: relative;
@@ -43,13 +51,20 @@
         background-color: #F7F7F7;
         background-position: center;
         z-index: 11;
+
+        @include media-breakpoint-down(md) {
+            transform: translateY(-35px);
+        }
     }
 
     &__list {
+        position: relative;
+        z-index: 2;
         margin-left: 118px;
         display: flex;
         flex-direction: column;
         gap: 20px;
+        transition: transform 0.3s ease-in-out;
     }
 
     &__item {

@@ -8421,6 +8421,7 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 767.98px) {
   .page-ctm-trust__block {
+    padding-top: 0;
     padding-bottom: 24px;
   }
 }
@@ -8451,6 +8452,16 @@ input[type=checkbox]:checked::after {
   font-weight: 400;
   font-size: 17px;
   line-height: 120%;
+}
+@media (max-width: 767.98px) {
+  .page-ctm-trust__text {
+    font-family: "Geologica";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: -5%;
+  }
 }
 .page-ctm-trust__list {
   margin-top: 27px;
@@ -8598,7 +8609,7 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 767.98px) {
   .page-ctm-contracts__decoration {
-    top: -410px;
+    top: -360px;
     width: 290px;
     object-fit: contain;
   }
@@ -8989,7 +9000,7 @@ input[type=checkbox]:checked::after {
 }
 .page-ctm-cycle__item::before {
   content: "";
-  background-image: url("../../../img/ctm/list-marker-small.svg");
+  background-image: url("../img/ctm/list-marker-small.svg");
   width: 13px;
   height: 14px;
   position: absolute;
@@ -9031,11 +9042,6 @@ input[type=checkbox]:checked::after {
   line-height: 100%;
   letter-spacing: 1.1%;
 }
-@media (max-width: 991.98px) {
-  .page-ctm-cycle__text {
-    text-align: start;
-  }
-}
 @media (max-width: 767.98px) {
   .page-ctm-cycle__text {
     margin-top: 24px;
@@ -9050,6 +9056,8 @@ input[type=checkbox]:checked::after {
 @media (max-width: 767.98px) {
   .page-ctm-categories {
     padding-top: 56px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #D4D4D4;
   }
 }
 @media (max-width: 1199.98px) {
@@ -9105,6 +9113,7 @@ input[type=checkbox]:checked::after {
 }
 @media (max-width: 767.98px) {
   .page-ctm-categories__title {
+    max-width: none;
     font-size: 32px;
     line-height: 110%;
     letter-spacing: -5%;
@@ -9180,6 +9189,8 @@ input[type=checkbox]:checked::after {
 @media (max-width: 767.98px) {
   .page-ctm-formats {
     padding-top: 56px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #D4D4D4;
   }
 }
 @media (max-width: 1199.98px) {
@@ -9305,11 +9316,12 @@ input[type=checkbox]:checked::after {
 }
 
 .page-ctm-format-types {
-  padding-top: 120px;
+  margin-top: 120px;
 }
 @media (max-width: 767.98px) {
   .page-ctm-format-types {
-    padding-top: 56px;
+    margin-top: 56px;
+    overflow: hidden;
   }
 }
 .page-ctm-format-types__title {
@@ -9331,6 +9343,11 @@ input[type=checkbox]:checked::after {
     line-height: 110%;
     max-width: 221px;
   }
+}
+.page-ctm-format-types__header {
+  position: relative;
+  z-index: 11;
+  background-color: #F7F7F7;
 }
 .page-ctm-format-types__inner {
   position: relative;
@@ -9355,11 +9372,19 @@ input[type=checkbox]:checked::after {
   background-position: center;
   z-index: 11;
 }
+@media (max-width: 767.98px) {
+  .page-ctm-format-types .js-page-ctm-format-types__list-pointer {
+    transform: translateY(-35px);
+  }
+}
 .page-ctm-format-types__list {
+  position: relative;
+  z-index: 2;
   margin-left: 118px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  transition: transform 0.3s ease-in-out;
 }
 .page-ctm-format-types__item {
   font-family: "Musticapro";
