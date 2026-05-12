@@ -7498,7 +7498,7 @@ input[type=checkbox]:checked::after {
   .feedback {
     display: flex;
     align-items: end;
-    height: 1102px;
+    height: 1122px;
     background-size: 282px 451px;
     background-position: top right;
     background-color: unset;
