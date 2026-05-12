@@ -1,144 +1,164 @@
 <!-- СДЕЛАТЬ ЗАКАЗ -->
-
 <div class="modal fade" id="createOrderModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content rounded-0">
-      <div class="modal-header">
-        <h1 class="modal-title typography-h2" id="createOrderModalLabel">Сделать заказ</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="" class="d-flex flex-column js-ajax-from" method="POST">
-          <input type="hidden" name="recaptcha_response" value="" class="visually-hidden">
-          <label class="feedback__form-label">
-            <span class="visually-hidden">Имя</span>
-            <input type="text" name="name" placeholder="Имя" class="w-100 feedback__form-input" required>
-          </label>
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h1 class="modal-title typography-h2" id="createOrderModalLabel">Сделать заказ</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/ajax/sendForm.php" class="d-flex flex-column js-ajax-from" method="POST">
+                    <input type="hidden" name="recaptcha_response" value="" class="visually-hidden">
+                    <input type="hidden" name="form_id" value="17" class="visually-hidden">
+                    <label class="feedback__form-label">
+                        <span class="visually-hidden">Имя</span>
+                        <input type="text" name="form_text_86" placeholder="Имя" class="w-100 feedback__form-input" required>
+                    </label>
 
-          <label class="feedback__form-label">
-            <span class="visually-hidden">Компания</span>
-            <input type="text" name="company" placeholder="Компания" class="w-100 feedback__form-input" required>
-          </label>
+                    <label class="feedback__form-label">
+                        <span class="visually-hidden">Компания</span>
+                        <input type="text" name="form_text_87" placeholder="Компания" class="w-100 feedback__form-input" required>
+                    </label>
 
-          <label class="feedback__form-label">
-            <span class="visually-hidden">Телефон</span>
-            <input type="tel" name="phone" placeholder="Телефон" imask-phone class="w-100 feedback__form-input"
-              required>
-          </label>
+                    <label class="feedback__form-label">
+                        <span class="visually-hidden">Телефон</span>
+                        <input type="tel" name="form_text_88" placeholder="Телефон" imask-phone class="w-100 feedback__form-input" required>
+                    </label>
 
-          <label class="feedback__form-label">
-            <span class="visually-hidden">Email</span>
-            <input type="email" name="email" placeholder="Email" class="w-100 feedback__form-input" required>
-          </label>
+                    <label class="feedback__form-label">
+                        <span class="visually-hidden">Email</span>
+                        <input type="email" name="form_text_89" placeholder="Email" class="w-100 feedback__form-input" required>
+                    </label>
 
-          <label class="feedback__form-label">
-            <span class="visually-hidden">Комментарий</span>
-            <textarea placeholder="Комментарий" class="w-100 feedback__form-input"></textarea>
-          </label>
+                    <label class="feedback__form-label">
+                        <span class="visually-hidden">Комментарий</span>
+                        <textarea name="form_textarea_90" placeholder="Комментарий" class="w-100 feedback__form-input"></textarea>
+                    </label>
 
-          <label class="visually-hidden">
-            <input type="hidden" name="product_name" value="">
-          </label>
+                    <label class="visually-hidden">
+                        <input type="hidden" name="form_text_91" class="js-product-name" value="">
+                    </label>
 
 
-          <div class="mx-auto feedback__form-check">
-            <label class="form-check-label d-flex align-items-center">
-              <input type="checkbox" name="consent" role="button" class="form-check-input me-2" required>
-              <span>Даю согласие на обработку <a href="#" target="_blank" class="text-decoration-underline">персональных
-                  данных</a></span>
-            </label>
-          </div>
-          <button type="submit" class="button button--dark feedback__form-button">Отправить запрос</button>
-        </form>
-      </div>
+                    <div class="mx-auto feedback__form-check">
+                        <label class="form-check-label d-flex align-items-center">
+                            <input type="checkbox" name="consent" role="button" class="form-check-input me-2" required>
+                            <? $APPLICATION->IncludeFile($APPLICATION->GetTemplatePath(SITE_DIR . "include/area/snack_form_agreement_text.php"), array(), array("MODE" => "html")); ?>
+                        </label>
+                    </div>
+                    <button type="submit" class="button button--dark feedback__form-button">Отправить запрос</button>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <!-- ПОЛУЧИТЬ ПРАЙС -->
 <div class="modal fade" id="getPriceModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content rounded-0">
-      <div class="modal-header">
-        <h1 class="modal-title typography-h2" id="getPriceModalLabel">Получить прайс</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="" class="d-flex flex-column js-ajax-from" method="POST">
-          <input type="hidden" name="recaptcha_response" value="" class="visually-hidden">
-          <label class="feedback__form-label">
-            <span class="visually-hidden">Имя</span>
-            <input type="text" name="name" placeholder="Имя" class="w-100 feedback__form-input" required>
-          </label>
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h1 class="modal-title typography-h2" id="getPriceModalLabel">Получить прайс</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/ajax/sendForm.php" class="d-flex flex-column js-ajax-from" method="POST">
+                    <input type="hidden" name="recaptcha_response" value="" class="visually-hidden">
+                    <input type="hidden" name="form_id" value="18" class="visually-hidden">
+                    <label class="feedback__form-label">
+                        <span class="visually-hidden">Имя</span>
+                        <input type="text" name="form_text_92" placeholder="Имя" class="w-100 feedback__form-input" required>
+                    </label>
 
-          <label class="feedback__form-label">
-            <span class="visually-hidden">Компания</span>
-            <input type="text" name="company" placeholder="Компания" class="w-100 feedback__form-input" required>
-          </label>
+                    <label class="feedback__form-label">
+                        <span class="visually-hidden">Компания</span>
+                        <input type="text" name="form_text_93" placeholder="Компания" class="w-100 feedback__form-input" required>
+                    </label>
 
-          <label class="feedback__form-label">
-            <span class="visually-hidden">Телефон</span>
-            <input type="tel" name="phone" placeholder="Телефон" imask-phone class="w-100 feedback__form-input"
-              required>
-          </label>
+                    <label class="feedback__form-label">
+                        <span class="visually-hidden">Телефон</span>
+                        <input type="tel" name="form_text_94" placeholder="Телефон" imask-phone class="w-100 feedback__form-input"
+                            required>
+                    </label>
 
-          <label class="feedback__form-label">
-            <span class="visually-hidden">Email</span>
-            <input type="email" name="email" placeholder="Email" class="w-100 feedback__form-input" required>
-          </label>
+                    <label class="feedback__form-label">
+                        <span class="visually-hidden">Email</span>
+                        <input type="email" name="form_text_95" placeholder="Email" class="w-100 feedback__form-input" required>
+                    </label>
 
-          <label class="feedback__form-label">
-            <span class="visually-hidden">Комментарий</span>
-            <textarea placeholder="Комментарий" class="w-100 feedback__form-input"></textarea>
-          </label>
+                    <label class="feedback__form-label">
+                        <span class="visually-hidden">Комментарий</span>
+                        <textarea name="form_textarea_96" placeholder="Комментарий" class="w-100 feedback__form-input"></textarea>
+                    </label>
 
 
-          <div class="mx-auto feedback__form-check">
-            <label class="form-check-label d-flex align-items-center">
-              <input type="checkbox" name="consent" role="button" class="form-check-input me-2" required>
-              <span>Даю согласие на обработку <a href="#" target="_blank" class="text-decoration-underline">персональных
-                  данных</a></span>
-            </label>
-          </div>
-          <button type="submit" class="button button--dark feedback__form-button">Отправить запрос</button>
-        </form>
-      </div>
+                    <div class="mx-auto feedback__form-check">
+                        <label class="form-check-label d-flex align-items-center">
+                            <input type="checkbox" name="consent" role="button" class="form-check-input me-2" required>
+                            <? $APPLICATION->IncludeFile($APPLICATION->GetTemplatePath(SITE_DIR . "include/area/snack_form_agreement_text.php"), array(), array("MODE" => "html")); ?>
+                        </label>
+                    </div>
+                    <button type="submit" class="button button--dark feedback__form-button">Отправить запрос</button>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
-<!-- ФОРМА -->
-<form action="/2323" class="d-flex flex-column js-ajax-from feedback__form" method="POST">
-  <input type="hidden" name="recaptcha_response" value="" class="visually-hidden">
-  <label class="feedback__form-label">
-    <span class="visually-hidden">Имя</span>
-    <input type="text" name="name" placeholder="Имя" class="w-100 feedback__form-input" required>
-  </label>
+<!-- СТАТИЧНАЯ ФОРМА -->
+ <section class="feedback layout-pt layout-pb">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <h2 class="feedback__title">
+                    <? $APPLICATION->IncludeFile($APPLICATION->GetTemplatePath(SITE_DIR . "include/area/snack_feedback_title.php"), array(), array("MODE" => "text", "NAME" => "заголовок")); ?>
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-6 col-xxl-5 offset-xl-1">
+                <form action="/ajax/sendForm.php" class="d-flex flex-column js-ajax-from feedback__form" method="POST">
+                    <label class="feedback__form-label">
+                        <span class="visually-hidden">Имя</span>
+                        <input type="text" name="form_text_82" placeholder="Имя" class="w-100 feedback__form-input" required>
+                    </label>
 
-  <label class="feedback__form-label">
-    <span class="visually-hidden">Компания</span>
-    <input type="text" name="company" placeholder="Компания" class="w-100 feedback__form-input" required>
-  </label>
+                    <label class="feedback__form-label">
+                        <span class="visually-hidden">Компания</span>
+                        <input type="text" name="form_text_83" placeholder="Компания" class="w-100 feedback__form-input" required>
+                    </label>
 
-  <div class="d-xxl-flex justify-content-between">
-    <label class="w-100 w-xxl-auto feedback__form-label">
-      <span class="visually-hidden">Телефон</span>
-      <input type="tel" name="phone" placeholder="Телефон" imask-phone class="w-100 w-xxl-auto feedback__form-input"
-        required>
-    </label>
+                    <div class="d-xxl-flex justify-content-between">
+                        <label class="w-100 w-xxl-auto feedback__form-label">
+                            <span class="visually-hidden">Телефон</span>
+                            <input type="tel" name="form_text_84" placeholder="Телефон" class="w-100 w-xxl-auto feedback__form-input" imask-phone required>
+                        </label>
 
-    <label class="w-100 w-xxl-auto feedback__form-label">
-      <span class="visually-hidden">Email</span>
-      <input type="email" name="email" placeholder="Email" class="w-100 w-xxl-auto feedback__form-input" required>
-    </label>
-  </div>
+                        <label class="w-100 w-xxl-auto feedback__form-label">
+                            <span class="visually-hidden">Email</span>
+                            <input type="email" name="form_text_85" placeholder="Email" class="w-100 w-xxl-auto feedback__form-input" required>
+                        </label>
+                    </div>
 
-  <div class="mx-auto feedback__form-check">
-    <label class="form-check-label d-flex align-items-center">
-      <input type="checkbox" name="consent" role="button" class="form-check-input me-2" required>
-      <span>Даю согласие на обработку <a href="#" target="_blank" class="text-decoration-underline">персональных
-          данных</a></span>
-    </label>
-  </div>
-  <button type="submit" class="button button--dark feedback__form-button">Отправить запрос</button>
-</form>
+                    <div class="mx-auto feedback__form-check">
+                        <label class="form-check-label d-flex align-items-center">
+                            <input type="checkbox" name="consent" role="button" class="form-check-input me-2" required>
+                            <?$APPLICATION->IncludeFile($APPLICATION->GetTemplatePath(SITE_DIR . "include/area/snack_form_agreement_text.php"),Array(),Array("MODE"=>"html"));?>
+                        </label>
+                    </div>
+                    <input type="hidden" name="recaptcha_response" value="" class="visually-hidden">
+                    <input type="hidden" name="form_id" value="16" class="visually-hidden">
+                    <button type="submit" class="button button--dark feedback__form-button">Отправить запрос</button>
+                </form>
+                <div class="d-flex flex-column flex-sm-row justify-content-between feedback__notes">
+                    <div class="w-auto w-sm-100 feedback__note">
+                        <p>Ответим в течение часа</p>
+                    </div>
+                    <div class="w-auto w-sm-100 feedback__note">
+                        <p>Отправим образцы</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
