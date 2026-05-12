@@ -166,8 +166,8 @@
                     </div>
                 </div>
                 <div class="d-flex flex-column page-ctm-hero__footer">
-                    <button class="button button--dark page-ctm-hero__button">Оставить заявку</button>
-                    <button class="button page-ctm-hero__button page-ctm-hero__button--light">получить расчёт</button>
+                    <button class="button button--dark page-ctm-hero__button"  data-bs-toggle="modal" data-bs-target="#createCTMRequest">Оставить заявку</button>
+                    <button class="button page-ctm-hero__button page-ctm-hero__button--light" data-bs-toggle="modal" data-bs-target="#checkCTMPrice">получить расчёт</button>
                 </div>
             </div>
         </section>
@@ -191,7 +191,7 @@
                     </div>
                 </div>
                 <div class="d-none d-lg-flex justify-content-center">
-                    <button class="button button--light page-ctm-subhero__button">Шаг в СТМ</button>
+                    <button class="button button--light page-ctm-subhero__button" data-bs-toggle="modal" data-bs-target="#createCTMRequest">Шаг в СТМ</button>
                 </div>
             </div>
         </section>
@@ -204,7 +204,7 @@
                 <p class="page-ctm-subhero-mobile__text">
                     Разработка и производство под задачи вашей сети
                 </p>
-                <button class="button button--dark page-ctm-subhero-mobile__button">Запустить СТМ</button>
+                <button class="button button--dark page-ctm-subhero-mobile__button" data-bs-toggle="modal" data-bs-target="#createCTMRequest">Запустить СТМ</button>
             </div>
         </section>
 
@@ -756,7 +756,68 @@
         <div class="modal-dialog">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
-                    <h1 class="modal-title typography-h2" id="createOrderModalLabel">Оставить заявку</h1>
+                    <h1 class="modal-title typography-h2">Оставить заявку на разработку СТМ</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/ajax/sendForm.php" class="d-flex flex-column js-ajax-from" method="POST">
+                        <input type="hidden" name="recaptcha_response" value="" class="visually-hidden">
+                        <input type="hidden" name="form_id" value="17" class="visually-hidden">
+                        <label class="feedback__form-label">
+                            <span class="visually-hidden">Имя</span>
+                            <input type="text" name="form_text_86" placeholder="Имя" class="w-100 feedback__form-input"
+                                required>
+                        </label>
+
+                        <label class="feedback__form-label">
+                            <span class="visually-hidden">Компания</span>
+                            <input type="text" name="form_text_87" placeholder="Компания"
+                                class="w-100 feedback__form-input" required>
+                        </label>
+
+                        <label class="feedback__form-label">
+                            <span class="visually-hidden">Телефон</span>
+                            <input type="tel" name="form_text_88" placeholder="Телефон" imask-phone
+                                class="w-100 feedback__form-input" required>
+                        </label>
+
+                        <label class="feedback__form-label">
+                            <span class="visually-hidden">Email</span>
+                            <input type="email" name="form_text_89" placeholder="Email"
+                                class="w-100 feedback__form-input" required>
+                        </label>
+
+                        <label class="feedback__form-label">
+                            <span class="visually-hidden">Комментарий</span>
+                            <textarea name="form_textarea_90" placeholder="Комментарий"
+                                class="w-100 feedback__form-input"></textarea>
+                        </label>
+
+                        <label class="visually-hidden">
+                            <input type="hidden" name="form_text_91" class="js-product-name" value="">
+                        </label>
+
+
+                        <div class="mx-auto feedback__form-check">
+                            <label class="form-check-label d-flex align-items-center">
+                                <input type="checkbox" name="consent" role="button" class="form-check-input me-2"
+                                    required>
+                                <? $APPLICATION->IncludeFile($APPLICATION->GetTemplatePath(SITE_DIR . "include/area/snack_form_agreement_text.php"), array(), array("MODE" => "html")); ?>
+                            </label>
+                        </div>
+                        <button type="submit" class="button button--dark feedback__form-button">Отправить
+                            запрос</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- узнать стоимость разработки СТМ -->
+    <div class="modal fade" id="checkCTMPrice" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h1 class="modal-title typography-h2">Узнать стоимость разработки СТМ</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
