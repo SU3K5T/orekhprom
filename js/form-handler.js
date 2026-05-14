@@ -8,16 +8,20 @@ const modals = [createOrderModal, getPriceModal];
 
 document.querySelectorAll('.js-form-create-order').forEach(el => {
     el.addEventListener('click', (e) => {
+        e.preventDefault();
+
         if (e.target.dataset.productName) {
             const modalForm = createOrderModal._element.querySelector('form');
-            modalForm.elements['product_name'].value = e.target.dataset.productName
+            modalForm.querySelector('.js-product-name').value = e.target.dataset.productName
         }
         createOrderModal.show();
     });
 });
 
 document.querySelectorAll('.js-form-get-price').forEach(el => {
-    el.addEventListener('click', () => {
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
+        
         getPriceModal.show();
     });
 });
@@ -38,7 +42,12 @@ document.querySelectorAll('input[imask-phone]').forEach(input => {
 });
 
 document.addEventListener('submit', async (e) => {
+    const form = e.target.closest('.js-ajax-from');
+
+    if (!form) return;
+
     e.preventDefault();
+
     grecaptcha.ready(function () {
         grecaptcha.execute('6LdAs4QpAAAAAB5e4Ceu1gmtK5xrRTsFyDR4K1n_', {
             action: 'submit'
@@ -46,11 +55,6 @@ document.addEventListener('submit', async (e) => {
 
             let recaptcha_response = e.target.querySelector('input[name="recaptcha_response"]');
             recaptcha_response.value = token;
-
-            const form = e.target.closest('.js-ajax-from');
-
-            if (!form) return;
-
 
             if (form.classList.contains('loading')) {
                 return;
