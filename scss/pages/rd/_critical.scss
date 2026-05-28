@@ -1,0 +1,77 @@
+.page-rd-critical {
+  overflow: hidden;
+  .container {
+    max-width: 1165px;
+  }
+
+  &__title {
+    @include typography("Musticapro", normal, 600, 72px, 85%);
+    letter-spacing: -5%;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 42px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 32px;
+      line-height: 110%;
+    }
+  }
+
+  &__text {
+    @include typography("Inter", normal, 400, 17px, 120%);
+    letter-spacing: -0.85%;
+
+    max-width: 511px;
+    margin-top: 30px;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 24px;
+    }
+  }
+
+  &__list {
+    margin-top: 100px;
+
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 40px;
+      flex-wrap: nowrap;
+      gap: 0;
+    }
+  }
+
+  &__item {
+    width: calc(33.33% - 15px);
+    height: 328px;
+    background-color: #fff;
+    padding: 32px 28px;
+    padding-top: 52px;
+
+    &:first-child {
+      background-color: $color-dark;
+      color: #fff;
+      padding-top: 25px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      width: 338px;
+    }
+
+    &-img {
+      width: 60px;
+      height: 60px;
+      margin-left: 30px;
+    }
+
+    &-text {
+      @include typography("Musticapro", normal, 600, 32px, 110%);
+      margin-top: 20px;
+    }
+
+  }
+}

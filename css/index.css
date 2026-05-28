@@ -9408,3 +9408,270 @@ input[type=checkbox]:checked::after {
     letter-spacing: -0.4%;
   }
 }
+
+.page-rd-hero {
+  margin-top: 60px;
+  overflow: hidden;
+}
+.page-rd-hero__line-1, .page-rd-hero__line-2 {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 170px;
+  line-height: 85%;
+  letter-spacing: -5%;
+  margin-left: -5px;
+}
+@media (max-width: 1199.98px) {
+  .page-rd-hero__line-1, .page-rd-hero__line-2 {
+    font-size: 140px;
+  }
+}
+@media (max-width: 991.98px) {
+  .page-rd-hero__line-1, .page-rd-hero__line-2 {
+    font-size: 100px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-rd-hero__line-1, .page-rd-hero__line-2 {
+    font-size: 52px;
+    line-height: 100%;
+    letter-spacing: 0.85%;
+  }
+}
+.page-rd-hero__text-inline {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.4%;
+  margin-top: 45px;
+  margin-left: 20px;
+}
+@media (max-width: 1199.98px) {
+  .page-rd-hero__text-inline {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 991.98px) {
+  .page-rd-hero__text-inline {
+    margin-left: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-rd-hero__text-inline {
+    font-family: "Geologica";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: -5%;
+    margin-top: 24px;
+  }
+}
+.page-rd-hero__bottom-inner {
+  margin-top: 23px;
+  border-top: 1px solid rgba(31, 32, 34, 0.1019607843);
+}
+@media (max-width: 767.98px) {
+  .page-rd-hero__bottom-inner {
+    margin-top: 43px;
+  }
+}
+.page-rd-hero__bottom-text-block {
+  padding-top: 96px;
+  max-width: 617px;
+}
+@media (max-width: 1199.98px) {
+  .page-rd-hero__bottom-text-block {
+    padding-top: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-rd-hero__bottom-text-block {
+    padding-top: 56px;
+    max-width: 327px;
+  }
+}
+.page-rd-hero__bottom-text--bold {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: -5%;
+}
+@media (max-width: 767.98px) {
+  .page-rd-hero__bottom-text--bold {
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: -0.4%;
+  }
+}
+.page-rd-hero__bottom-text--regular {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 120%;
+  letter-spacing: -0.85%;
+  max-width: 542px;
+  margin-top: 20px;
+}
+@media (max-width: 991.98px) {
+  .page-rd-hero__bottom-text--regular {
+    margin-top: 24px;
+    font-family: "Geologica";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: -5%;
+  }
+}
+.page-rd-hero__bottom-image-block {
+  margin-left: 20px;
+  width: 447px;
+  height: 353px;
+}
+@media (max-width: 767.98px) {
+  .page-rd-hero__bottom-image-block {
+    margin-left: 0;
+  }
+}
+.page-rd-hero__bottom-image {
+  height: 100%;
+  object-fit: cover;
+}
+.page-rd-hero__button {
+  margin-top: -30px;
+  width: 225px;
+  height: 60px;
+  text-transform: uppercase;
+}
+.page-rd-hero__button--light {
+  background-color: #F7F7F7;
+}
+.page-rd-hero__button {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+}
+@media (max-width: 991.98px) {
+  .page-rd-hero__button {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .page-rd-hero__button {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 991.98px) {
+  .page-rd-hero__button {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-rd-hero__button {
+    width: 100%;
+    height: 48px;
+  }
+}
+
+.page-rd-critical {
+  overflow: hidden;
+}
+.page-rd-critical .container {
+  max-width: 1165px;
+}
+.page-rd-critical__title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 85%;
+  letter-spacing: -5%;
+}
+@media (max-width: 991.98px) {
+  .page-rd-critical__title {
+    font-size: 42px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-rd-critical__title {
+    font-size: 32px;
+    line-height: 110%;
+  }
+}
+.page-rd-critical__text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 120%;
+  letter-spacing: -0.85%;
+  max-width: 511px;
+  margin-top: 30px;
+}
+@media (max-width: 767.98px) {
+  .page-rd-critical__text {
+    margin-top: 24px;
+  }
+}
+.page-rd-critical__list {
+  margin-top: 100px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 991.98px) {
+  .page-rd-critical__list {
+    margin-top: 40px;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+}
+.page-rd-critical__item {
+  width: calc(33.33% - 15px);
+  height: 328px;
+  background-color: #fff;
+  padding: 32px 28px;
+  padding-top: 52px;
+}
+.page-rd-critical__item:first-child {
+  background-color: #1F2022;
+  color: #fff;
+  padding-top: 25px;
+}
+@media (max-width: 991.98px) {
+  .page-rd-critical__item {
+    width: 338px;
+  }
+}
+.page-rd-critical__item-img {
+  width: 60px;
+  height: 60px;
+  margin-left: 30px;
+}
+.page-rd-critical__item-text {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 110%;
+  margin-top: 20px;
+}
