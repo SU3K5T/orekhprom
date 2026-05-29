@@ -1,7 +1,7 @@
-class CriticalSlider {
+class RDReasonsSlider {
   constructor({ target }) {
     this.target = target;
-    this.slider = target.querySelector('.js-page-rd-critical-slider');
+    this.slider = target.querySelector('.js-page-rd-reasons-slider');
     this.init();
   }
 
@@ -27,7 +27,7 @@ class CriticalSlider {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.js-critical-section').forEach((target) => {
-    new CriticalSlider({ target })
+  document.querySelectorAll('.js-page-rd-reasons-section').forEach((target) => {
+    new RDReasonsSlider({ target })
   })
 });

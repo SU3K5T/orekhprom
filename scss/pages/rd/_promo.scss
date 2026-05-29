@@ -1,0 +1,79 @@
+.page-rd-promo {
+    padding: 100px 0 120px 0;
+
+    &__static {
+        padding-top: 48px;
+        margin-left: -10px;
+
+        &-text {
+            @include typography("Musticapro", normal, 600, 32px, 110%);
+            letter-spacing: 1.1%;
+        }
+
+        &-subtext {
+            margin-top: 20px;
+            @include typography("Inter", normal, 600, 17px, 120%);
+            letter-spacing: -0.85%;
+        }
+    }
+
+    &__interact {
+        display: flex;
+        flex-direction: column;
+
+        &-static-block {
+            max-width: 381px;
+            margin-top: 39px;
+            @include typography("Musticapro", normal, 600, 20px, 120%);
+            letter-spacing: -0.4%;
+        }
+
+        &-list {
+            height: 382px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        &-item {
+            position: relative;
+            transition: transform 0.9s ease-in-out, font-size 0.3s ease-in-out, color 0.2s ease-in-out;
+
+            margin-top: 40px;
+
+            &-label {
+                display: block;
+                @include typography("Inter", normal, 600, 17px, 120%);
+                letter-spacing: -0.85%;
+                color: #D4D4D4;
+                margin-bottom: 7px;
+            }
+
+            &-text {
+                @include typography("Geologica", normal, 600, 16px, 120%);
+                letter-spacing: -0.32%;
+                color: #D4D4D4;
+                max-width: 302px;
+                margin-left: 10px;
+            }
+
+            &.active {
+                margin-top: 0;
+            }
+
+            &.active &-label {
+                color: black;
+            }
+
+            &.active &-text {
+                color: black;
+                font-size: 72px;
+                line-height: 85%;
+                letter-spacing: -5%;
+                max-width: none;
+            }
+
+        }
+
+
+    }
+}

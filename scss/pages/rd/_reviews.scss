@@ -1,0 +1,103 @@
+.page-rd-reviews {
+    padding-top: 140px;
+    padding-bottom: 120px;
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+
+    @include media-breakpoint-down(md) {
+        background-image: url('../img/rd/rd-reasons-bg.png');
+        background-repeat: no-repeatd;
+    }
+
+    &__header {
+        text-align: end;
+        margin-bottom: 79px;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 60px;
+        }
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 46px;
+        }
+    }
+
+    &__title {
+        @include typography("Musticapro", normal, 600, 72px, 85%);
+        letter-spacing: -5%;
+
+        @include media-breakpoint-down(md) {
+            font-size: 32px;
+            line-height: 110%;
+            letter-spacing: -0.85%;
+        }
+    }
+
+    &__text {
+        @include typography("Inter", normal, 400, 17px, 120%);
+        letter-spacing: -0.85%;
+        margin-top: 30px;
+
+        @include media-breakpoint-down(md) {
+            margin-top: 16px; 
+            max-width: 291px;  
+            margin-left: auto;
+        }
+    }
+
+
+    &__slide {
+        height: 280px;
+        width: 711px;
+        background-color: #fff;
+        padding: 40px;
+        position: relative;
+
+        @include media-breakpoint-down(lg) {
+            width: 605px;
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 330px;
+            height: 150px;
+            padding: 30px;
+        }
+
+        &-text {
+            @include typography("Musticapro", normal, 600, 32px, 110%);
+            letter-spacing: 1.1%;
+
+            @include media-breakpoint-down(lg) {
+                font-size: 26px;
+            }
+
+            @include media-breakpoint-down(lg) {
+                font-size: 16px;
+                line-height: 120%;
+                letter-spacing: -5%;
+                position: relative;
+                z-index: 2;
+            }
+        }
+
+        &-img {
+            position: absolute;
+            bottom: -10px;
+            right: 76px;
+            width: 157px;
+            height: 126px;
+
+            @include media-breakpoint-down(md) {
+                right: -14px;
+            }
+        }
+    }
+
+    .swiper-wrapper {
+        transition-timing-function: linear !important;
+        pointer-events: none;
+    }
+}
