@@ -9956,9 +9956,29 @@ input[type=checkbox]:checked::after {
 .page-rd-promo {
   padding: 100px 0 120px 0;
 }
+@media (max-width: 991.98px) {
+  .page-rd-promo {
+    padding: 40px 0 80px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-rd-promo {
+    padding-top: 56px;
+  }
+}
 .page-rd-promo__static {
   padding-top: 48px;
   margin-left: -10px;
+}
+@media (max-width: 991.98px) {
+  .page-rd-promo__static {
+    margin-left: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-rd-promo__static {
+    padding-top: 0;
+  }
 }
 .page-rd-promo__static-text {
   font-family: "Musticapro";
@@ -9967,6 +9987,13 @@ input[type=checkbox]:checked::after {
   font-size: 32px;
   line-height: 110%;
   letter-spacing: 1.1%;
+}
+@media (max-width: 767.98px) {
+  .page-rd-promo__static-text {
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: -0.4%;
+  }
 }
 .page-rd-promo__static-subtext {
   margin-top: 20px;
@@ -9977,9 +10004,32 @@ input[type=checkbox]:checked::after {
   line-height: 120%;
   letter-spacing: -0.85%;
 }
+@media (max-width: 767.98px) {
+  .page-rd-promo__static-subtext {
+    font-family: "Geologica";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: -5%;
+  }
+}
 .page-rd-promo__interact {
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 991.98px) {
+  .page-rd-promo__interact {
+    margin-top: 24px;
+  }
+}
+.page-rd-promo__interact .swiper {
+  height: 392px;
+}
+@media (max-width: 767.98px) {
+  .page-rd-promo__interact .swiper {
+    height: 333px;
+  }
 }
 .page-rd-promo__interact-static-block {
   max-width: 381px;
@@ -9991,48 +10041,75 @@ input[type=checkbox]:checked::after {
   line-height: 120%;
   letter-spacing: -0.4%;
 }
+@media (max-width: 767.98px) {
+  .page-rd-promo__interact-static-block {
+    line-height: 100%;
+    letter-spacing: -0.4%;
+    margin-top: 0;
+  }
+}
 .page-rd-promo__interact-list {
-  height: 382px;
-  overflow: hidden;
   position: relative;
 }
 .page-rd-promo__interact-item {
-  position: relative;
-  transition: transform 0.9s ease-in-out, font-size 0.3s ease-in-out, color 0.2s ease-in-out;
-  margin-top: 40px;
+  transition: margin 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease;
 }
 .page-rd-promo__interact-item-label {
   display: block;
   font-family: "Inter";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 17px;
   line-height: 120%;
   letter-spacing: -0.85%;
   color: #D4D4D4;
   margin-bottom: 7px;
+  transition: color 0.8s ease;
 }
 .page-rd-promo__interact-item-text {
-  font-family: "Geologica";
+  font-family: "Musticapro";
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 120%;
-  letter-spacing: -0.32%;
-  color: #D4D4D4;
-  max-width: 302px;
-  margin-left: 10px;
-}
-.page-rd-promo__interact-item.active {
-  margin-top: 0;
-}
-.page-rd-promo__interact-item.active .page-rd-promo__interact-item-label {
-  color: black;
-}
-.page-rd-promo__interact-item.active .page-rd-promo__interact-item-text {
-  color: black;
   font-size: 72px;
   line-height: 85%;
   letter-spacing: -5%;
+  color: #D4D4D4;
   max-width: none;
+  margin-left: 10px;
+  transform-origin: left top;
+  transform: scale(0.22);
+  transition: color 0.8s ease, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+@media (max-width: 767.98px) {
+  .page-rd-promo__interact-item-text {
+    font-size: 32px;
+    letter-spacing: -5%;
+    line-height: 110%;
+    transform: scale(0.62);
+  }
+}
+.page-rd-promo__interact-item.swiper-slide {
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.8s ease, opacity 0.8s ease, visibility 0.8s ease;
+}
+.page-rd-promo__interact-item.swiper-slide-active, .page-rd-promo__interact-item.swiper-slide-next {
+  opacity: 1;
+  visibility: visible;
+  height: max-content !important;
+}
+.page-rd-promo__interact-item.swiper-slide-active {
+  margin-top: 0;
+  transform: translateY(0);
+}
+.page-rd-promo__interact-item.swiper-slide-next {
+  margin-top: 40px;
+  transform: translateY(10px);
+}
+.page-rd-promo__interact-item.swiper-slide-active .page-rd-promo__interact-item-label {
+  color: black;
+}
+.page-rd-promo__interact-item.swiper-slide-active .page-rd-promo__interact-item-text {
+  color: black;
+  transform: scale(1);
 }

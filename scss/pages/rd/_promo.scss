@@ -1,19 +1,46 @@
 .page-rd-promo {
     padding: 100px 0 120px 0;
 
+    @include media-breakpoint-down(lg) {
+        padding: 40px 0 80px 0;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding-top: 56px;
+    }
+
     &__static {
         padding-top: 48px;
         margin-left: -10px;
 
+        @include media-breakpoint-down(lg) {
+            margin-left: 0;
+        }
+
+        @include media-breakpoint-down(md) {
+            padding-top: 0;
+        }
+
         &-text {
             @include typography("Musticapro", normal, 600, 32px, 110%);
             letter-spacing: 1.1%;
+
+            @include media-breakpoint-down(md) {
+                font-size: 20px;
+                line-height: 100%;
+                letter-spacing: -0.4%;
+            }
         }
 
         &-subtext {
             margin-top: 20px;
             @include typography("Inter", normal, 600, 17px, 120%);
             letter-spacing: -0.85%;
+
+            @include media-breakpoint-down(md) {
+                @include typography("Geologica", normal, 400, 15px, 100%);
+                letter-spacing: -5%;
+            }
         }
     }
 
@@ -21,57 +48,97 @@
         display: flex;
         flex-direction: column;
 
+        @include media-breakpoint-down(lg) {
+            margin-top: 24px;
+        }
+
+        .swiper {
+            height: 392px;
+
+            @include media-breakpoint-down(md) {
+                height: 333px;
+            }
+        }
+
         &-static-block {
             max-width: 381px;
             margin-top: 39px;
             @include typography("Musticapro", normal, 600, 20px, 120%);
             letter-spacing: -0.4%;
+
+            @include media-breakpoint-down(md) {
+                line-height: 100%;
+                letter-spacing: -0.4%;
+                margin-top: 0;
+            }
         }
 
         &-list {
-            height: 382px;
-            overflow: hidden;
             position: relative;
         }
 
         &-item {
-            position: relative;
-            transition: transform 0.9s ease-in-out, font-size 0.3s ease-in-out, color 0.2s ease-in-out;
-
-            margin-top: 40px;
+            transition: margin 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease;
 
             &-label {
                 display: block;
-                @include typography("Inter", normal, 600, 17px, 120%);
+                @include typography("Inter", normal, 400, 17px, 120%);
                 letter-spacing: -0.85%;
                 color: #D4D4D4;
                 margin-bottom: 7px;
+                transition: color 0.8s ease;
             }
 
             &-text {
-                @include typography("Geologica", normal, 600, 16px, 120%);
-                letter-spacing: -0.32%;
-                color: #D4D4D4;
-                max-width: 302px;
-                margin-left: 10px;
-            }
-
-            &.active {
-                margin-top: 0;
-            }
-
-            &.active &-label {
-                color: black;
-            }
-
-            &.active &-text {
-                color: black;
-                font-size: 72px;
-                line-height: 85%;
+                @include typography("Musticapro", normal, 600, 72px, 85%);
                 letter-spacing: -5%;
+                color: #D4D4D4;
                 max-width: none;
+                margin-left: 10px;
+                transform-origin: left top;
+                transform: scale(0.22);
+
+                transition: color 0.8s ease, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+
+                @include media-breakpoint-down(md) {
+                    font-size: 32px;
+                    letter-spacing: -5%;
+                    line-height: 110%;
+                    transform: scale(0.62);
+                }
             }
 
+            &.swiper-slide {
+                opacity: 0;
+                visibility: hidden;
+                transition: transform 0.8s ease, opacity 0.8s ease, visibility 0.8s ease;
+            }
+
+            &.swiper-slide-active,
+            &.swiper-slide-next {
+                opacity: 1;
+                visibility: visible;
+                height: max-content !important;
+            }
+
+            &.swiper-slide-active {
+                margin-top: 0;
+                transform: translateY(0);
+            }
+
+            &.swiper-slide-next {
+                margin-top: 40px;
+                transform: translateY(10px);
+            }
+
+            &.swiper-slide-active &-label {
+                color: black;
+            }
+
+            &.swiper-slide-active &-text {
+                color: black;
+                transform: scale(1);
+            }
         }
 
 
