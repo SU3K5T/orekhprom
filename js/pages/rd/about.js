@@ -7,7 +7,7 @@ class RDAbout {
     }
 
     init() {
-        const titleList = document.querySelectorAll('.page-rd-about__accordion-title-item');
+        const titleList = this.target.querySelectorAll('.page-rd-about__accordion-title-item');
         titleList.forEach(titleItem => {
             titleItem.addEventListener('mouseover', (e) => {
                 this.setActiveElement(e.target.closest("[data-title]"));
