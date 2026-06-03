@@ -16,6 +16,11 @@ class RDAbout {
     }
 
     setActiveElement(element) {
+
+        if (element.classList.contains('active')) {
+            return;
+        }
+
         const elementIndex = element.dataset.title;
 
         const newActiveTitleElement = this.target.querySelector(`[data-title="${elementIndex}"]`);
