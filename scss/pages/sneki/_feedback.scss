@@ -24,12 +24,26 @@
     }
 
     &__ctm {
-        background-image: url('../img/ctm/feedback-ctm-background.jpg');        
+        background-image: url('../img/ctm/feedback-ctm-background.jpg');
+    }
+
+    &__rd {
+        background-image: url('../img/rd/feedback-rd-background.jpg');
     }
 
 
     &__title {
         @include typography-accent-title;
+    }
+
+    &__subtext {
+        margin-top: 30px;
+        max-width: 565px;
+        @include typography("Inter", normal, 400, 17px, 120%);
+
+        @include media-breakpoint-down(md) {
+            margin-top: 16px;
+        }
     }
 
     &__form {

@@ -1,0 +1,81 @@
+.page-rd-further {
+    padding-top: 100px;
+
+    @include media-breakpoint-down(md) {
+        padding-top: 24px;
+    }
+
+    .container {
+        border-top: 1px solid #1F20221A;
+        border-bottom: 1px solid #1F20221A;
+    }
+
+    &__body {
+        max-width: 1165px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 37px 0 60px 0;
+
+        @include media-breakpoint-down(md) {
+            align-items: start;
+        }
+
+    }
+
+    &__title {
+        @include typography("Musticapro", normal, 600, 72px, 85%);
+        letter-spacing: -5%;
+        max-width: 335px;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 56px;
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: 32px;
+            line-height: 110%;
+            max-width: 166px;
+        }
+    }
+
+    &__list {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+
+        @include media-breakpoint-down(lg) {
+            flex-direction: column;
+            gap: 70px;
+        }
+    }
+
+    &__item {
+        @include typography("Musticapro", normal, 600, 20px, 120%);
+        letter-spacing: -0.4%;
+        width: 192px;
+        position: relative;
+
+        &:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: -30%;
+            top: 50%;
+            transform: translate(-100%, -50%);
+            background-image: url("../img/rd/arrow-right.svg");
+            width: 22px;
+            height: 22px;
+
+            @include media-breakpoint-down(lg) {
+                left: 0;
+                top: 150%;
+                transform: rotate(90deg);
+            }
+        }
+
+        &:first-child::after {
+            right: -40%;
+        }
+    }
+}
