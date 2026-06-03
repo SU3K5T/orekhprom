@@ -28,7 +28,33 @@
     }
 
     &__rd {
+        padding-bottom: 198px;
+        background-size: 38% auto;
         background-image: url('../img/rd/feedback-rd-background.jpg');
+
+        @include media-breakpoint-down(xxl) {
+            background-size: auto 100%;
+        }
+
+        @include media-breakpoint-down(lg) {
+            padding-bottom: 100px;
+            background-color: rgba(255, 255, 255, .75);
+            background-blend-mode: overlay;
+        }
+
+        @include media-breakpoint-down(md) {
+            padding-bottom: 56px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            display: flex;
+            align-items: end;
+            height: 1096px;
+            background-size: 282px 451px;
+            background-position: top right;
+            background-color: unset;
+            background-blend-mode: unset;
+        }
     }
 
 

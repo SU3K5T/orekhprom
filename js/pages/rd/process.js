@@ -12,6 +12,14 @@ class ProcessPicker {
                 this.moveNumber(e.target);
             })
         });
+        window.addEventListener('resize', () => {
+            this.updateUI();
+        })
+    }
+
+    updateUI() {
+        this._moveNumberBackward(this.target.querySelector('[data-number="0"]'));
+        this.setLast();
     }
 
     setLast() {
