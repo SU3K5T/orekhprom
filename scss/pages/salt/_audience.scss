@@ -12,9 +12,6 @@
       @include typography("Musticapro", normal, 600, 32px, 110%);
       letter-spacing: 0.01em;
 
-      // @include media-breakpoint-down(md) {
-      //   font-size: 24px;
-      // }
     }
 
     &-subtext {
@@ -36,9 +33,6 @@
     .swiper {
       height: 220px;
 
-      // @include media-breakpoint-down(md) {
-      //   height: 150px;
-      // }
     }
 
     &-list {
@@ -59,8 +53,7 @@
 
       &-text {
         @include typography("Musticapro", normal, 600, 44px, 90%);
-        // плавное масштабирование вместо скачков по брейкпоинтам:
-        // на ширинах ~730–1470px размер идёт по vw, за их пределами — фиксируется на min/max
+
         font-size: clamp(32px, 3vw, 64px);
         letter-spacing: -0.03em;
         color: rgba($color-dark, 0.35);

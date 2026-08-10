@@ -10,7 +10,6 @@ main {
     padding-top: 64px;
   }
 
-
   &__decor {
     position: absolute;
     inset: 0;
@@ -27,19 +26,19 @@ main {
     position: absolute;
     max-width: none;
     height: auto;
-    
+
     &--1 {
       left: 450px;
       width: 14%;
       top: -150px;
     }
-    
+
     &--2 {
       right: 0;
       top: -230px;
       width: 10%;
     }
-    
+
     &--3 {
       z-index: 20;
       right: 283px;
@@ -80,7 +79,7 @@ main {
   }
 
   &__list-inner {
-    
+
     @include media-breakpoint-up(xl) {
       display: grid;
       grid-template-columns: repeat(4, 1fr);

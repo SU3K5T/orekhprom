@@ -20,7 +20,6 @@
     }
   }
 
-
   &__accordion-item {
     background-color: transparent !important;
     border: none !important;
@@ -44,10 +43,10 @@
 
   &__accordion-button {
     display: flex;
-    align-items: stretch; // toggle-блок растягивается по фактической высоте кнопки сам, без хаков
+    align-items: stretch;
     width: 100%;
     min-height: 100px;
-    padding: 0; // паддинг переносим внутрь __accordion-main, чтобы toggle оставался "голым" на всю высоту
+    padding: 0;
     background-color: transparent !important;
     box-shadow: none !important;
     color: $color-dark;

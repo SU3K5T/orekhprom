@@ -1,6 +1,6 @@
 class AudienceScrollTrigger {
   constructor({ trigger }) {
-    this.itemsCount = 6; // реальных пунктов в списке (без служебного пустого слайда)
+    this.itemsCount = 6;
     this.currentIdx = 0;
     this.trigger = trigger;
     this.slider = this.trigger.querySelector('.swiper');
@@ -38,11 +38,6 @@ class AudienceScrollTrigger {
         end: `+=${this.itemsCount * 650}`,
         pin: true,
         scrub: true,
-        // секция "Честный вкус/линейка" (showcase) выше по документу и тоже
-        // запинена — без refreshPriority оба ScrollTrigger'а могут посчитать
-        // свои start/end до того, как пин-спейсер соседа встанет на место,
-        // и в итоге наедут друг на друга. refreshPriority ниже, чем у
-        // showcase, гарантирует, что showcase пересчитается первым (сверху вниз)
         refreshPriority: 0,
         onUpdate: ({ progress }) => {
           const targetIdx = Math.floor(progress * this.itemsCount);
@@ -64,10 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const trigger = document.querySelector('.js-scroll-trigger-audience');
   new AudienceScrollTrigger({ trigger });
 
-  // GSAP считает старт/конец пина по высоте документа в момент инициализации.
-  // Если после этого догружаются шрифты или картинки (а на этой странице их много),
-  // высота страницы "уезжает", и запинненная секция начинает наезжать на следующую.
-  // Пересчитываем разметку, когда всё реально готово.
   const refresh = () => ScrollTrigger.refresh();
 
   if (document.fonts && document.fonts.ready) {

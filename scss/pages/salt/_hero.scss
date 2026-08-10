@@ -29,9 +29,6 @@
     display: flex;
     flex-direction: column;
 
-    // на мобилке заголовок и лид-блок уже не делят одну строку grid'а с фото —
-    // они просто идут друг за другом, поэтому padding-top тут дублирует
-    // margin-bottom заголовка и создает двойной отступ; убираем его
     @include media-breakpoint-down(lg) {
       padding-top: 0;
     }
