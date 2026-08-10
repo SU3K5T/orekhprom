@@ -7516,11 +7516,13 @@ input[type=checkbox]:checked::after {
 @media (max-width: 1399.98px) {
   .feedback__salt {
     background-size: auto 100%;
+    padding-bottom: 100px;
   }
 }
 @media (max-width: 575.98px) {
   .feedback__salt {
     background-size: 282px 451px;
+    padding-bottom: 0;
   }
 }
 .feedback__rd {
