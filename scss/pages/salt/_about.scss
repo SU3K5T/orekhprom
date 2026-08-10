@@ -1,0 +1,102 @@
+.page-salt-about {
+  padding-top: 80px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 40px;
+  }
+
+  &__body {
+    border-top: 1px solid #1F20221A;
+  }
+
+  &__photo {
+    aspect-ratio: 333 / 652;
+    max-height: 652px;
+    background-color: rgba($color-dark, 0.05);
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+    }
+
+    @include media-breakpoint-down(lg) {
+      max-width: 260px;
+      margin: 0;
+      margin-left: auto;
+      margin-right: calc(var(--bs-gutter-x) * -0.5);
+    }
+  }
+
+  &__brand {
+    display: block;
+    width: 100%;
+    margin-bottom: 37px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__text {
+    @include typography("Musticapro", normal, 600, 52px, 100%);
+    letter-spacing: 0.01em;
+    margin-bottom: 40px;
+    padding-top: 31px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 32px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-top: 10px;
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__caption {
+    @include typography("Musticapro", normal, 600, 32px, 110%);
+    letter-spacing: 0.01em;
+    margin-top: auto;
+    margin-bottom: 23px;
+  }
+
+  &__cards-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      gap: 0;
+    }
+  }
+
+  &__card {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    gap: 24px;
+    height: 100%;
+    min-height: 164px;
+    padding: 32px 28px;
+    background-color: $color-light;
+
+    @include media-breakpoint-down(lg) {
+      width: 338px;
+    }
+
+    p {
+      @include typography("Inter", normal, 400, 17px, 120%);
+      letter-spacing: -0.01em;
+      margin-bottom: 0;
+    }
+
+    &-icon {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

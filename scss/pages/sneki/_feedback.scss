@@ -27,6 +27,20 @@
         background-image: url('../img/ctm/feedback-ctm-background.jpg');
     }
 
+    &__salt {
+        padding-bottom: 138px;
+        background-size: 38% auto;
+        background-image: url('../img/salt/salt-form.jpg');
+
+        @include media-breakpoint-down(xxl) {
+            background-size: auto 100%;
+        }
+
+        @include media-breakpoint-down(sm) {
+            background-size: 282px 451px;
+        }
+    }
+
     &__rd {
         padding-bottom: 198px;
         background-size: 38% auto;

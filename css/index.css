@@ -7508,6 +7508,21 @@ input[type=checkbox]:checked::after {
 .feedback__ctm {
   background-image: url("../img/ctm/feedback-ctm-background.jpg");
 }
+.feedback__salt {
+  padding-bottom: 138px;
+  background-size: 38% auto;
+  background-image: url("../img/salt/salt-form.jpg");
+}
+@media (max-width: 1399.98px) {
+  .feedback__salt {
+    background-size: auto 100%;
+  }
+}
+@media (max-width: 575.98px) {
+  .feedback__salt {
+    background-size: 282px 451px;
+  }
+}
 .feedback__rd {
   padding-bottom: 198px;
   background-size: 38% auto;
@@ -8568,7 +8583,7 @@ input[type=checkbox]:checked::after {
 .page-ctm-trust__slide::after {
   content: "";
   position: absolute;
-  background-image: url("../../../img/ctm/trust/comma.svg");
+  background-image: url("../img/ctm/trust/comma.svg");
   background-repeat: no-repeat;
   bottom: -10px;
   right: 77px;
@@ -10667,4 +10682,1105 @@ input[type=checkbox]:checked::after {
 }
 .page-rd-further__item:first-child::after {
   right: -40%;
+}
+
+.page-salt-hero {
+  margin-top: 60px;
+  overflow: hidden;
+}
+.page-salt-hero__title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 85%;
+  letter-spacing: -0.05em;
+  margin-bottom: 60px;
+}
+@media (max-width: 1199.98px) {
+  .page-salt-hero__title {
+    font-size: 56px;
+  }
+}
+@media (max-width: 991.98px) {
+  .page-salt-hero__title {
+    font-size: 40px;
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-salt-hero__title {
+    font-size: 32px;
+    line-height: 100%;
+    margin-bottom: 24px;
+  }
+}
+.page-salt-hero__lead {
+  height: 100%;
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 991.98px) {
+  .page-salt-hero__lead {
+    padding-top: 0;
+  }
+}
+.page-salt-hero__lead-title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.01em;
+  margin-bottom: 30px;
+}
+@media (max-width: 767.98px) {
+  .page-salt-hero__lead-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+.page-salt-hero__lead-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  margin-bottom: 0;
+}
+@media (max-width: 767.98px) {
+  .page-salt-hero__lead-text {
+    font-family: "Geologica";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 120%;
+  }
+}
+.page-salt-hero__button {
+  margin-top: auto;
+  width: 100%;
+  max-width: 572px;
+  height: 60px;
+  text-transform: uppercase;
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+}
+@media (max-width: 991.98px) {
+  .page-salt-hero__button {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .page-salt-hero__button {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.page-salt-hero__button {
+  position: relative;
+  z-index: 20;
+}
+@media (max-width: 991.98px) {
+  .page-salt-hero__button {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-salt-hero__button {
+    height: 48px;
+    max-width: none;
+  }
+}
+.page-salt-hero__photo {
+  width: 453px;
+  height: 413px;
+  aspect-ratio: 453/413;
+  background-color: rgba(31, 32, 34, 0.05);
+  position: relative;
+}
+.page-salt-hero__photo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: calc(100% + 24px);
+  width: 100vw;
+  height: 1px;
+  background-color: rgba(31, 32, 34, 0.1);
+}
+@media (max-width: 991.98px) {
+  .page-salt-hero__photo::before {
+    display: none;
+  }
+}
+.page-salt-hero__photo img {
+  object-fit: cover;
+}
+@media (max-width: 991.98px) {
+  .page-salt-hero__photo {
+    margin-top: 40px;
+    max-width: 453px;
+  }
+}
+
+main {
+  overflow: hidden;
+}
+
+.page-salt-honest {
+  position: relative;
+  padding-top: 120px;
+}
+@media (max-width: 767.98px) {
+  .page-salt-honest {
+    padding-top: 64px;
+  }
+}
+.page-salt-honest__decor {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  pointer-events: none;
+  overflow: visible;
+}
+@media (max-width: 991.98px) {
+  .page-salt-honest__decor {
+    display: none;
+  }
+}
+.page-salt-honest__decor-item {
+  position: absolute;
+  max-width: none;
+  height: auto;
+}
+.page-salt-honest__decor-item--1 {
+  left: 450px;
+  width: 14%;
+  top: -150px;
+}
+.page-salt-honest__decor-item--2 {
+  right: 0;
+  top: -230px;
+  width: 10%;
+}
+.page-salt-honest__decor-item--3 {
+  z-index: 20;
+  right: 283px;
+  top: -100px;
+  width: 500px;
+}
+.page-salt-honest__decor-item--4 {
+  left: 0;
+  width: 18%;
+  top: -300px;
+}
+.page-salt-honest__decor-item--5 {
+  width: 245px;
+  height: 227px;
+  right: -40px;
+  top: 100px;
+  object-fit: contain;
+}
+.page-salt-honest__title {
+  position: relative;
+  z-index: 20;
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 85%;
+  letter-spacing: -0.05em;
+  margin-bottom: 60px;
+}
+@media (max-width: 991.98px) {
+  .page-salt-honest__title {
+    font-size: 44px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-salt-honest__title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-salt-honest__list-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+.page-salt-honest__card {
+  background-color: #fff;
+  padding: 28px;
+  padding-right: 22px;
+  height: 100%;
+  height: 328px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+  width: 335px;
+}
+@media (min-width: 1200px) {
+  .page-salt-honest__card {
+    width: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-salt-honest__card {
+    padding: 20px;
+    gap: 16px;
+    width: 280px;
+  }
+}
+.page-salt-honest__card-index {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: #1F2022;
+}
+.page-salt-honest__card-title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.01em;
+}
+@media (max-width: 991.98px) {
+  .page-salt-honest__card-title {
+    font-size: 24px;
+  }
+}
+.page-salt-honest__card-text {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.page-salt-showcase {
+  padding-top: 120px;
+}
+@media (max-width: 767.98px) {
+  .page-salt-showcase {
+    padding-top: 64px;
+  }
+}
+.page-salt-showcase__title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 85%;
+  letter-spacing: -0.05em;
+  margin-bottom: 109px;
+}
+@media (max-width: 991.98px) {
+  .page-salt-showcase__title {
+    font-size: 44px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-salt-showcase__title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}
+.page-salt-showcase__slider {
+  position: relative;
+}
+@media (max-width: 1199.98px) {
+  .page-salt-showcase__slider {
+    height: 600px;
+  }
+}
+@media (max-width: 991.98px) {
+  .page-salt-showcase__slider {
+    height: auto;
+  }
+}
+.page-salt-showcase__panel {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  height: auto;
+  min-height: 100%;
+  background-color: #F7F7F7;
+  color: #1F2022;
+}
+@media (min-width: 992px) {
+  .page-salt-showcase__panel {
+    padding-left: 150px;
+    padding-bottom: 32px;
+  }
+}
+@media (max-width: 991.98px) {
+  .page-salt-showcase__panel {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px 20px 32px;
+    gap: 24px;
+  }
+}
+.page-salt-showcase__gallery {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+.page-salt-showcase__photo-main {
+  width: 526px;
+  aspect-ratio: 526/344;
+  object-fit: cover;
+  background-color: rgba(31, 32, 34, 0.05);
+}
+@media (max-width: 991.98px) {
+  .page-salt-showcase__photo-main {
+    width: 100%;
+  }
+}
+.page-salt-showcase__photo-small {
+  position: absolute;
+  left: -142px;
+  bottom: -32px;
+  width: 174px;
+  aspect-ratio: 174/235;
+  object-fit: cover;
+  background-color: #fff;
+}
+@media (max-width: 991.98px) {
+  .page-salt-showcase__photo-small {
+    width: 89px;
+    left: -10px;
+    bottom: -16px;
+  }
+}
+.page-salt-showcase__info {
+  margin-top: 40px;
+  width: 454px;
+}
+@media (min-width: 992px) {
+  .page-salt-showcase__info {
+    margin-top: 0;
+  }
+}
+@media (max-width: 991.98px) {
+  .page-salt-showcase__info {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+.page-salt-showcase__info-title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.01em;
+  flex: 1 0 0;
+}
+@media (max-width: 991.98px) {
+  .page-salt-showcase__info-title {
+    font-size: 24px;
+  }
+}
+.page-salt-showcase__info-text {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  margin-top: 26px;
+}
+.page-salt-showcase__weight {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 100px;
+  background-color: rgba(31, 32, 34, 0.1);
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+}
+.page-salt-showcase__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.page-salt-showcase__tag {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  background-color: #fff;
+  border-radius: 100px;
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+}
+
+.page-salt-composition {
+  padding-top: 120px;
+}
+@media (max-width: 767.98px) {
+  .page-salt-composition {
+    padding-top: 64px;
+  }
+}
+.page-salt-composition__title {
+  position: relative;
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 85%;
+  letter-spacing: -0.05em;
+  max-width: 460px;
+}
+.page-salt-composition__title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: calc(100% + 20px);
+  width: 100vw;
+  height: 1px;
+  background-color: rgba(31, 32, 34, 0.1);
+}
+@media (max-width: 991.98px) {
+  .page-salt-composition__title::before {
+    display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .page-salt-composition__title {
+    font-size: 44px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-salt-composition__title {
+    font-size: 32px;
+  }
+}
+.page-salt-composition__row2 {
+  margin-top: 8px;
+}
+@media (max-width: 767.98px) {
+  .page-salt-composition__row2 {
+    margin-top: 12px;
+  }
+}
+.page-salt-composition__subtitle {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.01em;
+  margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .page-salt-composition__subtitle {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-salt-composition__subtitle {
+    font-size: 20px;
+  }
+}
+.page-salt-composition__text {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .page-salt-composition__text {
+    margin-top: 0;
+  }
+}
+
+.page-salt-audience {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+@media (max-width: 767.98px) {
+  .page-salt-audience {
+    padding-top: 64px;
+    padding-bottom: 40px;
+  }
+}
+.page-salt-audience__static-text {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.01em;
+}
+.page-salt-audience__static-subtext {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  margin-top: 20px;
+}
+.page-salt-audience__interact {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+@media (min-width: 992px) {
+  .page-salt-audience__interact {
+    margin-top: 0;
+  }
+}
+.page-salt-audience__interact .swiper {
+  height: 220px;
+}
+.page-salt-audience__interact-list {
+  position: relative;
+}
+.page-salt-audience__interact-item {
+  transition: margin 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease;
+}
+.page-salt-audience__interact-item-label {
+  display: block;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: rgba(31, 32, 34, 0.35);
+  margin-bottom: 4px;
+  transition: color 0.8s ease;
+}
+.page-salt-audience__interact-item-text {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 90%;
+  font-size: clamp(32px, 3vw, 64px);
+  letter-spacing: -0.03em;
+  color: rgba(31, 32, 34, 0.35);
+  max-width: none;
+  transform-origin: left top;
+  transform: scale(0.55);
+  transition: color 0.8s ease, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.page-salt-audience__interact-item.swiper-slide {
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.8s ease, opacity 0.8s ease, visibility 0.8s ease;
+}
+.page-salt-audience__interact-item.swiper-slide-active, .page-salt-audience__interact-item.swiper-slide-next {
+  opacity: 1;
+  visibility: visible;
+  height: max-content !important;
+}
+.page-salt-audience__interact-item.swiper-slide-active {
+  margin-top: 0;
+  transform: translateY(0);
+}
+.page-salt-audience__interact-item.swiper-slide-next {
+  margin-top: 24px;
+  transform: translateY(10px);
+}
+.page-salt-audience__interact-item.swiper-slide-active .page-salt-audience__interact-item-label {
+  color: #1F2022;
+}
+.page-salt-audience__interact-item.swiper-slide-active .page-salt-audience__interact-item-text {
+  color: #1F2022;
+  transform: scale(1);
+}
+
+.page-salt-about {
+  padding-top: 80px;
+}
+@media (max-width: 767.98px) {
+  .page-salt-about {
+    padding-top: 40px;
+  }
+}
+.page-salt-about__body {
+  border-top: 1px solid rgba(31, 32, 34, 0.1019607843);
+}
+.page-salt-about__photo {
+  aspect-ratio: 333/652;
+  max-height: 652px;
+  background-color: rgba(31, 32, 34, 0.05);
+  overflow: hidden;
+}
+.page-salt-about__photo img {
+  object-fit: cover;
+}
+@media (max-width: 991.98px) {
+  .page-salt-about__photo {
+    max-width: 260px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: calc(var(--bs-gutter-x) * -0.5);
+  }
+}
+.page-salt-about__brand {
+  display: block;
+  width: 100%;
+  margin-bottom: 37px;
+}
+.page-salt-about__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.page-salt-about__text {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  margin-bottom: 40px;
+  padding-top: 31px;
+}
+@media (max-width: 991.98px) {
+  .page-salt-about__text {
+    font-size: 32px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-salt-about__text {
+    padding-top: 10px;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
+.page-salt-about__caption {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.01em;
+  margin-top: auto;
+  margin-bottom: 23px;
+}
+.page-salt-about__cards-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+@media (max-width: 991.98px) {
+  .page-salt-about__cards-list {
+    display: flex;
+    gap: 0;
+  }
+}
+.page-salt-about__card {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  align-items: center;
+  gap: 24px;
+  height: 100%;
+  min-height: 164px;
+  padding: 32px 28px;
+  background-color: #fff;
+}
+@media (max-width: 991.98px) {
+  .page-salt-about__card {
+    width: 338px;
+  }
+}
+.page-salt-about__card p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  margin-bottom: 0;
+}
+.page-salt-about__card-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.page-salt-benefits {
+  padding-top: 120px;
+}
+@media (max-width: 767.98px) {
+  .page-salt-benefits {
+    padding-top: 64px;
+  }
+}
+.page-salt-benefits__title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 85%;
+  letter-spacing: -0.05em;
+  margin-bottom: 80px;
+}
+@media (max-width: 991.98px) {
+  .page-salt-benefits__title {
+    font-size: 40px;
+    text-align: left !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-salt-benefits__title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+}
+.page-salt-benefits__list {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 991.98px) {
+  .page-salt-benefits__list {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-salt-benefits__list {
+    flex-direction: column;
+  }
+}
+.page-salt-benefits__item {
+  padding-top: 66px;
+  padding-left: 42px;
+  position: relative;
+  max-width: 230px;
+}
+.page-salt-benefits__item-index {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.page-salt-benefits__item-text {
+  position: relative;
+  z-index: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  margin-top: 12px;
+  text-align: start;
+}
+
+.page-salt-secret {
+  padding-top: 120px;
+}
+@media (max-width: 767.98px) {
+  .page-salt-secret {
+    padding-top: 64px;
+  }
+}
+.page-salt-secret__card {
+  height: 276px;
+  background-color: #1F2022;
+  color: #F7F7F7;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 991.98px) {
+  .page-salt-secret__card {
+    min-height: 0;
+    margin-bottom: 32px;
+  }
+}
+.page-salt-secret__card-line1 {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  margin-bottom: 0;
+}
+@media (max-width: 991.98px) {
+  .page-salt-secret__card-line1 {
+    font-size: 36px;
+  }
+}
+.page-salt-secret__card-line2 {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  text-align: right;
+  margin-bottom: 0;
+}
+.page-salt-secret__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.page-salt-secret__text {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+}
+.page-salt-secret__button {
+  margin-top: auto;
+  width: 100%;
+  max-width: 454px;
+  height: 60px;
+  text-transform: uppercase;
+  background-color: #F7F7F7;
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+}
+@media (max-width: 991.98px) {
+  .page-salt-secret__button {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .page-salt-secret__button {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-salt-secret__button {
+    max-width: none;
+    height: 48px;
+  }
+}
+
+.page-salt-faq {
+  padding: 120px 0;
+}
+@media (max-width: 767.98px) {
+  .page-salt-faq {
+    padding: 64px 0;
+  }
+}
+.page-salt-faq__title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 85%;
+  letter-spacing: -0.05em;
+  margin-bottom: 60px;
+}
+@media (max-width: 991.98px) {
+  .page-salt-faq__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-salt-faq__title {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+}
+.page-salt-faq__accordion-item {
+  background-color: transparent !important;
+  border: none !important;
+  border-top: 1px solid rgba(31, 32, 34, 0.1) !important;
+  border-radius: 0 !important;
+}
+.page-salt-faq__accordion-item:hover .page-salt-faq__accordion-toggle {
+  border-color: #000000;
+}
+.page-salt-faq__accordion-item:last-child {
+  border-bottom: 1px solid rgba(31, 32, 34, 0.1) !important;
+}
+.page-salt-faq__accordion-header {
+  margin-bottom: 0;
+}
+.page-salt-faq__accordion-button {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 100px;
+  padding: 0;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: #1F2022;
+}
+.page-salt-faq__accordion-button::after {
+  display: none;
+}
+.page-salt-faq__accordion-main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 20px 0;
+}
+.page-salt-faq__accordion-title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+}
+@media (max-width: 991.98px) {
+  .page-salt-faq__accordion-title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-salt-faq__accordion-title {
+    font-size: 17px;
+  }
+}
+.page-salt-faq__accordion-tag {
+  display: none;
+  margin-left: auto;
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(31, 32, 34, 0.16);
+}
+@media (min-width: 992px) {
+  .page-salt-faq__accordion-tag {
+    display: block;
+  }
+}
+.page-salt-faq__accordion-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100px;
+  border: 1px solid rgba(31, 32, 34, 0.1);
+  border-radius: 50%;
+  margin-left: 20px;
+}
+.page-salt-faq__accordion-toggle svg {
+  transition: transform 0.3s ease;
+}
+.page-salt-faq__accordion-button:not(.collapsed) {
+  color: #1F2022;
+}
+.page-salt-faq__accordion-button:not(.collapsed) .page-salt-faq__accordion-toggle {
+  border-color: #000000;
+}
+.page-salt-faq__accordion-button:not(.collapsed) .page-salt-faq__accordion-toggle svg {
+  transform: rotate(180deg);
+}
+.page-salt-faq__accordion-body {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  max-width: 690px;
+  margin-left: auto;
+  padding: 40px 0 48px 0;
+}
+@media (max-width: 991.98px) {
+  .page-salt-faq__accordion-body {
+    margin-left: 0;
+    max-width: none;
+  }
+}
+
+.page-salt-seo {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+@media (max-width: 767.98px) {
+  .page-salt-seo {
+    padding-top: 56px;
+    padding-bottom: 64px;
+  }
+}
+.page-salt-seo__title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.01em;
+  margin-bottom: 24px;
+}
+@media (max-width: 767.98px) {
+  .page-salt-seo__title {
+    font-size: 24px;
+  }
+}
+.page-salt-seo__text {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+}
+.page-salt-seo__text:not(:last-child) {
+  margin-bottom: 20px;
 }

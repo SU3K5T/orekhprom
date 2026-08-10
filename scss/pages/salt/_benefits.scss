@@ -1,0 +1,59 @@
+.page-salt-benefits {
+  padding-top: 120px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 64px;
+  }
+
+  &__title {
+    @include typography("Musticapro", normal, 600, 72px, 85%);
+    letter-spacing: -0.05em;
+    margin-bottom: 80px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 40px;
+      text-align: left !important;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(lg) {
+      flex-wrap: wrap;
+      row-gap: 20px;
+    }
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    padding-top: 66px;
+    padding-left: 42px;
+    position: relative;
+    max-width: 230px;
+
+    &-index {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &-text {
+      position: relative;
+      z-index: 5px;
+      @include typography("Inter", normal, 400, 17px, 120%);
+      letter-spacing: -0.01em;
+      margin-top: 12px;
+      text-align: start;
+    }
+  }
+}

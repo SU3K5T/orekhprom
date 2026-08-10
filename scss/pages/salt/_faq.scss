@@ -1,0 +1,134 @@
+.page-salt-faq {
+  padding: 120px 0;
+
+  @include media-breakpoint-down(md) {
+    padding: 64px 0;
+  }
+
+  &__title {
+    @include typography("Musticapro", normal, 600, 72px, 85%);
+    letter-spacing: -0.05em;
+    margin-bottom: 60px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 40px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 28px;
+      margin-bottom: 32px;
+    }
+  }
+
+
+  &__accordion-item {
+    background-color: transparent !important;
+    border: none !important;
+    border-top: 1px solid rgba($color-dark, 0.1) !important;
+    border-radius: 0 !important;
+
+    &:hover {
+      .page-salt-faq__accordion-toggle {
+        border-color: #000000;
+      }
+    }
+
+    &:last-child {
+      border-bottom: 1px solid rgba($color-dark, 0.1) !important;
+    }
+  }
+
+  &__accordion-header {
+    margin-bottom: 0;
+  }
+
+  &__accordion-button {
+    display: flex;
+    align-items: stretch; // toggle-блок растягивается по фактической высоте кнопки сам, без хаков
+    width: 100%;
+    min-height: 100px;
+    padding: 0; // паддинг переносим внутрь __accordion-main, чтобы toggle оставался "голым" на всю высоту
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: $color-dark;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__accordion-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 20px 0;
+  }
+
+  &__accordion-title {
+    @include typography("Musticapro", normal, 600, 32px, 110%);
+    letter-spacing: -0.03em;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 22px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 17px;
+    }
+  }
+
+  &__accordion-tag {
+    display: none;
+    margin-left: auto;
+    @include typography("Musticapro", normal, 600, 18px, 120%);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: rgba($color-dark, 0.16);
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+
+  &__accordion-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100px;
+    border: 1px solid rgba($color-dark, 0.1);
+    border-radius: 50%;
+    margin-left: 20px;
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &__accordion-button:not(.collapsed) {
+    color: $color-dark;
+  }
+
+  &__accordion-button:not(.collapsed) &__accordion-toggle {
+    border-color: #000000;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__accordion-body {
+    @include typography("Geologica", normal, 400, 16px, 130%);
+    letter-spacing: -0.01em;
+    max-width: 690px;
+    margin-left: auto;
+    padding: 40px 0 48px 0;
+
+    @include media-breakpoint-down(lg) {
+      margin-left: 0;
+      max-width: none;
+    }
+  }
+}

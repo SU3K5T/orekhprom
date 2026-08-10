@@ -1,0 +1,28 @@
+.page-salt-seo {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 56px;
+    padding-bottom: 64px;
+  }
+
+  &__title {
+    @include typography("Musticapro", normal, 600, 32px, 110%);
+    letter-spacing: 0.01em;
+    margin-bottom: 24px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    @include typography("Geologica", normal, 400, 16px, 130%);
+    letter-spacing: -0.01em;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}

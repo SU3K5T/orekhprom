@@ -1,0 +1,106 @@
+.page-salt-audience {
+  padding-top: 120px;
+  padding-bottom: 80px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 64px;
+    padding-bottom: 40px;
+  }
+
+  &__static {
+    &-text {
+      @include typography("Musticapro", normal, 600, 32px, 110%);
+      letter-spacing: 0.01em;
+
+      // @include media-breakpoint-down(md) {
+      //   font-size: 24px;
+      // }
+    }
+
+    &-subtext {
+      @include typography("Inter", normal, 400, 17px, 120%);
+      letter-spacing: -0.01em;
+      margin-top: 20px;
+    }
+  }
+
+  &__interact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 0;
+    }
+
+    .swiper {
+      height: 220px;
+
+      // @include media-breakpoint-down(md) {
+      //   height: 150px;
+      // }
+    }
+
+    &-list {
+      position: relative;
+    }
+
+    &-item {
+      transition: margin 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease;
+
+      &-label {
+        display: block;
+        @include typography("Inter", normal, 400, 17px, 120%);
+        letter-spacing: -0.01em;
+        color: rgba($color-dark, 0.35);
+        margin-bottom: 4px;
+        transition: color 0.8s ease;
+      }
+
+      &-text {
+        @include typography("Musticapro", normal, 600, 44px, 90%);
+        // плавное масштабирование вместо скачков по брейкпоинтам:
+        // на ширинах ~730–1470px размер идёт по vw, за их пределами — фиксируется на min/max
+        font-size: clamp(32px, 3vw, 64px);
+        letter-spacing: -0.03em;
+        color: rgba($color-dark, 0.35);
+        max-width: none;
+        transform-origin: left top;
+        transform: scale(0.55);
+        transition: color 0.8s ease, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+
+      &.swiper-slide {
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.8s ease, opacity 0.8s ease, visibility 0.8s ease;
+      }
+
+      &.swiper-slide-active,
+      &.swiper-slide-next {
+        opacity: 1;
+        visibility: visible;
+        height: max-content !important;
+      }
+
+      &.swiper-slide-active {
+        margin-top: 0;
+        transform: translateY(0);
+      }
+
+      &.swiper-slide-next {
+        margin-top: 24px;
+        transform: translateY(10px);
+      }
+
+      &.swiper-slide-active &-label {
+        color: $color-dark;
+      }
+
+      &.swiper-slide-active &-text {
+        color: $color-dark;
+        transform: scale(1);
+      }
+    }
+  }
+}
