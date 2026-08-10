@@ -10991,6 +10991,40 @@ main {
     padding-top: 64px;
   }
 }
+@media (max-width: 767.98px) {
+  .page-salt-showcase {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 991.98px) {
+  .page-salt-showcase {
+    display: flex;
+    flex-direction: column;
+    max-height: 100dvh;
+    overflow: hidden;
+  }
+}
+@media (max-width: 991.98px) {
+  .page-salt-showcase__header {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 991.98px) {
+  .page-salt-showcase__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+  .page-salt-showcase__body .row,
+  .page-salt-showcase__body [class*=offset] {
+    min-height: 0;
+  }
+  .page-salt-showcase__body .row {
+    flex: 1 1 auto;
+    flex-wrap: nowrap;
+  }
+}
 .page-salt-showcase__title {
   font-family: "Musticapro";
   font-style: normal;
@@ -11021,7 +11055,9 @@ main {
 }
 @media (max-width: 991.98px) {
   .page-salt-showcase__slider {
-    height: auto;
+    height: 100%;
+    overflow: hidden auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 .page-salt-showcase__panel {
