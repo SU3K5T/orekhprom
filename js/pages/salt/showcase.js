@@ -69,6 +69,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.fonts.ready.then(refresh);
   }
   window.addEventListener('load', refresh);
-  window.addEventListener('resize', refresh);
-  window.addEventListener('fullscreenchange', refresh);
 });
