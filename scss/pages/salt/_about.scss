@@ -20,7 +20,7 @@
     }
 
     @include media-breakpoint-down(lg) {
-      max-width: 260px;
+      max-width: 210px;
       margin: 0;
       margin-left: auto;
       margin-right: calc(var(--bs-gutter-x) * -0.5);

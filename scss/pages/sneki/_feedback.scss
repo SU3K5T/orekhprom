@@ -40,6 +40,11 @@
         @include media-breakpoint-down(sm) {
             background-size: 282px 451px;
             padding-bottom: 0;
+
+            display: block;
+            align-items: unset;
+            height: auto;
+            padding-top: 481px;
         }
     }
 

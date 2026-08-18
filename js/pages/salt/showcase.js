@@ -1,72 +1,22 @@
-class ShowcaseScrollTrigger {
-  constructor({ trigger }) {
-    this.itemsCount = 2;
-    this.currentIdx = 0;
-    this.trigger = trigger;
-    this.slider = this.trigger.querySelector('.js-page-salt-showcase-slider');
-    this.scrollTrigger = null;
-    this.swiper = null;
-
-    this.initSwiper();
-    this.init();
-  }
-
-  initSwiper() {
-    if (!this.slider) return;
-
-    this.swiper = new Swiper(this.slider, {
-      slidesPerView: 1,
-      effect: 'fade',
-      fadeEffect: { crossFade: true },
-      speed: 800,
-      allowTouchMove: false,
-    });
-  }
-
-  init() {
-    if (!this.trigger || !this.swiper) return;
-    const mm = gsap.matchMedia();
-
-    mm.add({ isDesktop: '(min-width: 992px)', isMobile: '(max-width: 991px)' }, (context) => {
-      const { isDesktop } = context.conditions;
-      const distancePerItem = isDesktop ? 700 : 500;
-
-      this.currentIdx = 0;
-      this.scrollTrigger = ScrollTrigger.create({
-        trigger: this.trigger,
-        start: 'top top',
-        end: `+=${this.itemsCount * 500}`,
-        pin: true,
-        scrub: true,
-        refreshPriority: 1,
-        invalidateOnRefresh: true,
-        onUpdate: ({ progress }) => {
-          const targetIdx = Math.min(this.itemsCount - 1, Math.floor(progress * this.itemsCount));
-          if (targetIdx !== this.currentIdx) {
-            this.currentIdx = targetIdx;
-            this.swiper.slideTo(targetIdx);
-          }
-        },
-      });
-
-      return () => {
-        this.scrollTrigger.kill();
-        this.scrollTrigger = null;
-      };
-    });
-  }
-
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-  const trigger = document.querySelector('.js-scroll-trigger-showcase');
-  if (!trigger) return;
+  const slider = document.querySelector('.js-page-salt-showcase-slider');
+  if (!slider) return;
 
-  new ShowcaseScrollTrigger({ trigger });
-
-  const refresh = () => ScrollTrigger.refresh();
-  if (document.fonts && document.fonts.ready) {
-    document.fonts.ready.then(refresh);
-  }
-  window.addEventListener('load', refresh);
+  new Swiper(slider, {
+    slidesPerView: 1,
+    speed: 600,
+    // не совсем fade и не совсем slide: старая панель уходит с лёгким
+    // сдвигом влево и затуханием, новая приходит справа так же через
+    // прозрачность — получается мягкий кросс-фейд со сдвигом, а не
+    // резкая протяжка всей панели целиком
+    effect: 'creative',
+    creativeEffect: {
+      prev: { opacity: 0, translate: ['-10%', 0, 0] },
+      next: { opacity: 0, translate: ['10%', 0, -1] },
+    },
+    navigation: {
+      nextEl: '.js-page-salt-showcase-next',
+      prevEl: '.js-page-salt-showcase-prev',
+    },
+  });
 });
