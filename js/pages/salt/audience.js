@@ -23,6 +23,8 @@ class AudienceScrollTrigger {
   init() {
     if (!this.trigger) return;
 
+    ScrollTrigger.config({ ignoreMobileResize: true });
+
     const mm = gsap.matchMedia();
 
     mm.add({
