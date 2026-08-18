@@ -5,14 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
   new Swiper(slider, {
     slidesPerView: 1,
     speed: 600,
-    // не совсем fade и не совсем slide: старая панель уходит с лёгким
-    // сдвигом влево и затуханием, новая приходит справа так же через
-    // прозрачность — получается мягкий кросс-фейд со сдвигом, а не
-    // резкая протяжка всей панели целиком
+    loop: true,
     effect: 'creative',
     creativeEffect: {
       prev: { opacity: 0, translate: ['-10%', 0, 0] },
       next: { opacity: 0, translate: ['10%', 0, -1] },
+    },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     navigation: {
       nextEl: '.js-page-salt-showcase-next',
