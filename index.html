@@ -4,914 +4,512 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ОРЕХПРОМ - Главная</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/swiper.bundle.min.css">
   <link rel="stylesheet" href="css/index.css">
+  <title>ОРЕХПРОМ — производитель орехов и пищевых ингредиентов для бизнеса</title>
 </head>
 
 <body>
-  <header class="header js-header">
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg">
 
-        <a class="navbar-brand" href="#">
-          <img src="img/logo.svg" alt="ОРЕХПРОМ">
-        </a>
+  <main>
 
-        <button class="navbar-toggler header__navbar-toggler" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false"
-          aria-label="Выпадающее меню">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="offcanvas offcanvas-end w-100 overflow-y-scroll overflow-y-lg-visible header__offcanvas"
-          id="navbarOffcanvas" aria-labelledby="offcanvasNavbarLabel">
-          <div class="container-fluid">
-            <div class="offcanvas-header">
-              <div class="offcanvas-title" id="offcanvasNavbarLabel"><img src="img/logo.svg" alt="ОРЕХПРОМ"></div>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+    <!-- ПЕРВЫЙ ЭКРАН -->
+    <section class="page-main-hero">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-xl-8">
+            <h1 class="page-main-hero__title">Орехпром — надежный производитель орехов и пищевых ингредиентов для бизнеса</h1>
+            <p class="page-main-hero__lead">От поставки сырья до контрактного производства и разработки новых продуктов — создаем решения для производителей продуктов питания, торговых сетей и собственных торговых марок</p>
+            <div class="page-main-hero__actions">
+              <a href="#contact" class="button button--dark page-main-hero__button">Оставить заявку</a>
+              <a href="#offer" class="button button--light page-main-hero__button">Что мы предлагаем</a>
             </div>
+          </div>
+          <div class="col-12 col-xl-4">
+            <div class="page-main-hero__media">
+              <button type="button" class="page-main-hero__video" data-bs-toggle="modal" data-bs-target="#mainVideoModal"
+                data-video-src="videos/main/1_web.mp4" aria-label="Смотреть видео о производстве">
+                <img src="img/main/Производственные%20линии.png" alt="Производство ОРЕХПРОМ" class="page-main-hero__video-cover">
+                <span class="page-main-hero__video-label">видео · производство</span>
+                <span class="page-main-hero__video-play">
+                  <span class="page-main-hero__video-icon">▶</span>
+                  <span class="page-main-hero__video-text">Коллаж производства</span>
+                </span>
+              </button>
+              <div class="page-main-hero__thumbs">
+                <div class="page-main-hero__thumb"><img src="img/main/Лаборатория.png" alt="Лаборатория"></div>
+                <div class="page-main-hero__thumb"><img src="img/main/Агропроизводство.png" alt="Собственные плантации"></div>
+                <div class="page-main-hero__thumb"><img src="img/main/Упаковка%20продукции.png" alt="Упаковка"></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <div class="offcanvas-body d-flex flex-column flex-lg-row">
-              <ul class="order-2 order-lg-0 navbar-nav ms-lg-auto d-lg-flex align-items-lg-center">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">О&nbsp;компании</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Производство</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    B2B
+        <div class="row page-main-hero__facts">
+          <div class="col-6 col-md-3 page-main-hero__fact">
+            <span class="page-main-hero__fact-label">Опыт</span>
+            <p class="page-main-hero__fact-value">25+ лет<br>экспертизы</p>
+          </div>
+          <div class="col-6 col-md-3 page-main-hero__fact">
+            <span class="page-main-hero__fact-label">Клиенты</span>
+            <p class="page-main-hero__fact-value">700+ компаний<br>по всей России</p>
+          </div>
+          <div class="col-6 col-md-3 page-main-hero__fact">
+            <span class="page-main-hero__fact-label">Масштаб</span>
+            <p class="page-main-hero__fact-value">Производство<br>полного цикла</p>
+          </div>
+          <div class="col-6 col-md-3 page-main-hero__fact">
+            <span class="page-main-hero__fact-label">Качество</span>
+            <p class="page-main-hero__fact-value">Международные<br>стандарты</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ДЛЯ КОГО МЫ РАБОТАЕМ -->
+    <section class="page-main-audience">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-xl-8">
+            <h2 class="page-main-audience__title">для кого мы работаем</h2>
+            <p class="page-main-audience__subtitle">Три ключевых направления работы с бизнесом</p>
+          </div>
+        </div>
+        <div class="row page-main-audience__list">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="page-main-audience__card">
+              <div class="page-main-audience__card-photo"><img src="img/main/Ингредиенты.png" alt="Кондитерская и молочная индустрия"></div>
+              <h3 class="page-main-audience__card-title">Производителям кондитерской и молочной индустрии</h3>
+              <p class="page-main-audience__card-text">Сырье, ингредиенты и технологическая поддержка</p>
+              <a href="#offer" class="page-main-audience__card-link">Подробнее →</a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="page-main-audience__card">
+              <div class="page-main-audience__card-photo"><img src="img/main/Собственные%20бренды.png" alt="Торговые федеральные сети"></div>
+              <h3 class="page-main-audience__card-title">Торговым федеральным сетям</h3>
+              <p class="page-main-audience__card-text">Готовая продукция под собственными брендами. Контрактное производство и выпуск продукции под СТМ</p>
+              <a href="#offer" class="page-main-audience__card-link">Подробнее →</a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="page-main-audience__card">
+              <div class="page-main-audience__card-photo"><img src="img/main/Упаковка%20продукции-1.png" alt="HoReCa"></div>
+              <h3 class="page-main-audience__card-title">HoReCa</h3>
+              <p class="page-main-audience__card-text">Орехи и ингредиенты для профессионального использования. Орехи для мелкооптовых потребностей</p>
+              <a href="#offer" class="page-main-audience__card-link">Подробнее →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ЧТО МЫ ПРЕДЛАГАЕМ -->
+    <section class="page-main-offer" id="offer">
+      <div class="container-fluid">
+        <div class="page-main-offer__head">
+          <div>
+            <h2 class="page-main-offer__title">что мы предлагаем</h2>
+            <p class="page-main-offer__subtitle">Четыре крупных направления</p>
+          </div>
+          <div class="page-main-offer__nav">
+            <button type="button" class="js-page-main-offer-prev page-main-offer__nav-button" aria-label="Предыдущая карточка">←</button>
+            <button type="button" class="js-page-main-offer-next page-main-offer__nav-button" aria-label="Следующая карточка">→</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="js-page-main-offer-slider page-main-offer__slider swiper">
+              <ul class="swiper-wrapper page-main-offer__list">
+                <li class="swiper-slide page-main-offer__item">
+                  <a href="#contact" class="page-main-offer__card">
+                    <div class="page-main-offer__card-photo"><img src="img/main/Ингредиенты-1.png" alt="Ингредиенты"></div>
+                    <h3 class="page-main-offer__card-title">Ингредиенты</h3>
+                    <p class="page-main-offer__card-text">Орехи, ореховые пасты, начинки и специализированные ингредиенты</p>
+                    <span class="page-main-offer__card-link">Подробнее →</span>
                   </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Орехи</a></li>
-                    <li><a class="dropdown-item" href="#">Пасты</a></li>
-                    <li><a class="dropdown-item" href="#">Ингридиенты</a></li>
-                    <li><a class="dropdown-item" href="#">Начинки</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Перейти</a></li>
-                  </ul>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Бренды
+                <li class="swiper-slide page-main-offer__item">
+                  <a href="#contact" class="page-main-offer__card">
+                    <div class="page-main-offer__card-photo"><img src="img/main/Контрактное%20производство.png" alt="Контрактное производство"></div>
+                    <h3 class="page-main-offer__card-title">Контрактное производство</h3>
+                    <p class="page-main-offer__card-text">Разработка и выпуск продукции под вашей торговой маркой</p>
+                    <span class="page-main-offer__card-link">Подробнее →</span>
                   </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Твердый знак</a></li>
-                    <li><a class="dropdown-item" href="#">ЕМ!</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Перейти</a></li>
-                  </ul>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Рецепты</a>
+                <li class="swiper-slide page-main-offer__item">
+                  <a href="#contact" class="page-main-offer__card">
+                    <div class="page-main-offer__card-photo"><img src="img/main/Собственные%20бренды-1.png" alt="Собственные бренды"></div>
+                    <h3 class="page-main-offer__card-title">Собственные бренды</h3>
+                    <p class="page-main-offer__card-text">Готовые решения для федеральных сетей</p>
+                    <span class="page-main-offer__card-link">Подробнее →</span>
+                  </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Блог</a>
+                <li class="swiper-slide page-main-offer__item">
+                  <a href="#contact" class="page-main-offer__card">
+                    <div class="page-main-offer__card-photo"><img src="img/main/Агропроизводство.png" alt="Агропроизводство"></div>
+                    <h3 class="page-main-offer__card-title">Агропроизводство</h3>
+                    <p class="page-main-offer__card-text">Собственные плантации и контроль качества сырья</p>
+                    <span class="page-main-offer__card-link">Подробнее →</span>
+                  </a>
                 </li>
               </ul>
-              <hr class="d-lg-none">
-              <div class="d-flex justify-content-between justify-content-lg-start align-items-center">
-                <div class="order-2 order-lg-0 lang-switcher mb-lg-0 me-lg-3">
-                  <a href="#" class="d-lg-none d-xl-inline lang-link active">Ru</a>
-                  <a href="#" class="lang-link">En</a>
-                </div>
-                <div class="header-divider d-none d-lg-block"></div>
-                <a href="#" class="button button--dark mt-2 mt-lg-0 ms-lg-3 text-center d-flex justify-content-center align-items-center">Интернет-магазин</a>
-              </div>
-              <hr class="d-lg-none">
-              <div class="order-3 d-flex flex-column mt-auto d-lg-none header__address">
-                <hr class="d-lg-none">
-                <div class="header__address-info">
-                  <address class="header__address-description">Краснодарский край, г. Краснодар, <br> ул. Красных
-                    партизан, д. 2/4 А</address>
-                  <br>
-                  <a class="header__phone" href="tel:+7 (800) 555 41 61">8 (800) 555 41 61</a>
-                  </p>
-                  <hr class="d-lg-none">
-                </div>
-              </div>
             </div>
           </div>
-      </nav>
-    </div>
-  </header>
-  <section class="hero js-hero-section">
-    <div class="hero__video">
-      <video src="videos/hero.mp4" poster="img/hero.png" type="video/mp4"
-        class="h-100 w-100 object-fit-cover position-relative" autoplay muted loop playsinline></video>
-    </div>
-    <div class="hero__stock">
+        </div>
+      </div>
+    </section>
+
+    <!-- ПОЧЕМУ ВЫБИРАЮТ ОРЕХПРОМ -->
+    <section class="page-main-why js-page-main-why">
       <div class="container-fluid">
-        <div class="row hero__row">
-          <div class="col-xl-10">
-            <div class="swiper js-hero-slider">
-              <div class="swiper-wrapper hero__slider-wrapper">
-                <a href="#" class="swiper-slide hero__slide d-flex justify-content-between">
-                  <div class="hero__slide-text d-flex flex-column">
-                    <h2 class="hero__slide-title">Гребешки
-                      в чесночном соусе</h2>
-                    <div class="d-flex mt-auto">
-                      <span class="hero__slide-badge">50г</span>
-                      <span class="hero__slide-badge">180г</span>
-                    </div>
-                  </div>
-                  <img src="img/hero/hero-slide-1.png" alt="" class="hero__slide-img">
-                </a>
-                <a href="#" class="swiper-slide hero__slide d-flex justify-content-between">
-                  <div class="hero__slide-text d-flex flex-column">
-                    <h2 class="hero__slide-title">Лисички
-                      в сметане</h2>
-                    <div class="d-flex mt-auto">
-                      <span class="hero__slide-badge">50 г</span>
-                      <span class="hero__slide-badge">180 г</span>
-                    </div>
-                  </div>
-                  <img src="img/hero/hero-slide-2.png" alt="" class="hero__slide-img">
-                </a>
-                <a href="#" class="swiper-slide hero__slide d-flex justify-content-between">
-                  <div class="hero__slide-text d-flex flex-column">
-                    <h2 class="hero__slide-title">Белые
-                      грибы</h2>
-                    <div class="d-flex mt-auto">
-                      <span class="hero__slide-badge">50 г</span>
-                      <span class="hero__slide-badge">180 г</span>
-                    </div>
-                  </div>
-                  <img src="img/hero/hero-slide-3.png" alt="" class="hero__slide-img">
-                </a>
+        <div class="page-main-why__head">
+          <div class="page-main-why__kicker">почему выбирают</div>
+          <div class="page-main-why__brand">ОРЕХПРОМ</div>
+        </div>
+        <p class="page-main-why__subtitle">Пять этапов, за которые мы отвечаем сами — выберите этап, чтобы увидеть, что это дает вашему производству</p>
+
+        <div class="page-main-why__body">
+          <div class="page-main-why__visual">
+            <img src="img/main/Агропроизводство.png" alt="Сырье и агропроизводство" class="page-main-why__visual-img js-page-main-why-visual is-active" data-step="1">
+            <img src="img/main/Лаборатория-1.png" alt="R&amp;D и разработка рецептур" class="page-main-why__visual-img js-page-main-why-visual" data-step="2">
+            <img src="img/main/Производственные%20линии-1.png" alt="Производство полного цикла" class="page-main-why__visual-img js-page-main-why-visual" data-step="3">
+            <img src="img/main/Лаборатория-2.png" alt="Контроль качества" class="page-main-why__visual-img js-page-main-why-visual" data-step="4">
+            <img src="img/main/Складские%20комплексы.png" alt="Логистика и поставки" class="page-main-why__visual-img js-page-main-why-visual" data-step="5">
+          </div>
+
+          <div class="page-main-why__panel">
+            <div class="page-main-why__panel-step js-page-main-why-step">Этап 01 / 05</div>
+            <div class="page-main-why__panel-title js-page-main-why-panel-title">Сырье и агропроизводство</div>
+            <!-- Текст и пункты ниже — временный плейсхолдер, одинаковый для всех 5 этапов (по договоренности), пока не появится уникальный текст под каждый шаг -->
+            <p class="page-main-why__panel-text">Каждая партия проходит лабораторную проверку. Производство работает по международным стандартам пищевой безопасности</p>
+            <div class="page-main-why__panel-list">
+              <div class="page-main-why__panel-list-item">
+                <span class="page-main-why__panel-list-item-arrow">→</span>
+                <span class="page-main-why__panel-list-item-text">ISO, HACCP, FSSC</span>
+              </div>
+              <div class="page-main-why__panel-list-item">
+                <span class="page-main-why__panel-list-item-arrow">→</span>
+                <span class="page-main-why__panel-list-item-text">Лабораторный контроль партий</span>
+              </div>
+              <div class="page-main-why__panel-list-item">
+                <span class="page-main-why__panel-list-item-arrow">→</span>
+                <span class="page-main-why__panel-list-item-text">Прослеживаемость от сырья до отгрузки</span>
               </div>
             </div>
           </div>
-          <div class="col-xl-2 d-flex flex-column justify-content-between hero__buttons">
-            <button class="js-form-create-order button button--dark hero__button">Сделать заказ</button>
-            <button class="js-form-get-price button button--light hero__button">Получить прайс</button>
+
+          <div class="page-main-why__nav">
+            <button type="button" class="page-main-why__nav-item js-page-main-why-nav-item is-active" data-step="1">
+              <span class="page-main-why__nav-item-index">01</span>
+              <span>
+                <span class="page-main-why__nav-item-title js-page-main-why-nav-title">Сырье и агропроизводство</span>
+                <span class="page-main-why__nav-item-text">Собственные плантации и отбор поставщиков</span>
+              </span>
+            </button>
+            <button type="button" class="page-main-why__nav-item js-page-main-why-nav-item" data-step="2">
+              <span class="page-main-why__nav-item-index">02</span>
+              <span>
+                <span class="page-main-why__nav-item-title js-page-main-why-nav-title">R&amp;D и разработка рецептур</span>
+                <span class="page-main-why__nav-item-text">Собственная лаборатория и технологи</span>
+              </span>
+            </button>
+            <button type="button" class="page-main-why__nav-item js-page-main-why-nav-item" data-step="3">
+              <span class="page-main-why__nav-item-index">03</span>
+              <span>
+                <span class="page-main-why__nav-item-title js-page-main-why-nav-title">Производство полного цикла</span>
+                <span class="page-main-why__nav-item-text">Две площадки, автоматизированные линии</span>
+              </span>
+            </button>
+            <button type="button" class="page-main-why__nav-item js-page-main-why-nav-item" data-step="4">
+              <span class="page-main-why__nav-item-index">04</span>
+              <span>
+                <span class="page-main-why__nav-item-title js-page-main-why-nav-title">Контроль качества</span>
+                <span class="page-main-why__nav-item-text">Международные стандарты безопасности</span>
+              </span>
+            </button>
+            <button type="button" class="page-main-why__nav-item js-page-main-why-nav-item" data-step="5">
+              <span class="page-main-why__nav-item-index">05</span>
+              <span>
+                <span class="page-main-why__nav-item-title js-page-main-why-nav-title">Логистика и поставки</span>
+                <span class="page-main-why__nav-item-text">Складские комплексы и доставка по России</span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
-    </div>
-    <div class="w-100">
-      <div class="swiper js-hero-ticker hero__ticker w-100">
-        <div class="swiper-wrapper hero__ticker-wrapper">
-          <div class="swiper-slide hero__ticker-slide">
-            <p>
-              вкус как новая валюта внимания
-            </p>
+    </section>
+
+    <!-- КОМПАНИЯ В ЦИФРАХ -->
+    <section class="page-main-stats">
+      <div class="container-fluid">
+        <div class="page-main-stats__head">
+          <div>
+            <h2 class="page-main-stats__title">компания в цифрах</h2>
+            <p class="page-main-stats__subtitle">25+ лет опыта в производстве орехов и пищевых ингредиентов</p>
           </div>
-          <div class="swiper-slide hero__ticker-slide">
-            <p>
-              вкус как новая валюта внимания
-            </p>
-          </div>
+          <a href="#contact" class="page-main-stats__cta">Стать клиентом</a>
         </div>
-      </div>
-    </div>
-  </section>
-  <main>
-    <section class="facts position-relative js-facts-section">
-      <div class="container-fluid vh-lg-100 js-facts-container">
-        <div class="row">
-          <div class="facts-1 py-2 vh-lg-100 col-6 col-lg-4 d-block facts-section">
-            <div class="vh-100 h-lg-100 facts-section__inner">
-              <div class="h-50">
-                <div class="swiper js-facts-slider facts__slider facts__slider--tl h-100">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide facts__slide">
-                      <p class="text-lowercase typography-title">выигрывают те, <br> кто удивляют</p>
-                    </div>
-                    <div class="swiper-slide facts__slide">
-                      <p class="typography-caption">Заметная выкладка, понятные вкусы и удобная фасовка помогают быстро
-                        принять решение и добавить товар в корзину без раздумий.</p>
-                    </div>
-                    <div class="swiper-slide facts__slide">
 
-                    </div>
-                    <div class="swiper-slide facts__slide">
-                      <img class="w-100 h-100 object-fit-cover" src="img/facts/facts-slider-tl.png" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="divider"></div>
-              <div class="h-50">
-                <div class="swiper js-facts-slider facts__slider facts__slider--bl h-100">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide d-flex align-items-start facts__slide">
-                      <p class="typography-caption">Необычные сочетания, яркие вкусы и нестандартная подача превращают
-                        привычный перекус в маленькое открытие.</p>
-                    </div>
-                    <div class="swiper-slide d-flex align-items-start facts__slide">
-                      <p class="text-lowercase typography-title">импульсивная доля <br> покупок орехов <br> составляет
-                        41%
-                      </p>
-                    </div>
-                    <div class="swiper-slide facts__slide">
-                      <img class="w-100 h-100 object-fit-cover" src="img/facts/facts-slider-bl.png" alt="">
-                    </div>
-                    <div class="swiper-slide facts__slide">
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+        <div class="page-main-stats__body">
+          <div class="page-main-stats__photo">
+            <img src="img/main/Складские%20комплексы.png" alt="Складской комплекс ОРЕХПРОМ">
           </div>
-
-          <div class="facts-2 py-2 vh-lg-100 col-12 col-lg-4 d-flex flex-column overflow-hidden">
-            <button class="d-sm-none js-facts-mobile-next"></button>
-            <div class="mt-lg-auto d-flex flex-column facts__center-block">
-              <div class="swiper js-facts-slider-mobile facts__slider--tl facts__center-block-swiper--top">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide facts__slide">
-                    <p class="typography-accent-title mt-2">выигрывают те,
-                      кто удивляют</p>
-                  </div>
-                  <div class="w-100 swiper-slide facts__slide">
-                    <p class="text-lowercase typography-caption">Заметная выкладка, понятные вкусы и удобная фасовка
-                      помогают быстро принять решение и добавить товар в корзину без раздумий.</p>
-                  </div>
-                  <div class="w-100 swiper-slide facts__slide">
-                    <p class="typography-accent-title mt-2">покупатели выбирают эмоцию во вкусе 22%</p>
-                  </div>
-                  <div class="w-100 swiper-slide facts__slide">
-                    <p class="text-lowercase typography-caption">Орехи с акцентом на гастрономию — это уже не просто
-                      перекус, а часть вкусового опыта, который конкурирует с десертами и закусками.</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="d-sm-none facts__center-block-divider facts__center-block-divider--transition">
-              <div class="w-100 swiper js-facts-slider-mobile facts__center-block-swiper--bottom">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide facts__slide facts__slide--bottom">
-                    <p class="typography-caption mt-2">Необычные сочетания, яркие вкусы и нестандартная подача
-                      превращают привычный перекус в маленькое открытие.</p>
-                  </div>
-                  <div class="swiper-slide facts__slide facts__slide--bottom">
-                    <p class="text-lowercase typography-accent-title">импульсивная доля покупок орехов составляет 41%
-                    </p>
-                  </div>
-                  <div class="swiper-slide facts__slide facts__slide--bottom">
-                    <p class="typography-caption mt-2">Пряные, сладкие, солёные и смелые миксы создают настроение
-                      и делают выбор не рациональным, а чувственным.</p>
-                  </div>
-                  <div class="swiper-slide facts__slide facts__slide--bottom">
-                    <p class="text-lowercase typography-accent-title">рост интереса к гастро-снэкам выше 18%</p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper js-facts-slider-mobile swiper-photos">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide facts__photo-slide d-flex align-items-center justify-content-start">
-                    <img src="img/facts/facts-slider-tl.png" alt="" class="facts__slide-img-1">
-                  </div>
-                  <div class="swiper-slide facts__photo-slide d-flex align-items-center justify-content-end">
-                    <img src="img/facts/facts-slider-bl.png" alt="" class="facts__slide-img-2">
-                  </div>
-                  <div class="swiper-slide facts__photo-slide d-flex align-items-center justify-content-start">
-                    <img src="img/facts/facts-slider-tr.png" alt="" class="facts__slide-img-3">
-                  </div>
-                  <div class="swiper-slide facts__photo-slide d-flex align-items-center justify-content-center">
-                    <img src="img/facts/facts-slider-br.png" alt="" class="facts__slide-img-4">
-                  </div>
-                </div>
-              </div>
-              <h2 class="facts__title facts__title--transition">снэковый <br> рынок растет</h2>
-              <div class="d-none d-md-grid mt-3 mt-md-3 h-lg-100 facts__center-block-text">
-                <div class="facts__center-block-text-item-1">
-                  <p class="facts__text">
-                    Потребители ищут новые вкусы, эмоции и гастроно-мические открытия.
-                  </p>
-                </div>
-                <div class="facts__center-block-text-item-2">
-                  <p class="facts__text">
-                    Снэки c необычными, но понятными профилями вкуса дают покупателю повод взять продукт здесь и сейчас.
-                  </p>
-                </div>
-                <button
-                  class="js-form-create-order button button--dark facts__button facts__center-block-text-item-3">Сделать
-                  заказ</button>
-                <button
-                  class="js-form-get-price button button--light facts__button facts__center-block-text-item-4">Получить
-                  прайс</button>
-              </div>
+          <div class="page-main-stats__list">
+            <div class="page-main-stats__item">
+              <div class="page-main-stats__item-value">700+</div>
+              <div class="page-main-stats__item-label">корпоративных клиентов</div>
             </div>
-          </div>
-
-          <div class="facts-3 py-2 vh-lg-100 col-6 col-lg-4 d-block facts-section">
-            <div class="vh-100 h-lg-100 facts-section__inner">
-              <div class="h-50">
-                <div class="swiper js-facts-slider facts__slider facts__slider--tr h-100">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide facts__slide"></div>
-                    <div class="swiper-slide facts__slide">
-                      <img class="w-100 h-100 object-fit-cover" src="img/facts/facts-slider-tr.png" alt="">
-                    </div>
-                    <div class="swiper-slide d-flex align-items-end facts__slide">
-                      <p class="text-lowercase typography-title">покупатели выбирают эмоцию во вкусе 22%</p>
-                    </div>
-                    <div class="swiper-slide d-flex align-items-end facts__slide">
-                      <p class="typography-caption">Орехи с акцентом на гастрономию — это уже не просто перекус, а часть
-                        вкусового опыта, который конкурирует с десертами и закусками.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="divider"></div>
-              <div class="h-50">
-                <div class="swiper js-facts-slider facts__slider facts__slider--br h-100">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide facts__slide">
-                      <img class="w-100 h-100 object-fit-cover" src="img/facts/facts-slider-br.png" alt="">
-                    </div>
-                    <div class="swiper-slide facts__slide"></div>
-                    <div class="swiper-slide facts__slide">
-                      <p class="typography-caption">Пряные, сладкие, солёные и смелые миксы создают настроение и делают
-                        выбор не рациональным, а чувственным.</p>
-                    </div>
-                    <div class="swiper-slide facts__slide">
-                      <p class="text-lowercase typography-title">рост интереса к гастроснэкам 22%</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="page-main-stats__item">
+              <div class="page-main-stats__item-value">17</div>
+              <div class="page-main-stats__item-label">стран-поставщиков сырья</div>
+            </div>
+            <div class="page-main-stats__item">
+              <div class="page-main-stats__item-value">100%</div>
+              <div class="page-main-stats__item-label">контроль качества продукции</div>
+            </div>
+            <div class="page-main-stats__item">
+              <div class="page-main-stats__item-value">2</div>
+              <div class="page-main-stats__item-label">производственные площадки</div>
+            </div>
+            <div class="page-main-stats__item">
+              <div class="page-main-stats__item-value">25+</div>
+              <div class="page-main-stats__item-label">лет опыта на рынке</div>
+            </div>
+            <div class="page-main-stats__item">
+              <div class="page-main-stats__item-value">1000+</div>
+              <div class="page-main-stats__item-label">тонн продукции ежегодно</div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div class="container">
-      <div
-        class="d-md-none facts__center-block-text facts__center-block-text--transition facts__center-block-text--mobile">
-        <div class="facts__center-block-text-item-1">
-          <p class="facts__text">
-            Потребители ищут новые вкусы, эмоции и гастроно-мические открытия.
-          </p>
-        </div>
-        <div class="facts__center-block-text-item-2">
-          <p class="facts__text">
-            Снэки c необычными, но понятными профилями вкуса дают покупателю повод взять продукт здесь и сейчас.
-          </p>
-        </div>
-        <button class="js-form-create-order button button--dark facts__button facts__center-block-text-item-3">Сделать
-          заказ</button>
-        <button class="js-form-get-price button button--light facts__button facts__center-block-text-item-4">Получить
-          прайс</button>
-      </div>
-    </div>
-    <section class="flavors js-flavors-section overflow-hidden">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-9 offset-lg-1">
-            <h2 class="text-lowercase flavors__title">Ассортимент вкусов</h2>
-          </div>
-        </div>
-        <div class="flavors__slider js-flavors-slider">
-          <div class="swiper-wrapper flavors__slider-wrapper justify-content-lg-center">
-            <div class="swiper-slide flavors-slide">
-              <h3 class="flavors-slide__title">Лисички в сметане</h3>
-              <p class="flavors-slide__description">
-                Нежный лесной акцент, который превращает орех в уютный гастро-момент
-              </p>
-              <div class="d-flex align-items-center layout-mt">
-                <div class="d-flex flavors-slide__options">
-                  <div class="d-flex align-items-center justify-content-center flavors-slide__option">
-                    <span>50г</span>
-                  </div>
-                  <div class="d-flex align-items-center justify-content-center flavors-slide__option">
-                    <span>180г</span>
-                  </div>
-                </div>
-                <div class="divider"></div>
-                <button class="js-form-create-order button button--dark"
-                  data-product-name="lisichki-v-smetane">Заказать</button>
-              </div>
-              <img src="img/flavors/flavor-2.png" alt="Вкус 1" class="flavors-slide__image layout-mt">
-            </div>
-            <div class="swiper-slide flavors-slide">
-              <h3 class="flavors-slide__title">Гребешки в чесночном соусе</h3>
-              <p class="flavors-slide__description">
-                Соленая морская нота и ароматное чесночное масло — ресторанный эффект прямо в пачке
-              </p>
-              <div class="d-flex align-items-center layout-mt">
-                <div class="d-flex flavors-slide__options">
-                  <div class="d-flex align-items-center justify-content-center flavors-slide__option">
-                    <span>50г</span>
-                  </div>
-                  <div class="d-flex align-items-center justify-content-center flavors-slide__option">
-                    <span>180г</span>
-                  </div>
-                </div>
-                <div class="divider"></div>
-                <button class="js-form-create-order button button--dark"
-                  data-product-name="lisichki-v-smetane">Заказать</button>
-              </div>
-              <img src="img/flavors/flavor-1.png" alt="Вкус 1" class="flavors-slide__image layout-mt">
-            </div>
-            <div class="swiper-slide flavors-slide">
-              <h3 class="flavors-slide__title">Белые грибы</h3>
-              <p class="flavors-slide__description">
-                Глубокий, благородный грибной вкус с высокой узнаваемостью
-              </p>
-              <div class="d-flex align-items-center layout-mt">
-                <div class="d-flex flavors-slide__options">
-                  <div class="d-flex align-items-center justify-content-center flavors-slide__option">
-                    <span>50г</span>
-                  </div>
-                  <div class="d-flex align-items-center justify-content-center flavors-slide__option">
-                    <span>180г</span>
-                  </div>
-                </div>
-                <div class="divider"></div>
-                <button class="js-form-create-order button button--dark"
-                  data-product-name="lisichki-v-smetane">Заказать</button>
-              </div>
-              <img src="img/flavors/flavor-3.png" alt="Вкус 1" class="flavors-slide__image layout-mt">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="layout-pt layout-pb reasons">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-xl-10 offset-xl-2">
-            <div class="position-relative reasons__title-block">
-              <div class="position-relative text-end text-xl-start d-flex flex-column lines-container"
-                id="linesContainer">
-                <strong class="reasons__title reasons__magnet-text" id="magnetText">почему это</strong>
-                <strong class="reasons__title reasons__line active" id="line1" data-line="1">
-                  работает на полке
-                </strong>
-                <strong class="reasons__title reasons__line" id="line2" data-line="2">
-                  выгодно для сетей
-                </strong>
+
+    <!-- ПРОИЗВОДСТВО -->
+    <section class="page-main-production" id="production">
+      <div class="container-fluid">
+        <div class="page-main-production__head">
+          <h2 class="page-main-production__title">производство, которому доверяют крупнейшие компании</h2>
+          <div>
+            <p class="page-main-production__text">Две производственные площадки, автоматизированные линии, собственная лаборатория контроля качества и федеральная логистика. Мы отвечаем за каждый этап — от плантации до паллеты на складе клиента</p>
+            <div class="page-main-production__actions">
+              <button type="button" class="button button--dark page-main-production__watch" data-bs-toggle="modal"
+                data-bs-target="#mainVideoModal" data-video-src="videos/main/2_web.mp4">
+                <span class="page-main-production__watch-icon">▶</span>
+                Посмотреть производство
+              </button>
+              <div class="page-main-production__nav">
+                <button type="button" class="js-page-main-production-prev page-main-production__nav-button" aria-label="Предыдущее фото">←</button>
+                <button type="button" class="js-page-main-production-next page-main-production__nav-button" aria-label="Следующее фото">→</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="reasons__inner">
-          <div class="d-flex flex-column reasons__blocks reasons__element-1">
-            <div class="d-flex flex-column reasons__block">
-              <p class="reasons__block-metricks">+1,7 сек</p>
-              <p class="align-self-end reasons__block-text">внимания</p>
-            </div>
-            <div class="d-flex flex-column reasons__block">
-              <p class="reasons__block-metricks">+12–15%</p>
-              <p class="align-self-end reasons__block-text">к среднему чеку</p>
-            </div>
-          </div>
-          <div class="d-flex flex-column reasons__element-2">
-            <div class="reasons__content js-reasons__content active" data-reasons-content="1">
-              высокий вау- эффект <br>
-              понятная гастрономичность <br>
-              рост импульсных продаж
-            </div>
-            <div class="reasons__content js-reasons__content" data-reasons-content="2">
-              Новинки с нестандартными, но понятными вкусами привлекают внимание покупателей и увеличивают поток к полке
-              за счет яркого визуального и гастрономического контраста с привычными продуктами. Такие SKU помогают сети
-              выделяться на фоне конкурентов и обеспечивают дополнительный рост продаж за счет импульсных покупок.
-            </div>
-          </div>
-          <div class="mt-lg-auto d-flex flex-column reasons__buttons reasons__element-3">
-            <button class="button reasons__button js-form-get-price">получить коммерческое предложение</button>
-            <button class="button reasons__button js-form-get-price">обсудить условия поставок</button>
-          </div>
-    </section>
-    <section class="layout-pt reviews js-reviews-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-9 offset-lg-1">
-            <h2 class="text-lowercase reviews__title">что думают покупатели</h2>
-          </div>
-          <div class="text-lg-center layout-mt reviews__description">
-            нас хвалят за вкус, сочетания, качество и разнообразие
-          </div>
-        </div>
       </div>
-      <div class="swiper reviews__slider js-reviews-slider">
-        <div class="swiper-wrapper reviews__slider-wrapper">
-          <div class="swiper-slide d-flex reviews-slide">
-            <div class="d-flex flex-column align-items-center justify-content-between">
-              <strong class="reviews-slide__mark">5</strong>
-              <img class="reviews-slide__star" src="img/star.svg" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-between reviews-slide__content">
-              <p class="reviews-slide__text">
-                бомбезное сочетание, а главное, что «сезон лисичек» даже в орехах соблюли :) вкусненько продавцу
-                спасибо нигде больше не продают такое
-              </p>
-              <span class="reviews-slide__author">Екатерина</span>
-            </div>
-          </div>
-          <div class="swiper-slide d-flex reviews-slide">
-            <div class="d-flex flex-column align-items-center justify-content-between">
-              <strong class="reviews-slide__mark">5</strong>
-              <img class="reviews-slide__star" src="img/star.svg" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-between reviews-slide__content">
-              <p class="reviews-slide__text">
-                бомбезное сочетание, а главное, что «сезон лисичек» даже в орехах соблюли :) вкусненько продавцу
-                спасибо нигде больше не продают такое
-              </p>
-              <span class="reviews-slide__author">Марина</span>
-            </div>
-          </div>
-          <div class="swiper-slide d-flex reviews-slide">
-            <div class="d-flex flex-column align-items-center justify-content-between">
-              <strong class="reviews-slide__mark">5</strong>
-              <img class="reviews-slide__star" src="img/star.svg" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-between reviews-slide__content">
-              <p class="reviews-slide__text">
-                бомбезное сочетание, а главное, что «сезон лисичек» даже в орехах соблюли :) вкусненько продавцу
-                спасибо нигде больше не продают такое
-              </p>
-              <span class="reviews-slide__author">Лариса</span>
-            </div>
-          </div>
-          <div class="swiper-slide d-flex reviews-slide">
-            <div class="d-flex flex-column align-items-center justify-content-between">
-              <strong class="reviews-slide__mark">5</strong>
-              <img class="reviews-slide__star" src="img/star.svg" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-between reviews-slide__content">
-              <p class="reviews-slide__text">
-                бомбезное сочетание, а главное, что «сезон лисичек» даже в орехах соблюли :) вкусненько продавцу
-                спасибо нигде больше не продают такое
-              </p>
-              <span class="reviews-slide__author">Валерия</span>
-            </div>
-          </div>
-          <div class="swiper-slide d-flex reviews-slide">
-            <div class="d-flex flex-column align-items-center justify-content-between">
-              <strong class="reviews-slide__mark">5</strong>
-              <img class="reviews-slide__star" src="img/star.svg" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-between reviews-slide__content">
-              <p class="reviews-slide__text">
-                бомбезное сочетание, а главное, что «сезон лисичек» даже в орехах соблюли :) вкусненько продавцу
-                спасибо нигде больше не продают такое
-              </p>
-              <span class="reviews-slide__author">Екатерина</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="layout-pt questions">
+
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-7 offset-lg-5">
-            <h2 class="text-lowercase questions__title">отвечаем на вопросы</h2>
-          </div>
-        </div>
-        <div class="accordion questions__accordion" id="accordionPanelsStayOpenExample">
-          <div class="accordion-item questions__accordion-item">
-            <h2 class="accordion-header questions__accordion-header">
-              <button class="accordion-button d-flex justify-content-between questions__accordion-button" type="button"
-                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-1" aria-expanded="false"
-                aria-controls="panelsStayOpen-1">
-                <span class="questions__accordion-title">
-                  Чем ваши вкусы отличаются от обычного кешью?
-                </span>
-                <span class="text-end ms-auto text-uppercase questions__accordion-tag">
-                  смотреть ответ
+          <div class="col-12">
+            <div class="page-main-production__body">
+              <button type="button" class="page-main-production__video" data-bs-toggle="modal" data-bs-target="#mainVideoModal"
+                data-video-src="videos/main/2_web.mp4" aria-label="Смотреть экскурсию по производству">
+                <img src="img/main/Производственные%20линии-1.png" alt="Видео производства" class="page-main-production__video-cover">
+                <span class="page-main-production__video-label">видео · reels</span>
+                <span class="page-main-production__video-play">
+                  <span class="page-main-production__video-icon">▶</span>
+                  <span class="page-main-production__video-text">Экскурсия<br>по производству</span>
                 </span>
               </button>
-            </h2>
-            <div id="panelsStayOpen-1" class="accordion-collapse collapse show">
-              <div class="accordion-body questions__accordion-body">
-                Наши орехи проходят гастрономическую ароматизацию — орех впитывает сложный вкус, вдохновленный
-                ресторанными блюдами, а не просто солью или специями. Это делает вкус более глубоким, ярким и
-                запоминающимся.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item questions__accordion-item">
-            <h2 class="accordion-header questions__accordion-header">
-              <button class="accordion-button d-flex justify-content-between questions__accordion-button collapsed"
-                type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-2" aria-expanded="false"
-                aria-controls="panelsStayOpen-2">
-                <span class="questions__accordion-title">
-                  Какие варианты фасовок доступны?
-                </span>
-                <span class="text-end ms-auto text-uppercase questions__accordion-tag">
-                  смотреть ответ
-                </span>
-              </button>
-            </h2>
-            <div id="panelsStayOpen-2" class="accordion-collapse collapse">
-              <div class="accordion-body questions__accordion-body">
-                Наши орехи проходят гастрономическую ароматизацию — орех впитывает сложный вкус, вдохновленный
-                ресторанными блюдами, а не просто солью или специями. Это делает вкус более глубоким, ярким и
-                запоминающимся.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item questions__accordion-item">
-            <h2 class="accordion-header questions__accordion-header">
-              <button class="accordion-button d-flex justify-content-between questions__accordion-button collapsed"
-                type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-3" aria-expanded="false"
-                aria-controls="panelsStayOpen-3">
-                <span class="questions__accordion-title">
-                  Как быстро возможна поставка?
-                </span>
-                <span class="text-end ms-auto text-uppercase questions__accordion-tag">
-                  смотреть ответ
-                </span>
-              </button>
-            </h2>
-            <div id="panelsStayOpen-3" class="accordion-collapse collapse">
-              <div class="accordion-body questions__accordion-body">
-                Наши орехи проходят гастрономическую ароматизацию — орех впитывает сложный вкус, вдохновленный
-                ресторанными блюдами, а не просто солью или специями. Это делает вкус более глубоким, ярким и
-                запоминающимся.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item questions__accordion-item">
-            <h2 class="accordion-header questions__accordion-header">
-              <button class="accordion-button d-flex justify-content-between questions__accordion-button collapsed"
-                type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-4" aria-expanded="false"
-                aria-controls="panelsStayOpen-4">
-                <span class="questions__accordion-title">
-                  Можно ли получить образцы?
-                </span>
-                <span class="text-end ms-auto text-uppercase questions__accordion-tag">
-                  смотреть ответ
-                </span>
-              </button>
-            </h2>
-            <div id="panelsStayOpen-4" class="accordion-collapse collapse">
-              <div class="accordion-body questions__accordion-body">
-                Наши орехи проходят гастрономическую ароматизацию — орех впитывает сложный вкус, вдохновленный
-                ресторанными блюдами, а не просто солью или специями. Это делает вкус более глубоким, ярким и
-                запоминающимся.
+
+              <div class="js-page-main-production-slider page-main-production__slider swiper">
+                <div class="swiper-wrapper page-main-production__gallery">
+                  <figure class="swiper-slide page-main-production__gallery-item">
+                    <div class="page-main-production__gallery-photo"><img src="img/main/Производственные%20линии.png" alt="Производственные линии"></div>
+                    <figcaption class="page-main-production__gallery-caption">Производственные линии</figcaption>
+                  </figure>
+                  <figure class="swiper-slide page-main-production__gallery-item">
+                    <div class="page-main-production__gallery-photo"><img src="img/main/Автоматизированное%20оборудование.png" alt="Автоматизированное оборудование"></div>
+                    <figcaption class="page-main-production__gallery-caption">Автоматизированное оборудование</figcaption>
+                  </figure>
+                  <figure class="swiper-slide page-main-production__gallery-item">
+                    <div class="page-main-production__gallery-photo"><img src="img/main/Лаборатория.png" alt="Лаборатория"></div>
+                    <figcaption class="page-main-production__gallery-caption">Лаборатория</figcaption>
+                  </figure>
+                  <figure class="swiper-slide page-main-production__gallery-item">
+                    <div class="page-main-production__gallery-photo"><img src="img/main/Складские%20комплексы.png" alt="Складские комплексы"></div>
+                    <figcaption class="page-main-production__gallery-caption">Складские комплексы</figcaption>
+                  </figure>
+                  <figure class="swiper-slide page-main-production__gallery-item">
+                    <div class="page-main-production__gallery-photo"><img src="img/main/Упаковка%20продукции.png" alt="Упаковка продукции"></div>
+                    <figcaption class="page-main-production__gallery-caption">Упаковка продукции</figcaption>
+                  </figure>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="feedback layout-pt layout-pb">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-10 offset-xl-1">
-            <h2 class="feedback__title">
-              готовы добавить гастро-снеки вкусы на вашу полку?
-            </h2>
+
+    <!-- НОВОСТИ И ЭКСПЕРТНЫЕ МАТЕРИАЛЫ -->
+    <section class="page-main-news js-page-main-news" id="news">
+      <div class="container-fluid">
+        <div class="page-main-news__head">
+          <div>
+            <h2 class="page-main-news__title">новости и экспертные материалы</h2>
+            <p class="page-main-news__subtitle">Тренды рынка, исследования и статьи наших технологов</p>
+          </div>
+          <a href="#news" class="page-main-news__all-link">Все материалы</a>
+        </div>
+
+        <!-- TODO: блок статичный (демо), в проде подставляется из блога WinterCMS -->
+        <div class="page-main-news__filters">
+          <button type="button" class="page-main-news__filter js-page-main-news-filter is-active" data-category="all">Все материалы</button>
+          <button type="button" class="page-main-news__filter js-page-main-news-filter" data-category="trends">Тренды рынка</button>
+          <button type="button" class="page-main-news__filter js-page-main-news-filter" data-category="research">Исследования</button>
+          <button type="button" class="page-main-news__filter js-page-main-news-filter" data-category="expert">Статья технолога</button>
+          <button type="button" class="page-main-news__filter js-page-main-news-filter" data-category="products">Новые продукты</button>
+        </div>
+
+        <div class="row page-main-news__grid">
+          <div class="col-12 col-lg-6">
+            <a href="#news" class="page-main-news__main js-page-main-news-card" data-category="trends">
+              <div class="page-main-news__main-photo"><img src="img/main/Ингредиенты-2.png" alt="Ореховые ингредиенты в кондитерке"></div>
+              <div class="page-main-news__main-meta">
+                <span class="page-main-news__main-tag">Тренды рынка</span>
+                <span>04.08.2026</span>
+              </div>
+              <h3 class="page-main-news__main-title">Ореховые ингредиенты в кондитерке: что меняется в 2026 году</h3>
+              <p class="page-main-news__main-text">Разбираем спрос на пасты и пралине в промышленных рецептурах и то, как меняются требования производителей</p>
+              <span class="page-main-news__main-link">Читать материал →</span>
+            </a>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="page-main-news__side">
+              <a href="#news" class="page-main-news__card js-page-main-news-card" data-category="research">
+                <div class="page-main-news__card-photo"><img src="img/main/Лаборатория-1.png" alt="Стабильность начинок при длительном хранении"></div>
+                <div>
+                  <div class="page-main-news__card-meta"><span>Исследования</span><span>·</span><span>28.07.2026</span></div>
+                  <h3 class="page-main-news__card-title">Стабильность начинок при длительном хранении</h3>
+                  <p class="page-main-news__card-text">Результаты лабораторных тестов на жировой и водной основах</p>
+                </div>
+              </a>
+              <a href="#news" class="page-main-news__card js-page-main-news-card" data-category="expert">
+                <div class="page-main-news__card-photo"><img src="img/main/Автоматизированное%20оборудование-1.png" alt="Как подобрать ореховую пасту под линию дозирования"></div>
+                <div>
+                  <div class="page-main-news__card-meta"><span>Статья технолога</span><span>·</span><span>19.07.2026</span></div>
+                  <h3 class="page-main-news__card-title">Как подобрать ореховую пасту под линию дозирования</h3>
+                  <p class="page-main-news__card-text">Вязкость, температура и помол — на что смотреть технологу</p>
+                </div>
+              </a>
+              <a href="#news" class="page-main-news__card js-page-main-news-card" data-category="products">
+                <div class="page-main-news__card-photo"><img src="img/main/Ингредиенты-3.png" alt="Мультисенсорные вкусо-ароматические решения на орехе"></div>
+                <div>
+                  <div class="page-main-news__card-meta"><span>Новые продукты</span><span>·</span><span>10.07.2026</span></div>
+                  <h3 class="page-main-news__card-title">Мультисенсорные вкусо-ароматические решения на орехе</h3>
+                  <p class="page-main-news__card-text">Новая линейка для снеков и кондитерских изделий</p>
+                </div>
+              </a>
+              <a href="#news" class="page-main-news__card js-page-main-news-card" data-category="agro">
+                <div class="page-main-news__card-photo"><img src="img/main/Агропроизводство.png" alt="Итоги сезона на собственных плантациях"></div>
+                <div>
+                  <div class="page-main-news__card-meta"><span>Агропроизводство</span><span>·</span><span>21.06.2026</span></div>
+                  <h3 class="page-main-news__card-title">Итоги сезона на собственных плантациях</h3>
+                  <p class="page-main-news__card-text">Урожай, качество сырья и планы на следующий год</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12 col-lg-6 col-xxl-5 offset-xl-1">
-            <form action="/2323" class="d-flex flex-column js-ajax-from feedback__form" method="POST">
+      </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section class="page-main-contact" id="contact">
+      <div class="container-fluid">
+        <div class="row page-main-contact__row align-items-stretch">
+          <div class="col-12 col-lg-7">
+            <h2 class="page-main-contact__title">готовы обсудить поставку или свой продукт?</h2>
+            <p class="page-main-contact__text">Оставьте заявку — менеджер и технолог свяжутся с вами, чтобы уточнить задачу и предложить оптимальное решение</p>
+
+            <!-- TODO: подставить реальные form_id и имена полей form_text_NN из WinterCMS (см. пример в salt.html) -->
+            <form action="/ajax/sendForm.php" class="js-ajax-from page-main-contact__form" method="POST">
               <input type="hidden" name="recaptcha_response" value="" class="visually-hidden">
-              <label class="feedback__form-label">
+              <input type="hidden" name="form_id" value="TODO" class="visually-hidden">
+
+              <label class="page-main-contact__form-label">
                 <span class="visually-hidden">Имя</span>
-                <input type="text" name="name" placeholder="Имя" class="w-100 feedback__form-input" required>
+                <input type="text" name="form_text_TODO" placeholder="Имя" class="page-main-contact__form-input" required>
               </label>
 
-              <label class="feedback__form-label">
+              <label class="page-main-contact__form-label">
                 <span class="visually-hidden">Компания</span>
-                <input type="text" name="company" placeholder="Компания" class="w-100 feedback__form-input" required>
+                <input type="text" name="form_text_TODO" placeholder="Компания" class="page-main-contact__form-input" required>
               </label>
 
-              <div class="d-xxl-flex justify-content-between">
-                <label class="w-100 w-xxl-auto feedback__form-label">
+              <div class="page-main-contact__form-row">
+                <label class="page-main-contact__form-label">
                   <span class="visually-hidden">Телефон</span>
-                  <input type="tel" name="phone" placeholder="Телефон" imask-phone
-                    class="w-100 w-xxl-auto feedback__form-input" required>
+                  <input type="tel" name="form_text_TODO" placeholder="Телефон" imask-phone class="page-main-contact__form-input" required>
                 </label>
-
-                <label class="w-100 w-xxl-auto feedback__form-label">
+                <label class="page-main-contact__form-label">
                   <span class="visually-hidden">Email</span>
-                  <input type="email" name="email" placeholder="Email" class="w-100 w-xxl-auto feedback__form-input"
-                    required>
+                  <input type="email" name="form_text_TODO" placeholder="Email" class="page-main-contact__form-input" required>
                 </label>
               </div>
 
-              <div class="mx-auto feedback__form-check">
-                <label class="form-check-label d-flex align-items-center">
-                  <input type="checkbox" name="consent" role="button" class=" me-2" required>
-                  <span>Даю согласие на обработку <a href="#" target="_blank"
-                      class="text-decoration-underline">персональных данных</a></span>
-                </label>
-              </div>
-              <button type="submit" class="button button--dark feedback__form-button">Отправить запрос</button>
+              <label class="page-main-contact__form-label">
+                <span class="visually-hidden">Задача или интересующая продукция</span>
+                <input type="text" name="form_text_TODO" placeholder="Задача или интересующая продукция" class="page-main-contact__form-input">
+              </label>
+
+              <label class="page-main-contact__form-check">
+                <input type="checkbox" name="consent" role="button" required>
+                <span>Даю согласие на обработку <a href="#" target="_blank">персональных данных</a></span>
+              </label>
+
+              <button type="submit" class="button button--dark page-main-contact__form-button">Отправить запрос</button>
             </form>
-            <div class="d-flex flex-column flex-sm-row justify-content-between feedback__notes">
-              <div class="w-auto w-sm-100 feedback__note">
-                <p>Ответим в течение часа</p>
-              </div>
-              <div class="w-auto w-sm-100 feedback__note">
-                <p>Отправим образцы</p>
-              </div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="page-main-contact__photo">
+              <img src="img/main/Лаборатория-2.png" alt="Лаборатория контроля качества ОРЕХПРОМ">
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="page-main-next-steps">
+          <div class="page-main-next-steps__title">что будет<br>дальше:</div>
+          <div class="page-main-next-steps__item">
+            <span>Свяжемся в течение<br>1 рабочего дня</span>
+            <span class="page-main-next-steps__item-arrow">→</span>
+          </div>
+          <div class="page-main-next-steps__item">
+            <span>Уточним<br>требования</span>
+            <span class="page-main-next-steps__item-arrow">→</span>
+          </div>
+          <div class="page-main-next-steps__item">Предложим объемы,<br>сроки и условия</div>
         </div>
       </div>
     </section>
 
   </main>
-  <footer class="footer">
-    <div class="container">
-      <div class="d-flex footer__top">
-        <nav class="footer__nav">
-          <ul class="d-grid footer__list">
-            <li class="footer__nav-item"><a href="" class="footer__nav-link">О компании</a></li>
-            <li class="footer__nav-item"><a href="" class="footer__nav-link">Бренды</a></li>
-            <li class="footer__nav-item"><a href="" class="footer__nav-link">Производство</a></li>
-            <li class="footer__nav-item"><a href="" class="footer__nav-link">Рецепты</a></li>
-            <li class="footer__nav-item"><a href="" class="footer__nav-link">В2В</a></li>
-            <li class="footer__nav-item"><a href="" class="footer__nav-link">Блог</a></li>
-          </ul>
-        </nav>
-        <div class="footer__contacts">
-          <div class="footer__contacts-label">Контакты:</div>
-          <div class="d-flex flex-sm-column footer__contacts-data">
-            <a href="tel:+78612060694" class="footer__contacts-phone">8 (861) 206 06 94</a>
-            <address class="d-flex flex-column footer__contacts-address">
-              <a href="mailto:shop@orekh.com">shop@orekh.com</a>
-              <a href="https://yandex.ru/maps/-/CPfDqZnM" target="_blank">350012, г. Краснодар, ул. Красных Партизан, д.
-                2/4а</a>
-            </address>
-          </div>
-        </div>
-        <ul class="d-flex align-items-center footer__socials">
-          <li class="footer__socials-item"><a href="" class="footer__socials-link">
-              <img src="img/socials/vk.svg" alt="">
-            </a></li>
-          <li class="footer__socials-item"><a href="" class="footer__socials-link">
-              <img src="img/socials/max.svg" alt="">
-            </a></li>
-          <li class="footer__socials-item"><a href="" class="footer__socials-link">
-              <img src="img/socials/tg.svg" alt="">
-            </a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer__banner">
-      <img src="img/footer-banner.svg" alt="" class="w-100 h-100">
-    </div>
-    <div class="container">
-      <ul class="d-flex flex-column flex-lg-row footer__bottom">
-        <li class="footer__bottom-item footer__bottom-item-1">АО Орехпром © 1998 - 2026. Все права защищены</li>
-        <li class="footer__bottom-item footer__bottom-item-2">
-          <a href="" target="_blank">
-            Политика конфиденциальности
-          </a>
-        </li>
-        <li class="footer__bottom-item footer__bottom-item-3">
-          <a href="" target="_blank">
-            Договор-оферта для юр.лиц
-          </a>
-        </li>
-        <li class="footer__bottom-item footer__bottom-item-4">
-          <a href="https://nuts-agency.ru" target="_blank">
-            Разработали в NUTS
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
 
-  <div class="modal fade" id="modal-result-error" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content rounded-0">
+  <!-- МОДАЛЬНОЕ ОКНО С ВИДЕО (переиспользуется для hero и production) -->
+  <div class="modal fade page-main-video-modal" id="mainVideoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
         <div class="modal-header">
-          <h1 class="typography-h2">Ошибка!</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body typography-caption">
-          Что-то пошло не так, попробуйте позже
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="modal-result-success" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content rounded-0">
-        <div class="modal-header">
-          <h1 class="typography-h2">Ваш запрос успешно отправлен!</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body typography-caption">
-          Наш менеджер скоро с Вами свяжется
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="createOrderModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content rounded-0">
-        <div class="modal-header">
-          <h1 class="modal-title typography-h2" id="createOrderModalLabel">Сделать заказ</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
         </div>
         <div class="modal-body">
-          <form action="" class="d-flex flex-column js-ajax-from" method="POST">
-            <input type="hidden" name="recaptcha_response" value="" class="visually-hidden">
-            <label class="feedback__form-label">
-              <span class="visually-hidden">Имя</span>
-              <input type="text" name="name" placeholder="Имя" class="w-100 feedback__form-input" required>
-            </label>
-
-            <label class="feedback__form-label">
-              <span class="visually-hidden">Компания</span>
-              <input type="text" name="company" placeholder="Компания" class="w-100 feedback__form-input" required>
-            </label>
-
-            <label class="feedback__form-label">
-              <span class="visually-hidden">Телефон</span>
-              <input type="tel" name="phone" placeholder="Телефон" imask-phone class="w-100 feedback__form-input"
-                required>
-            </label>
-
-            <label class="feedback__form-label">
-              <span class="visually-hidden">Email</span>
-              <input type="email" name="email" placeholder="Email" class="w-100 feedback__form-input" required>
-            </label>
-
-            <label class="feedback__form-label">
-              <span class="visually-hidden">Комментарий</span>
-              <textarea placeholder="Комментарий" class="w-100 feedback__form-input"></textarea>
-            </label>
-
-            <label class="visually-hidden">
-              <input type="hidden" name="product_name" value="">
-            </label>
-
-
-            <div class="mx-auto feedback__form-check">
-              <label class="form-check-label d-flex align-items-center">
-                <input type="checkbox" name="consent" role="button" class=" me-2" required>
-                <span>Даю согласие на обработку <a href="#" target="_blank"
-                    class="text-decoration-underline">персональных данных</a></span>
-              </label>
-            </div>
-            <button type="submit" class="button button--dark feedback__form-button">Отправить запрос</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="getPriceModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content rounded-0">
-        <div class="modal-header">
-          <h1 class="modal-title typography-h2" id="getPriceModalLabel">Получить прайс</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form action="" class="d-flex flex-column js-ajax-from" method="POST">
-            <input type="hidden" name="recaptcha_response" value="" class="visually-hidden">
-            <label class="feedback__form-label">
-              <span class="visually-hidden">Имя</span>
-              <input type="text" name="name" placeholder="Имя" class="w-100 feedback__form-input" required>
-            </label>
-
-            <label class="feedback__form-label">
-              <span class="visually-hidden">Компания</span>
-              <input type="text" name="company" placeholder="Компания" class="w-100 feedback__form-input" required>
-            </label>
-
-            <label class="feedback__form-label">
-              <span class="visually-hidden">Телефон</span>
-              <input type="tel" name="phone" placeholder="Телефон" imask-phone class="w-100 feedback__form-input"
-                required>
-            </label>
-
-            <label class="feedback__form-label">
-              <span class="visually-hidden">Email</span>
-              <input type="email" name="email" placeholder="Email" class="w-100 feedback__form-input" required>
-            </label>
-
-            <label class="feedback__form-label">
-              <span class="visually-hidden">Комментарий</span>
-              <textarea placeholder="Комментарий" class="w-100 feedback__form-input"></textarea>
-            </label>
-
-
-            <div class="mx-auto feedback__form-check">
-              <label class="form-check-label d-flex align-items-center">
-                <input type="checkbox" name="consent" role="button" class=" me-2" required>
-                <span>Даю согласие на обработку <a href="#" target="_blank"
-                    class="text-decoration-underline">персональных данных</a></span>
-              </label>
-            </div>
-            <button type="submit" class="button button--dark feedback__form-button">Отправить запрос</button>
-          </form>
+          <video class="page-main-video-modal__player js-page-main-video-modal-player" controls playsinline></video>
         </div>
       </div>
     </div>
@@ -919,17 +517,13 @@
 
   <script src="js/libs/bootstrap.bundle.min.js"></script>
   <script src="js/libs/swiper.bundle.js"></script>
-  <script src="js/libs/gsap.js"></script>
-  <script src="js/libs/scroll-trigger.js"></script>
   <script src="js/libs/imask.js"></script>
   <script src="js/helpers.js"></script>
-  <script src="js/header.js"></script>
-  <script src="js/hero.js"></script>
-  <script src="js/facts.js"></script>
-  <script src="js/flavors.js"></script>
-  <script src="js/reviews.js"></script>
-  <script src="js/reasons.js"></script>
-  <script src="js/form-handler.js"></script>
+  <script src="js/pages/main/offer.js"></script>
+  <script src="js/pages/main/production.js"></script>
+  <script src="js/pages/main/why.js"></script>
+  <script src="js/pages/main/news.js"></script>
+  <script src="js/pages/main/video-modal.js"></script>
 </body>
 
 </html>

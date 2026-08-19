@@ -1,0 +1,35 @@
+.page-main-next-steps {
+  border-top: 1px solid $color-gray-dark;
+  padding: 54px 0;
+  display: grid;
+  grid-template-columns: 300px repeat(3, 1fr);
+  gap: 32px;
+  align-items: center;
+
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 32px 0;
+  }
+
+  &__title {
+    @include typography("Geologica", normal, 600, 40px, 1.05);
+    letter-spacing: -0.02em;
+
+    @include media-breakpoint-down(md) {
+      font-size: 26px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    @include typography("Geologica", normal, 500, 17px, 1.35);
+
+    &-arrow {
+      color: rgba($color-dark, 0.35);
+      font-size: 22px;
+    }
+  }
+}

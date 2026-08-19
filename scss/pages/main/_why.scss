@@ -1,0 +1,204 @@
+.page-main-why {
+  padding-top: 96px;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 56px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 40px;
+  }
+
+  &__head {
+    text-align: right;
+    padding-bottom: 18px;
+    border-bottom: 1px solid $color-gray-dark;
+
+    @include media-breakpoint-down(md) {
+      text-align: left;
+    }
+  }
+
+  &__kicker {
+    @include typography("Geologica", normal, 600, 46px, 1);
+    letter-spacing: -0.02em;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 34px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 26px;
+    }
+  }
+
+  &__brand {
+    @include typography("Musticapro", normal, 600, 108px, 0.95);
+    letter-spacing: -0.01em;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 72px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 44px;
+    }
+  }
+
+  &__subtitle {
+    margin: 20px 0 0 auto;
+    max-width: 520px;
+    text-align: right;
+    @include typography("Geologica", normal, 400, 17px, 1.5);
+    color: rgba($color-dark, 0.6);
+
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+      text-align: left;
+      font-size: 15px;
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: minmax(180px, 300px) minmax(340px, 1fr) minmax(280px, 380px);
+    gap: 20px;
+    margin-top: 40px;
+    align-items: stretch;
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__visual {
+    position: relative;
+    overflow: hidden;
+    min-height: 520px;
+    background-color: $color-gray-dark;
+
+    @include media-breakpoint-down(md) {
+      min-height: 280px;
+    }
+
+    &-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+
+      &.is-active {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__panel {
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+    background-color: $color-dark;
+    color: $color-light;
+
+    @include media-breakpoint-down(md) {
+      padding: 24px;
+    }
+
+    &-step {
+      @include typography("Geologica", normal, 400, 12px, 12px);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba($color-light, 0.45);
+    }
+
+    &-title {
+      margin-top: 22px;
+      @include typography("Geologica", normal, 600, 34px, 1.1);
+      letter-spacing: -0.01em;
+
+      @include media-breakpoint-down(md) {
+        font-size: 26px;
+      }
+    }
+
+    &-text {
+      margin-top: 16px;
+      max-width: 520px;
+      @include typography("Geologica", normal, 400, 16px, 1.55);
+      color: rgba($color-light, 0.62);
+    }
+
+    &-list {
+      display: grid;
+      gap: 1px;
+      margin-top: 34px;
+      background-color: rgba($color-light, 0.14);
+    }
+
+    &-list-item {
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 14px;
+      align-items: baseline;
+      padding: 18px 0;
+      background-color: $color-dark;
+
+      &-arrow {
+        font-size: 13px;
+        color: rgba($color-light, 0.35);
+      }
+
+      &-text {
+        @include typography("Geologica", normal, 500, 17px, 1.3);
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__nav-item {
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 20px 22px;
+    border: 0;
+    border-top: 1px solid $color-gray-dark;
+    background-color: $color-light;
+    color: $color-dark;
+    text-align: left;
+    cursor: pointer;
+
+    &:last-of-type {
+      border-bottom: 1px solid $color-gray-dark;
+    }
+
+    &.is-active {
+      background-color: $color-dark;
+      color: $color-light;
+    }
+
+    &-index {
+      @include typography("Geologica", normal, 400, 13px, 13px);
+      opacity: 0.5;
+    }
+
+    &-title {
+      display: block;
+      @include typography("Geologica", normal, 600, 19px, 1.2);
+    }
+
+    &-text {
+      display: block;
+      margin-top: 5px;
+      @include typography("Geologica", normal, 400, 14px, 1.35);
+      opacity: 0.6;
+    }
+  }
+}

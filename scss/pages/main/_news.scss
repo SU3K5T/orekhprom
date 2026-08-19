@@ -1,0 +1,240 @@
+.page-main-news {
+  padding-top: 88px;
+
+  .is-hidden {
+    display: none !important;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 56px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 40px;
+  }
+
+  &__head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+
+  &__title {
+    @include typography("Geologica", normal, 600, 52px, 1.05);
+
+    @include media-breakpoint-down(lg) {
+      font-size: 38px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 28px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 14px;
+    @include typography("Geologica", normal, 400, 16px, 1.4);
+    color: rgba($color-dark, 0.55);
+  }
+
+  &__all-link {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 0 40px;
+    height: 62px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    @include typography("Geologica", normal, 600, 14px, 14px);
+    letter-spacing: 0.08em;
+    border: 1px solid rgba($color-dark, 0.25);
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      height: 48px;
+    }
+  }
+
+  &__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 32px;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 20px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  &__filter {
+    flex-shrink: 0;
+    padding: 12px 22px;
+    border: 1px solid rgba($color-dark, 0.22);
+    background: none;
+    color: $color-dark;
+    @include typography("Geologica", normal, 500, 14px, 14px);
+
+    &.is-active {
+      border-color: $color-dark;
+      background-color: $color-dark;
+      color: $color-light;
+    }
+  }
+
+  &__grid {
+    margin-top: 28px;
+    row-gap: 20px;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 20px;
+      row-gap: 12px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 24px;
+    background-color: $color-light;
+
+    @include media-breakpoint-down(md) {
+      padding: 16px;
+    }
+
+    &-photo {
+      height: 320px;
+      overflow: hidden;
+      background-color: $color-gray-dark;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @include media-breakpoint-down(md) {
+        height: 220px;
+      }
+    }
+
+    &-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 24px;
+      @include typography("Geologica", normal, 600, 12px, 12px);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba($color-dark, 0.45);
+    }
+
+    &-tag {
+      padding: 7px 14px;
+      background-color: $color-gray;
+    }
+
+    &-title {
+      margin-top: 18px;
+      @include typography("Geologica", normal, 700, 32px, 1.15);
+      letter-spacing: -0.01em;
+
+      @include media-breakpoint-down(md) {
+        font-size: 22px;
+      }
+    }
+
+    &-text {
+      margin-top: 14px;
+      @include typography("Geologica", normal, 400, 17px, 1.5);
+      color: rgba($color-dark, 0.6);
+    }
+
+    &-link {
+      margin-top: auto;
+      padding-top: 24px;
+      @include typography("Geologica", normal, 600, 14px, 14px);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+  }
+
+  &__side {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+  }
+
+  &__card {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 22px;
+    align-items: center;
+    flex: 1 1 0;
+    padding: 22px;
+    background-color: $color-light;
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 84px 1fr;
+      gap: 14px;
+      padding: 14px;
+    }
+
+    &-photo {
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      background-color: $color-gray-dark;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      @include typography("Geologica", normal, 600, 12px, 12px);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba($color-dark, 0.45);
+    }
+
+    &-title {
+      margin-top: 12px;
+      @include typography("Geologica", normal, 600, 20px, 1.25);
+
+      @include media-breakpoint-down(md) {
+        font-size: 16px;
+      }
+    }
+
+    &-text {
+      margin-top: 8px;
+      @include typography("Geologica", normal, 400, 15px, 1.45);
+      color: rgba($color-dark, 0.58);
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+  }
+}

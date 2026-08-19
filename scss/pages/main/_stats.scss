@@ -1,0 +1,156 @@
+.page-main-stats {
+  margin-top: 120px;
+  padding: 96px 0;
+  background-color: $color-dark;
+  color: $color-light;
+
+  @include media-breakpoint-down(lg) {
+    margin-top: 72px;
+    padding: 56px 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-top: 48px;
+    padding: 40px 0;
+  }
+
+  &__head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    @include typography("Geologica", normal, 600, 52px, 1.05);
+
+    @include media-breakpoint-down(lg) {
+      font-size: 38px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 28px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 14px;
+    @include typography("Geologica", normal, 400, 16px, 1.4);
+    color: rgba($color-light, 0.5);
+  }
+
+  &__cta {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 0 40px;
+    height: 62px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    @include typography("Geologica", normal, 600, 14px, 14px);
+    letter-spacing: 0.08em;
+    border: 1px solid rgba($color-light, 0.3);
+    color: $color-light;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-light;
+        color: $color-dark;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      height: 48px;
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 28px;
+    margin-top: 56px;
+    align-items: stretch;
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 1fr;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-top: 32px;
+      gap: 16px;
+    }
+  }
+
+  &__photo {
+    overflow: hidden;
+    background-color: rgba($color-light, 0.06);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.85;
+    }
+
+    @include media-breakpoint-down(lg) {
+      height: 220px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    padding: 28px;
+    background-color: rgba($color-light, 0.06);
+
+    @include media-breakpoint-down(md) {
+      min-height: 140px;
+      padding: 18px;
+    }
+
+    &-value {
+      @include typography("Geologica", normal, 600, 62px, 1);
+      letter-spacing: -0.03em;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 44px;
+      }
+
+      @include media-breakpoint-down(md) {
+        font-size: 30px;
+      }
+    }
+
+    &-label {
+      margin-top: auto;
+      padding-top: 20px;
+      @include typography("Geologica", normal, 400, 16px, 1.35);
+      color: rgba($color-light, 0.62);
+
+      @include media-breakpoint-down(md) {
+        padding-top: 10px;
+        font-size: 13px;
+      }
+    }
+  }
+}
