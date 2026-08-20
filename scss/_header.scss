@@ -75,7 +75,7 @@
     }
 
     color: $color-dark;
-    letter-spacing: -2%;
+    letter-spacing: -0.02em;
 
     @include media-breakpoint-down(lg) {
       font-size: 30px;

@@ -5707,7 +5707,7 @@ input[type=checkbox]:checked::after {
 }
 .header .nav-link {
   color: #1F2022;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
 }
 @media (max-width: 991.98px) {
   .header .nav-link {
@@ -6007,12 +6007,7 @@ input[type=checkbox]:checked::after {
 }
 .footer__bottom-item {
   color: #D4D4D4;
-  letter-spacing: -5%;
-}
-@media (max-width: 991.98px) {
-  .footer__bottom-item {
-    text-align: center;
-  }
+  letter-spacing: -0.05em;
 }
 @media (max-width: 991.98px) {
   .footer__bottom-item {
@@ -12718,7 +12713,6 @@ main {
     gap: 12px;
     overflow-x: auto;
     scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
     scroll-snap-type: x proximity;
     margin-left: calc(var(--bs-gutter-x, 1.5rem) * -0.5);
     margin-right: calc(var(--bs-gutter-x, 1.5rem) * -0.5);
@@ -13342,7 +13336,6 @@ main {
     flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
     scroll-snap-type: x proximity;
     margin-left: calc(var(--bs-gutter-x, 1.5rem) * -0.5);
     margin-right: calc(var(--bs-gutter-x, 1.5rem) * -0.5);

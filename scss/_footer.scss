@@ -173,11 +173,7 @@
 
         &-item {
             color: #D4D4D4;
-            letter-spacing: -5%;
-
-            @include media-breakpoint-down(lg) {
-                text-align: center;
-            }
+            letter-spacing: -0.05em;
 
             @include media-breakpoint-down(lg) {
                 text-align: start;
