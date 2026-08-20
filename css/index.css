@@ -5042,14 +5042,6 @@
   --f-video-aspect-ratio: 9 / 16;
 }
 
-html.with-fancybox {
-  overflow-x: hidden !important;
-}
-
-html.with-fancybox body.hide-scrollbar {
-  overscroll-behavior-x: none;
-}
-
 /* Box sizing rules */
 *,
 *::before,
@@ -5062,13 +5054,6 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-}
-
-/* Guard against any component (sliders, lightbox scroll-lock, full-bleed rows)
-   leaving the page horizontally scrollable */
-html,
-body {
-  overflow-x: hidden;
 }
 
 /* Remove default margin in favour of better control in authored CSS */
