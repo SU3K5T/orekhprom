@@ -5042,6 +5042,14 @@
   --f-video-aspect-ratio: 9 / 16;
 }
 
+html.with-fancybox {
+  overflow-x: hidden !important;
+}
+
+html.with-fancybox body.hide-scrollbar {
+  overscroll-behavior-x: none;
+}
+
 /* Box sizing rules */
 *,
 *::before,
