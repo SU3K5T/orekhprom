@@ -9,6 +9,7 @@ class HeroGallery {
 
     Fancybox.bind(this.target, '[data-fancybox="hero-gallery"]', {
       groupAll: true,
+      placeFocusBack: false,
     });
   }
 }

@@ -28,7 +28,7 @@ class ProductionFancybox {
   init() {
     if (!window.Fancybox) return;
 
-    Fancybox.bind(this.target, '[data-fancybox]');
+    Fancybox.bind(this.target, '[data-fancybox]', { placeFocusBack: false });
   }
 }
 
