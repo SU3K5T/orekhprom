@@ -93,6 +93,7 @@
     width: 62px;
     height: 62px;
     border: 1px solid rgba($color-dark, 0.25);
+    border-radius: 100px;
     background: none;
     color: $color-dark;
     font-size: 18px;
@@ -139,10 +140,6 @@
     overflow: hidden;
     cursor: pointer;
     text-align: start;
-
-    @include media-breakpoint-down(lg) {
-      min-height: 320px;
-    }
 
     &-cover {
       position: absolute;

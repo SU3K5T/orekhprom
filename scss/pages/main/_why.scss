@@ -6,7 +6,7 @@
   }
 
   @include media-breakpoint-down(md) {
-    padding-top: 40px;
+    padding-top: 28px;
   }
 
   &__head {
@@ -16,6 +16,7 @@
 
     @include media-breakpoint-down(md) {
       text-align: left;
+      padding-bottom: 12px;
     }
   }
 
@@ -56,6 +57,7 @@
       margin-left: 0;
       text-align: left;
       font-size: 15px;
+      margin-top: 12px;
     }
   }
 
@@ -68,6 +70,8 @@
 
     @include media-breakpoint-down(lg) {
       grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 28px;
     }
   }
 
@@ -77,8 +81,13 @@
     min-height: 520px;
     background-color: $color-gray-dark;
 
+    @include media-breakpoint-down(lg) {
+      order: 3;
+      min-height: 320px;
+    }
+
     @include media-breakpoint-down(md) {
-      min-height: 280px;
+      min-height: 200px;
     }
 
     &-img {
@@ -103,8 +112,13 @@
     background-color: $color-dark;
     color: $color-light;
 
+    @include media-breakpoint-down(lg) {
+      order: 2;
+      padding: 28px;
+    }
+
     @include media-breakpoint-down(md) {
-      padding: 24px;
+      padding: 18px;
     }
 
     &-step {
@@ -119,8 +133,12 @@
       @include typography("Geologica", normal, 600, 34px, 1.1);
       letter-spacing: -0.01em;
 
+      @include media-breakpoint-down(lg) {
+        margin-top: 12px;
+      }
+
       @include media-breakpoint-down(md) {
-        font-size: 26px;
+        font-size: 22px;
       }
     }
 
@@ -129,6 +147,10 @@
       max-width: 520px;
       @include typography("Geologica", normal, 400, 16px, 1.55);
       color: rgba($color-light, 0.62);
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 10px;
+      }
     }
 
     &-list {
@@ -136,6 +158,10 @@
       gap: 1px;
       margin-top: 34px;
       background-color: rgba($color-light, 0.14);
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 14px;
+      }
     }
 
     &-list-item {
@@ -145,6 +171,10 @@
       align-items: baseline;
       padding: 18px 0;
       background-color: $color-dark;
+
+      @include media-breakpoint-down(lg) {
+        padding: 10px 0;
+      }
 
       &-arrow {
         font-size: 13px;
@@ -160,13 +190,33 @@
   &__nav {
     display: flex;
     flex-direction: column;
+
+    @include media-breakpoint-down(lg) {
+      position: relative;
+      order: 1;
+      flex-direction: row;
+      gap: 12px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x proximity;
+      margin-left: calc(var(--bs-gutter-x, 1.5rem) * -0.5);
+      margin-right: calc(var(--bs-gutter-x, 1.5rem) * -0.5);
+      padding-left: calc(var(--bs-gutter-x, 1.5rem) * 0.5);
+      padding-right: calc(var(--bs-gutter-x, 1.5rem) * 0.5);
+      scroll-padding-left: calc(var(--bs-gutter-x, 1.5rem) * 0.5);
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 
   &__nav-item {
     display: grid;
     grid-template-columns: 46px 1fr;
     gap: 10px;
-    align-items: center;
+    align-items: start;
     padding: 20px 22px;
     border: 0;
     border-top: 1px solid $color-gray-dark;
@@ -174,9 +224,26 @@
     color: $color-dark;
     text-align: left;
     cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
 
     &:last-of-type {
       border-bottom: 1px solid $color-gray-dark;
+    }
+
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      flex: 0 0 260px;
+      padding: 16px;
+      border: 0;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+    }
+
+    @include media-breakpoint-down(md) {
+      flex-basis: 224px;
+      padding: 12px;
     }
 
     &.is-active {
@@ -187,11 +254,24 @@
     &-index {
       @include typography("Geologica", normal, 400, 13px, 13px);
       opacity: 0.5;
+
+      @include media-breakpoint-down(lg) {
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 14px;
+      }
     }
 
     &-title {
       display: block;
       @include typography("Geologica", normal, 600, 19px, 1.2);
+
+      @include media-breakpoint-down(lg) {
+        font-size: 16px;
+      }
     }
 
     &-text {
@@ -199,6 +279,11 @@
       margin-top: 5px;
       @include typography("Geologica", normal, 400, 14px, 1.35);
       opacity: 0.6;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 3px;
+        font-size: 12px;
+      }
     }
   }
 }

@@ -320,6 +320,14 @@ $color-accent: #3A3B3D;
   }
 }
 
+// Наши видео (hero/production) — вертикальные ролики 1080x1920,
+// у Fancybox по умолчанию бокс под альбомное видео (960x540)
+:root {
+  --f-video-height: 645px;
+  --f-video-width: 439px;
+  --f-video-aspect-ratio: 9 / 16;
+}
+
 @mixin form-group_vertical {
   flex-direction: column;
   align-items: stretch;

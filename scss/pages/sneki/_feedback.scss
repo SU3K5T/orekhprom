@@ -27,6 +27,39 @@
         background-image: url('../img/ctm/feedback-ctm-background.jpg');
     }
 
+    &__main {
+        margin-top: 40px;
+        padding-bottom: 198px;
+        background-size: 38% auto;
+        background-image: url('../img/main/Лаборатория-2.png');
+
+        @include media-breakpoint-down(xxl) {
+            background-size: auto 100%;
+        }
+
+        @include media-breakpoint-down(lg) {
+            margin-top: 32px;
+            padding-bottom: 100px;
+            background-color: rgba(255, 255, 255, .75);
+            background-blend-mode: overlay;
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-top: 24px;
+            padding-bottom: 56px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            display: flex;
+            align-items: end;
+            height: 1096px;
+            background-size: 282px 451px;
+            background-position: top right;
+            background-color: unset;
+            background-blend-mode: unset;
+        }
+    }
+
     &__salt {
         padding-bottom: 138px;
         background-size: 38% auto;

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/swiper.bundle.min.css">
+  <link rel="stylesheet" href="css/fancybox.min.css">
   <link rel="stylesheet" href="css/index.css">
   <title>ОРЕХПРОМ — производитель орехов и пищевых ингредиентов для бизнеса</title>
 </head>
@@ -17,32 +18,29 @@
     <!-- ПЕРВЫЙ ЭКРАН -->
     <section class="page-main-hero">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-xl-8">
+        <div class="page-main-hero__top">
+          <div class="page-main-hero__text">
             <h1 class="page-main-hero__title">Орехпром — надежный производитель орехов и пищевых ингредиентов для бизнеса</h1>
             <p class="page-main-hero__lead">От поставки сырья до контрактного производства и разработки новых продуктов — создаем решения для производителей продуктов питания, торговых сетей и собственных торговых марок</p>
-            <div class="page-main-hero__actions">
-              <a href="#contact" class="button button--dark page-main-hero__button">Оставить заявку</a>
-              <a href="#offer" class="button button--light page-main-hero__button">Что мы предлагаем</a>
+          </div>
+          <div class="page-main-hero__media">
+            <a href="videos/main/1_web.mp4" class="page-main-hero__video" data-fancybox="hero-gallery" aria-label="Смотреть видео о производстве">
+              <video class="page-main-hero__video-cover" src="videos/main/1_web.mp4" poster="img/main/Производственные%20линии.png" autoplay muted loop playsinline></video>
+              <span class="page-main-hero__video-label">видео · производство</span>
+              <span class="page-main-hero__video-play">
+                <span class="page-main-hero__video-icon">▶</span>
+                <span class="page-main-hero__video-text">Коллаж производства</span>
+              </span>
+            </a>
+            <div class="page-main-hero__thumbs">
+              <a href="img/main/Лаборатория.png" class="page-main-hero__thumb" data-fancybox="hero-gallery"><img src="img/main/Лаборатория.png" alt="Лаборатория"></a>
+              <a href="img/main/Агропроизводство.png" class="page-main-hero__thumb" data-fancybox="hero-gallery"><img src="img/main/Агропроизводство.png" alt="Собственные плантации"></a>
+              <a href="img/main/Упаковка%20продукции.png" class="page-main-hero__thumb" data-fancybox="hero-gallery"><img src="img/main/Упаковка%20продукции.png" alt="Упаковка"></a>
             </div>
           </div>
-          <div class="col-12 col-xl-4">
-            <div class="page-main-hero__media">
-              <button type="button" class="page-main-hero__video" data-bs-toggle="modal" data-bs-target="#mainVideoModal"
-                data-video-src="videos/main/1_web.mp4" aria-label="Смотреть видео о производстве">
-                <img src="img/main/Производственные%20линии.png" alt="Производство ОРЕХПРОМ" class="page-main-hero__video-cover">
-                <span class="page-main-hero__video-label">видео · производство</span>
-                <span class="page-main-hero__video-play">
-                  <span class="page-main-hero__video-icon">▶</span>
-                  <span class="page-main-hero__video-text">Коллаж производства</span>
-                </span>
-              </button>
-              <div class="page-main-hero__thumbs">
-                <div class="page-main-hero__thumb"><img src="img/main/Лаборатория.png" alt="Лаборатория"></div>
-                <div class="page-main-hero__thumb"><img src="img/main/Агропроизводство.png" alt="Собственные плантации"></div>
-                <div class="page-main-hero__thumb"><img src="img/main/Упаковка%20продукции.png" alt="Упаковка"></div>
-              </div>
-            </div>
+          <div class="page-main-hero__actions">
+            <a href="#contact" class="button button--dark page-main-hero__button">Оставить заявку</a>
+            <a href="#offer" class="button button--light page-main-hero__button">Что мы предлагаем</a>
           </div>
         </div>
 
@@ -70,35 +68,48 @@
     <!-- ДЛЯ КОГО МЫ РАБОТАЕМ -->
     <section class="page-main-audience">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-xl-8">
+        <div class="page-main-audience__head">
+          <div>
             <h2 class="page-main-audience__title">для кого мы работаем</h2>
             <p class="page-main-audience__subtitle">Три ключевых направления работы с бизнесом</p>
           </div>
+          <div class="page-main-audience__nav">
+            <button type="button" class="js-page-main-audience-prev page-main-audience__nav-button" aria-label="Предыдущая карточка">←</button>
+            <button type="button" class="js-page-main-audience-next page-main-audience__nav-button" aria-label="Следующая карточка">→</button>
+          </div>
         </div>
-        <div class="row page-main-audience__list">
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="page-main-audience__card">
-              <div class="page-main-audience__card-photo"><img src="img/main/Ингредиенты.png" alt="Кондитерская и молочная индустрия"></div>
-              <h3 class="page-main-audience__card-title">Производителям кондитерской и молочной индустрии</h3>
-              <p class="page-main-audience__card-text">Сырье, ингредиенты и технологическая поддержка</p>
-              <a href="#offer" class="page-main-audience__card-link">Подробнее →</a>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="page-main-audience__card">
-              <div class="page-main-audience__card-photo"><img src="img/main/Собственные%20бренды.png" alt="Торговые федеральные сети"></div>
-              <h3 class="page-main-audience__card-title">Торговым федеральным сетям</h3>
-              <p class="page-main-audience__card-text">Готовая продукция под собственными брендами. Контрактное производство и выпуск продукции под СТМ</p>
-              <a href="#offer" class="page-main-audience__card-link">Подробнее →</a>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="page-main-audience__card">
-              <div class="page-main-audience__card-photo"><img src="img/main/Упаковка%20продукции-1.png" alt="HoReCa"></div>
-              <h3 class="page-main-audience__card-title">HoReCa</h3>
-              <p class="page-main-audience__card-text">Орехи и ингредиенты для профессионального использования. Орехи для мелкооптовых потребностей</p>
-              <a href="#offer" class="page-main-audience__card-link">Подробнее →</a>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="js-page-main-audience-slider page-main-audience__slider">
+              <ul class="swiper-wrapper page-main-audience__list">
+                <li class="swiper-slide page-main-audience__item">
+                  <div class="page-main-audience__card">
+                    <div class="page-main-audience__card-photo"><img src="img/main/Ингредиенты.png" alt="Кондитерская и молочная индустрия"></div>
+                    <h3 class="page-main-audience__card-title">Производителям кондитерской и молочной индустрии</h3>
+                    <p class="page-main-audience__card-text">Сырье, ингредиенты и технологическая поддержка</p>
+                    <a href="#offer" class="page-main-audience__card-link">Подробнее →</a>
+                  </div>
+                </li>
+                <li class="swiper-slide page-main-audience__item">
+                  <div class="page-main-audience__card">
+                    <div class="page-main-audience__card-photo"><img src="img/main/Собственные%20бренды.png" alt="Торговые федеральные сети"></div>
+                    <h3 class="page-main-audience__card-title">Торговым федеральным сетям</h3>
+                    <p class="page-main-audience__card-text">Готовая продукция под собственными брендами. Контрактное производство и выпуск продукции под СТМ</p>
+                    <a href="#offer" class="page-main-audience__card-link">Подробнее →</a>
+                  </div>
+                </li>
+                <li class="swiper-slide page-main-audience__item">
+                  <div class="page-main-audience__card">
+                    <div class="page-main-audience__card-photo"><img src="img/main/Упаковка%20продукции-1.png" alt="HoReCa"></div>
+                    <h3 class="page-main-audience__card-title">HoReCa</h3>
+                    <p class="page-main-audience__card-text">Орехи и ингредиенты для профессионального использования. Орехи для мелкооптовых потребностей</p>
+                    <a href="#offer" class="page-main-audience__card-link">Подробнее →</a>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -123,7 +134,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-            <div class="js-page-main-offer-slider page-main-offer__slider swiper">
+            <div class="js-page-main-offer-slider page-main-offer__slider">
               <ul class="swiper-wrapper page-main-offer__list">
                 <li class="swiper-slide page-main-offer__item">
                   <a href="#contact" class="page-main-offer__card">
@@ -297,11 +308,10 @@
           <div>
             <p class="page-main-production__text">Две производственные площадки, автоматизированные линии, собственная лаборатория контроля качества и федеральная логистика. Мы отвечаем за каждый этап — от плантации до паллеты на складе клиента</p>
             <div class="page-main-production__actions">
-              <button type="button" class="button button--dark page-main-production__watch" data-bs-toggle="modal"
-                data-bs-target="#mainVideoModal" data-video-src="videos/main/2_web.mp4">
+              <a href="videos/main/2_web.mp4" class="button button--dark page-main-production__watch" data-fancybox="production-video-watch">
                 <span class="page-main-production__watch-icon">▶</span>
                 Посмотреть производство
-              </button>
+              </a>
               <div class="page-main-production__nav">
                 <button type="button" class="js-page-main-production-prev page-main-production__nav-button" aria-label="Предыдущее фото">←</button>
                 <button type="button" class="js-page-main-production-next page-main-production__nav-button" aria-label="Следующее фото">→</button>
@@ -315,36 +325,35 @@
         <div class="row">
           <div class="col-12">
             <div class="page-main-production__body">
-              <button type="button" class="page-main-production__video" data-bs-toggle="modal" data-bs-target="#mainVideoModal"
-                data-video-src="videos/main/2_web.mp4" aria-label="Смотреть экскурсию по производству">
-                <img src="img/main/Производственные%20линии-1.png" alt="Видео производства" class="page-main-production__video-cover">
+              <a href="videos/main/2_web.mp4" class="page-main-production__video" data-fancybox="production-video-card" aria-label="Смотреть экскурсию по производству">
+                <video class="page-main-production__video-cover" src="videos/main/2_web.mp4" poster="img/main/Производственные%20линии-1.png" autoplay muted loop playsinline></video>
                 <span class="page-main-production__video-label">видео · reels</span>
                 <span class="page-main-production__video-play">
                   <span class="page-main-production__video-icon">▶</span>
                   <span class="page-main-production__video-text">Экскурсия<br>по производству</span>
                 </span>
-              </button>
+              </a>
 
-              <div class="js-page-main-production-slider page-main-production__slider swiper">
+              <div class="js-page-main-production-slider page-main-production__slider">
                 <div class="swiper-wrapper page-main-production__gallery">
                   <figure class="swiper-slide page-main-production__gallery-item">
-                    <div class="page-main-production__gallery-photo"><img src="img/main/Производственные%20линии.png" alt="Производственные линии"></div>
+                    <a href="img/main/Производственные%20линии.png" class="page-main-production__gallery-photo" data-fancybox="production-gallery"><img src="img/main/Производственные%20линии.png" alt="Производственные линии"></a>
                     <figcaption class="page-main-production__gallery-caption">Производственные линии</figcaption>
                   </figure>
                   <figure class="swiper-slide page-main-production__gallery-item">
-                    <div class="page-main-production__gallery-photo"><img src="img/main/Автоматизированное%20оборудование.png" alt="Автоматизированное оборудование"></div>
+                    <a href="img/main/Автоматизированное%20оборудование.png" class="page-main-production__gallery-photo" data-fancybox="production-gallery"><img src="img/main/Автоматизированное%20оборудование.png" alt="Автоматизированное оборудование"></a>
                     <figcaption class="page-main-production__gallery-caption">Автоматизированное оборудование</figcaption>
                   </figure>
                   <figure class="swiper-slide page-main-production__gallery-item">
-                    <div class="page-main-production__gallery-photo"><img src="img/main/Лаборатория.png" alt="Лаборатория"></div>
+                    <a href="img/main/Лаборатория.png" class="page-main-production__gallery-photo" data-fancybox="production-gallery"><img src="img/main/Лаборатория.png" alt="Лаборатория"></a>
                     <figcaption class="page-main-production__gallery-caption">Лаборатория</figcaption>
                   </figure>
                   <figure class="swiper-slide page-main-production__gallery-item">
-                    <div class="page-main-production__gallery-photo"><img src="img/main/Складские%20комплексы.png" alt="Складские комплексы"></div>
+                    <a href="img/main/Складские%20комплексы.png" class="page-main-production__gallery-photo" data-fancybox="production-gallery"><img src="img/main/Складские%20комплексы.png" alt="Складские комплексы"></a>
                     <figcaption class="page-main-production__gallery-caption">Складские комплексы</figcaption>
                   </figure>
                   <figure class="swiper-slide page-main-production__gallery-item">
-                    <div class="page-main-production__gallery-photo"><img src="img/main/Упаковка%20продукции.png" alt="Упаковка продукции"></div>
+                    <a href="img/main/Упаковка%20продукции.png" class="page-main-production__gallery-photo" data-fancybox="production-gallery"><img src="img/main/Упаковка%20продукции.png" alt="Упаковка продукции"></a>
                     <figcaption class="page-main-production__gallery-caption">Упаковка продукции</figcaption>
                   </figure>
                 </div>
@@ -375,125 +384,109 @@
           <button type="button" class="page-main-news__filter js-page-main-news-filter" data-category="products">Новые продукты</button>
         </div>
 
-        <div class="row page-main-news__grid">
-          <div class="col-12 col-lg-6">
-            <a href="#news" class="page-main-news__main js-page-main-news-card" data-category="trends">
-              <div class="page-main-news__main-photo"><img src="img/main/Ингредиенты-2.png" alt="Ореховые ингредиенты в кондитерке"></div>
-              <div class="page-main-news__main-meta">
-                <span class="page-main-news__main-tag">Тренды рынка</span>
-                <span>04.08.2026</span>
-              </div>
-              <h3 class="page-main-news__main-title">Ореховые ингредиенты в кондитерке: что меняется в 2026 году</h3>
-              <p class="page-main-news__main-text">Разбираем спрос на пасты и пралине в промышленных рецептурах и то, как меняются требования производителей</p>
-              <span class="page-main-news__main-link">Читать материал →</span>
-            </a>
-          </div>
-          <div class="col-12 col-lg-6">
-            <div class="page-main-news__side">
-              <a href="#news" class="page-main-news__card js-page-main-news-card" data-category="research">
-                <div class="page-main-news__card-photo"><img src="img/main/Лаборатория-1.png" alt="Стабильность начинок при длительном хранении"></div>
-                <div>
-                  <div class="page-main-news__card-meta"><span>Исследования</span><span>·</span><span>28.07.2026</span></div>
-                  <h3 class="page-main-news__card-title">Стабильность начинок при длительном хранении</h3>
-                  <p class="page-main-news__card-text">Результаты лабораторных тестов на жировой и водной основах</p>
-                </div>
-              </a>
-              <a href="#news" class="page-main-news__card js-page-main-news-card" data-category="expert">
-                <div class="page-main-news__card-photo"><img src="img/main/Автоматизированное%20оборудование-1.png" alt="Как подобрать ореховую пасту под линию дозирования"></div>
-                <div>
-                  <div class="page-main-news__card-meta"><span>Статья технолога</span><span>·</span><span>19.07.2026</span></div>
-                  <h3 class="page-main-news__card-title">Как подобрать ореховую пасту под линию дозирования</h3>
-                  <p class="page-main-news__card-text">Вязкость, температура и помол — на что смотреть технологу</p>
-                </div>
-              </a>
-              <a href="#news" class="page-main-news__card js-page-main-news-card" data-category="products">
-                <div class="page-main-news__card-photo"><img src="img/main/Ингредиенты-3.png" alt="Мультисенсорные вкусо-ароматические решения на орехе"></div>
-                <div>
-                  <div class="page-main-news__card-meta"><span>Новые продукты</span><span>·</span><span>10.07.2026</span></div>
-                  <h3 class="page-main-news__card-title">Мультисенсорные вкусо-ароматические решения на орехе</h3>
-                  <p class="page-main-news__card-text">Новая линейка для снеков и кондитерских изделий</p>
-                </div>
-              </a>
-              <a href="#news" class="page-main-news__card js-page-main-news-card" data-category="agro">
-                <div class="page-main-news__card-photo"><img src="img/main/Агропроизводство.png" alt="Итоги сезона на собственных плантациях"></div>
-                <div>
-                  <div class="page-main-news__card-meta"><span>Агропроизводство</span><span>·</span><span>21.06.2026</span></div>
-                  <h3 class="page-main-news__card-title">Итоги сезона на собственных плантациях</h3>
-                  <p class="page-main-news__card-text">Урожай, качество сырья и планы на следующий год</p>
-                </div>
-              </a>
+        <div class="page-main-news__grid">
+          <a href="#news" class="page-main-news__main js-page-main-news-card" data-category="trends">
+            <div class="page-main-news__main-photo"><img src="img/main/Ингредиенты-2.png" alt="Ореховые ингредиенты в кондитерке"></div>
+            <div class="page-main-news__main-meta">
+              <span class="page-main-news__main-tag">Тренды рынка</span>
+              <span>04.08.2026</span>
             </div>
-          </div>
+            <h3 class="page-main-news__main-title">Ореховые ингредиенты в кондитерке: что меняется в 2026 году</h3>
+            <p class="page-main-news__main-text">Разбираем спрос на пасты и пралине в промышленных рецептурах и то, как меняются требования производителей</p>
+            <span class="page-main-news__main-link">Читать материал →</span>
+          </a>
+          <a href="#news" class="page-main-news__card js-page-main-news-card" data-category="research">
+            <div class="page-main-news__card-photo"><img src="img/main/Лаборатория-1.png" alt="Стабильность начинок при длительном хранении"></div>
+            <div>
+              <div class="page-main-news__card-meta"><span>Исследования</span><span>·</span><span>28.07.2026</span></div>
+              <h3 class="page-main-news__card-title">Стабильность начинок при длительном хранении</h3>
+              <p class="page-main-news__card-text">Результаты лабораторных тестов на жировой и водной основах</p>
+            </div>
+          </a>
+          <a href="#news" class="page-main-news__card js-page-main-news-card" data-category="expert">
+            <div class="page-main-news__card-photo"><img src="img/main/Автоматизированное%20оборудование-1.png" alt="Как подобрать ореховую пасту под линию дозирования"></div>
+            <div>
+              <div class="page-main-news__card-meta"><span>Статья технолога</span><span>·</span><span>19.07.2026</span></div>
+              <h3 class="page-main-news__card-title">Как подобрать ореховую пасту под линию дозирования</h3>
+              <p class="page-main-news__card-text">Вязкость, температура и помол — на что смотреть технологу</p>
+            </div>
+          </a>
+          <a href="#news" class="page-main-news__card js-page-main-news-card" data-category="products">
+            <div class="page-main-news__card-photo"><img src="img/main/Ингредиенты-3.png" alt="Мультисенсорные вкусо-ароматические решения на орехе"></div>
+            <div>
+              <div class="page-main-news__card-meta"><span>Новые продукты</span><span>·</span><span>10.07.2026</span></div>
+              <h3 class="page-main-news__card-title">Мультисенсорные вкусо-ароматические решения на орехе</h3>
+              <p class="page-main-news__card-text">Новая линейка для снеков и кондитерских изделий</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- КОНТАКТЫ -->
-    <section class="page-main-contact" id="contact">
+    <section class="feedback feedback__main layout-pt" id="contact">
       <div class="container-fluid">
-        <div class="row page-main-contact__row align-items-stretch">
-          <div class="col-12 col-lg-7">
-            <h2 class="page-main-contact__title">готовы обсудить поставку или свой продукт?</h2>
-            <p class="page-main-contact__text">Оставьте заявку — менеджер и технолог свяжутся с вами, чтобы уточнить задачу и предложить оптимальное решение</p>
-
+        <div class="row">
+          <div class="col-xl-11 offset-xl-1">
+            <h2 class="feedback__title">готовы обсудить поставку или свой продукт?</h2>
+            <p class="feedback__subtext">Оставьте заявку — менеджер и технолог свяжутся с вами, чтобы уточнить задачу и предложить оптимальное решение</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-6 col-xxl-5 offset-xl-1">
             <!-- TODO: подставить реальные form_id и имена полей form_text_NN из WinterCMS (см. пример в salt.html) -->
-            <form action="/ajax/sendForm.php" class="js-ajax-from page-main-contact__form" method="POST">
+            <form action="/ajax/sendForm.php" class="d-flex flex-column js-ajax-from feedback__form" method="POST">
               <input type="hidden" name="recaptcha_response" value="" class="visually-hidden">
               <input type="hidden" name="form_id" value="TODO" class="visually-hidden">
 
-              <label class="page-main-contact__form-label">
+              <label class="feedback__form-label">
                 <span class="visually-hidden">Имя</span>
-                <input type="text" name="form_text_TODO" placeholder="Имя" class="page-main-contact__form-input" required>
+                <input type="text" name="form_text_TODO" placeholder="Имя" class="w-100 feedback__form-input" required>
               </label>
 
-              <label class="page-main-contact__form-label">
+              <label class="feedback__form-label">
                 <span class="visually-hidden">Компания</span>
-                <input type="text" name="form_text_TODO" placeholder="Компания" class="page-main-contact__form-input" required>
+                <input type="text" name="form_text_TODO" placeholder="Компания" class="w-100 feedback__form-input" required>
               </label>
 
-              <div class="page-main-contact__form-row">
-                <label class="page-main-contact__form-label">
+              <div class="d-xxl-flex justify-content-between">
+                <label class="w-100 w-xxl-auto feedback__form-label">
                   <span class="visually-hidden">Телефон</span>
-                  <input type="tel" name="form_text_TODO" placeholder="Телефон" imask-phone class="page-main-contact__form-input" required>
+                  <input type="tel" name="form_text_TODO" placeholder="Телефон" imask-phone class="w-100 w-xxl-auto feedback__form-input" required>
                 </label>
-                <label class="page-main-contact__form-label">
+
+                <label class="w-100 w-xxl-auto feedback__form-label">
                   <span class="visually-hidden">Email</span>
-                  <input type="email" name="form_text_TODO" placeholder="Email" class="page-main-contact__form-input" required>
+                  <input type="email" name="form_text_TODO" placeholder="Email" class="w-100 w-xxl-auto feedback__form-input" required>
                 </label>
               </div>
 
-              <label class="page-main-contact__form-label">
+              <label class="feedback__form-label">
                 <span class="visually-hidden">Задача или интересующая продукция</span>
-                <input type="text" name="form_text_TODO" placeholder="Задача или интересующая продукция" class="page-main-contact__form-input">
+                <input type="text" name="form_text_TODO" placeholder="Задача или интересующая продукция" class="w-100 feedback__form-input">
               </label>
 
-              <label class="page-main-contact__form-check">
-                <input type="checkbox" name="consent" role="button" required>
-                <span>Даю согласие на обработку <a href="#" target="_blank">персональных данных</a></span>
-              </label>
-
-              <button type="submit" class="button button--dark page-main-contact__form-button">Отправить запрос</button>
+              <div class="mx-auto feedback__form-check">
+                <label class="form-check-label d-flex align-items-start align-items-lg-center">
+                  <input type="checkbox" name="consent" role="button" class="me-2" required>
+                  <span>Даю согласие на обработку <a href="#" target="_blank" class="text-decoration-underline">персональных данных</a></span>
+                </label>
+              </div>
+              <button type="submit" class="button button--dark feedback__form-button">Отправить запрос</button>
             </form>
-          </div>
-          <div class="col-12 col-lg-5">
-            <div class="page-main-contact__photo">
-              <img src="img/main/Лаборатория-2.png" alt="Лаборатория контроля качества ОРЕХПРОМ">
-            </div>
           </div>
         </div>
       </div>
+    </section>
 
+    <section class="page-main-next-steps-section">
       <div class="container-fluid">
         <div class="page-main-next-steps">
           <div class="page-main-next-steps__title">что будет<br>дальше:</div>
-          <div class="page-main-next-steps__item">
-            <span>Свяжемся в течение<br>1 рабочего дня</span>
-            <span class="page-main-next-steps__item-arrow">→</span>
-          </div>
-          <div class="page-main-next-steps__item">
-            <span>Уточним<br>требования</span>
-            <span class="page-main-next-steps__item-arrow">→</span>
-          </div>
+          <div class="page-main-next-steps__item">Свяжемся в течение<br>1 рабочего дня</div>
+          <span class="page-main-next-steps__arrow">→</span>
+          <div class="page-main-next-steps__item">Уточним<br>требования</div>
+          <span class="page-main-next-steps__arrow">→</span>
           <div class="page-main-next-steps__item">Предложим объемы,<br>сроки и условия</div>
         </div>
       </div>
@@ -501,29 +494,17 @@
 
   </main>
 
-  <!-- МОДАЛЬНОЕ ОКНО С ВИДЕО (переиспользуется для hero и production) -->
-  <div class="modal fade page-main-video-modal" id="mainVideoModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-        </div>
-        <div class="modal-body">
-          <video class="page-main-video-modal__player js-page-main-video-modal-player" controls playsinline></video>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <script src="js/libs/bootstrap.bundle.min.js"></script>
   <script src="js/libs/swiper.bundle.js"></script>
   <script src="js/libs/imask.js"></script>
+  <script src="js/libs/fancybox.js"></script>
   <script src="js/helpers.js"></script>
+  <script src="js/pages/main/hero.js"></script>
+  <script src="js/pages/main/audience.js"></script>
   <script src="js/pages/main/offer.js"></script>
   <script src="js/pages/main/production.js"></script>
   <script src="js/pages/main/why.js"></script>
   <script src="js/pages/main/news.js"></script>
-  <script src="js/pages/main/video-modal.js"></script>
 </body>
 
 </html>

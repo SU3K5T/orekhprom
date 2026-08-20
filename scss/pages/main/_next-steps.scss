@@ -2,14 +2,17 @@
   border-top: 1px solid $color-gray-dark;
   padding: 54px 0;
   display: grid;
-  grid-template-columns: 300px repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: 300px repeat(5, 1fr);
   align-items: center;
 
   @include media-breakpoint-down(lg) {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 32px 0;
+
+    .page-main-next-steps__arrow {
+      display: none;
+    }
   }
 
   &__title {
@@ -22,14 +25,14 @@
   }
 
   &__item {
-    display: flex;
-    align-items: center;
-    gap: 24px;
     @include typography("Geologica", normal, 500, 17px, 1.35);
+  }
 
-    &-arrow {
-      color: rgba($color-dark, 0.35);
-      font-size: 22px;
-    }
+  &__arrow {
+    color: rgba($color-dark, 0.35);
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

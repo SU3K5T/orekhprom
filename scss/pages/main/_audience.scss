@@ -9,6 +9,17 @@
     padding-top: 40px;
   }
 
+  &__head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+
+    @include media-breakpoint-down(md) {
+      align-items: flex-start;
+    }
+  }
+
   &__title {
     @include typography("Geologica", normal, 600, 52px, 1.05);
 
@@ -27,13 +38,69 @@
     color: rgba($color-dark, 0.55);
   }
 
-  &__list {
+  &__nav {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  &__nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    border: 1px solid rgba($color-dark, 0.25);
+    border-radius: 100px;
+    background: none;
+    color: $color-dark;
+    font-size: 18px;
+    transition: 0.3s background-color ease-in-out, 0.3s color ease-in-out;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-dark;
+        color: $color-light;
+      }
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+  }
+
+  &__slider {
     margin-top: 44px;
-    row-gap: 20px;
+    padding-bottom: 6px;
 
     @include media-breakpoint-down(md) {
-      margin-top: 28px;
-      row-gap: 12px;
+      margin-top: 24px;
+    }
+  }
+
+  &__list {
+    @include media-breakpoint-up(lg) {
+      gap: 24px;
+    }
+  }
+
+  &__item {
+    width: 330px;
+    height: auto;
+
+    @include media-breakpoint-down(md) {
+      width: 260px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: auto;
+      flex: 1 1 0%;
+      margin-right: 0 !important;
     }
   }
 

@@ -19,8 +19,22 @@ class ProductionGallerySlider {
   }
 }
 
+class ProductionFancybox {
+  constructor({ target }) {
+    this.target = target;
+    this.init();
+  }
+
+  init() {
+    if (!window.Fancybox) return;
+
+    Fancybox.bind(this.target, '[data-fancybox]');
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.page-main-production').forEach((target) => {
     new ProductionGallerySlider({ target });
+    new ProductionFancybox({ target });
   });
 });

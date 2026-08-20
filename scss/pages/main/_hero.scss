@@ -9,6 +9,33 @@
     padding-top: 24px;
   }
 
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "text"
+      "media"
+      "actions";
+    row-gap: 32px;
+
+    @include media-breakpoint-down(md) {
+      row-gap: 24px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
+        "text media"
+        "actions media";
+      column-gap: 24px;
+      row-gap: 0;
+    }
+  }
+
+  &__text {
+    grid-area: text;
+  }
+
   &__title {
     @include typography("Geologica", normal, 600, 68px, 1);
     max-width: 900px;
@@ -35,15 +62,18 @@
   }
 
   &__actions {
+    grid-area: actions;
     display: flex;
     align-items: center;
     gap: 14px;
     flex-wrap: wrap;
-    margin-top: 40px;
 
     @include media-breakpoint-down(md) {
-      margin-top: 28px;
       gap: 10px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 40px;
     }
   }
 
@@ -65,18 +95,15 @@
   }
 
   &__media {
+    grid-area: media;
     display: flex;
     gap: 12px;
     height: 555px;
 
     @include media-breakpoint-down(lg) {
-      margin-top: 32px;
-      height: 420px;
+      height: 470px;
     }
 
-    @include media-breakpoint-down(md) {
-      height: 320px;
-    }
   }
 
   &__video {
@@ -190,13 +217,14 @@
 
     @include media-breakpoint-down(md) {
       padding: 20px 16px;
-
-      &:nth-child(2n) {
+      
+      &:nth-child(n+3) {
         border-left: 0;
+        border-top: 1px solid $color-gray-dark;
       }
 
-      &:nth-child(n+3) {
-        border-top: 1px solid $color-gray-dark;
+      &:nth-child(n+4) {
+        border-left: 1px solid $color-gray-dark;
       }
     }
 

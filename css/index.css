@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .align-baseline {
   vertical-align: baseline !important;
 }
@@ -5035,6 +5036,12 @@
     max-width: 1390px;
   }
 }
+:root {
+  --f-video-height: 645px;
+  --f-video-width: 439px;
+  --f-video-aspect-ratio: 9 / 16;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -7507,6 +7514,42 @@ input[type=checkbox]:checked::after {
 }
 .feedback__ctm {
   background-image: url("../img/ctm/feedback-ctm-background.jpg");
+}
+.feedback__main {
+  margin-top: 40px;
+  padding-bottom: 198px;
+  background-size: 38% auto;
+  background-image: url("../img/main/Лаборатория-2.png");
+}
+@media (max-width: 1399.98px) {
+  .feedback__main {
+    background-size: auto 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  .feedback__main {
+    margin-top: 32px;
+    padding-bottom: 100px;
+    background-color: rgba(255, 255, 255, 0.75);
+    background-blend-mode: overlay;
+  }
+}
+@media (max-width: 767.98px) {
+  .feedback__main {
+    margin-top: 24px;
+    padding-bottom: 56px;
+  }
+}
+@media (max-width: 575.98px) {
+  .feedback__main {
+    display: flex;
+    align-items: end;
+    height: 1096px;
+    background-size: 282px 451px;
+    background-position: top right;
+    background-color: unset;
+    background-blend-mode: unset;
+  }
 }
 .feedback__salt {
   padding-bottom: 138px;
@@ -11838,6 +11881,28 @@ main {
     padding-top: 24px;
   }
 }
+.page-main-hero__top {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "text" "media" "actions";
+  row-gap: 32px;
+}
+@media (max-width: 767.98px) {
+  .page-main-hero__top {
+    row-gap: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-main-hero__top {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "text media" "actions media";
+    column-gap: 24px;
+    row-gap: 0;
+  }
+}
+.page-main-hero__text {
+  grid-area: text;
+}
 .page-main-hero__title {
   font-family: "Geologica";
   font-style: normal;
@@ -11877,16 +11942,20 @@ main {
   }
 }
 .page-main-hero__actions {
+  grid-area: actions;
   display: flex;
   align-items: center;
   gap: 14px;
   flex-wrap: wrap;
-  margin-top: 40px;
 }
 @media (max-width: 767.98px) {
   .page-main-hero__actions {
-    margin-top: 28px;
     gap: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-main-hero__actions {
+    margin-top: 40px;
   }
 }
 .page-main-hero__button {
@@ -11911,19 +11980,14 @@ main {
   }
 }
 .page-main-hero__media {
+  grid-area: media;
   display: flex;
   gap: 12px;
   height: 555px;
 }
 @media (max-width: 991.98px) {
   .page-main-hero__media {
-    margin-top: 32px;
-    height: 420px;
-  }
-}
-@media (max-width: 767.98px) {
-  .page-main-hero__media {
-    height: 320px;
+    height: 470px;
   }
 }
 .page-main-hero__video {
@@ -12037,11 +12101,12 @@ main {
   .page-main-hero__fact {
     padding: 20px 16px;
   }
-  .page-main-hero__fact:nth-child(2n) {
-    border-left: 0;
-  }
   .page-main-hero__fact:nth-child(n+3) {
+    border-left: 0;
     border-top: 1px solid rgba(31, 32, 34, 0.1019607843);
+  }
+  .page-main-hero__fact:nth-child(n+4) {
+    border-left: 1px solid rgba(31, 32, 34, 0.1019607843);
   }
 }
 .page-main-hero__fact-label {
@@ -12082,6 +12147,17 @@ main {
     padding-top: 40px;
   }
 }
+.page-main-audience__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+@media (max-width: 767.98px) {
+  .page-main-audience__head {
+    align-items: flex-start;
+  }
+}
 .page-main-audience__title {
   font-family: "Geologica";
   font-style: normal;
@@ -12108,14 +12184,67 @@ main {
   line-height: 1.4;
   color: rgba(31, 32, 34, 0.55);
 }
-.page-main-audience__list {
+.page-main-audience__nav {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+@media (min-width: 992px) {
+  .page-main-audience__nav {
+    display: none;
+  }
+}
+.page-main-audience__nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  border: 1px solid rgba(31, 32, 34, 0.25);
+  border-radius: 100px;
+  background: none;
+  color: #1F2022;
+  font-size: 18px;
+  transition: 0.3s background-color ease-in-out, 0.3s color ease-in-out;
+}
+@media (hover: hover) {
+  .page-main-audience__nav-button:hover {
+    background-color: #1F2022;
+    color: #fff;
+  }
+}
+.page-main-audience__nav-button.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+.page-main-audience__slider {
   margin-top: 44px;
-  row-gap: 20px;
+  padding-bottom: 6px;
 }
 @media (max-width: 767.98px) {
+  .page-main-audience__slider {
+    margin-top: 24px;
+  }
+}
+@media (min-width: 992px) {
   .page-main-audience__list {
-    margin-top: 28px;
-    row-gap: 12px;
+    gap: 24px;
+  }
+}
+.page-main-audience__item {
+  width: 330px;
+  height: auto;
+}
+@media (max-width: 767.98px) {
+  .page-main-audience__item {
+    width: 260px;
+  }
+}
+@media (min-width: 992px) {
+  .page-main-audience__item {
+    width: auto;
+    flex: 1 1 0%;
+    margin-right: 0 !important;
   }
 }
 .page-main-audience__card {
@@ -12253,6 +12382,7 @@ main {
   width: 62px;
   height: 62px;
   border: 1px solid rgba(31, 32, 34, 0.25);
+  border-radius: 100px;
   background: none;
   color: #1F2022;
   font-size: 18px;
@@ -12367,7 +12497,7 @@ main {
 }
 @media (max-width: 767.98px) {
   .page-main-why {
-    padding-top: 40px;
+    padding-top: 28px;
   }
 }
 .page-main-why__head {
@@ -12378,6 +12508,7 @@ main {
 @media (max-width: 767.98px) {
   .page-main-why__head {
     text-align: left;
+    padding-bottom: 12px;
   }
 }
 .page-main-why__kicker {
@@ -12432,6 +12563,7 @@ main {
     margin-left: 0;
     text-align: left;
     font-size: 15px;
+    margin-top: 12px;
   }
 }
 .page-main-why__body {
@@ -12444,6 +12576,8 @@ main {
 @media (max-width: 991.98px) {
   .page-main-why__body {
     grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 28px;
   }
 }
 .page-main-why__visual {
@@ -12452,9 +12586,15 @@ main {
   min-height: 520px;
   background-color: rgba(31, 32, 34, 0.1019607843);
 }
+@media (max-width: 991.98px) {
+  .page-main-why__visual {
+    order: 3;
+    min-height: 320px;
+  }
+}
 @media (max-width: 767.98px) {
   .page-main-why__visual {
-    min-height: 280px;
+    min-height: 200px;
   }
 }
 .page-main-why__visual-img {
@@ -12476,9 +12616,15 @@ main {
   background-color: #1F2022;
   color: #fff;
 }
+@media (max-width: 991.98px) {
+  .page-main-why__panel {
+    order: 2;
+    padding: 28px;
+  }
+}
 @media (max-width: 767.98px) {
   .page-main-why__panel {
-    padding: 24px;
+    padding: 18px;
   }
 }
 .page-main-why__panel-step {
@@ -12500,9 +12646,14 @@ main {
   line-height: 1.1;
   letter-spacing: -0.01em;
 }
+@media (max-width: 991.98px) {
+  .page-main-why__panel-title {
+    margin-top: 12px;
+  }
+}
 @media (max-width: 767.98px) {
   .page-main-why__panel-title {
-    font-size: 26px;
+    font-size: 22px;
   }
 }
 .page-main-why__panel-text {
@@ -12515,11 +12666,21 @@ main {
   line-height: 1.55;
   color: rgba(255, 255, 255, 0.62);
 }
+@media (max-width: 991.98px) {
+  .page-main-why__panel-text {
+    margin-top: 10px;
+  }
+}
 .page-main-why__panel-list {
   display: grid;
   gap: 1px;
   margin-top: 34px;
   background-color: rgba(255, 255, 255, 0.14);
+}
+@media (max-width: 991.98px) {
+  .page-main-why__panel-list {
+    margin-top: 14px;
+  }
 }
 .page-main-why__panel-list-item {
   display: grid;
@@ -12528,6 +12689,11 @@ main {
   align-items: baseline;
   padding: 18px 0;
   background-color: #1F2022;
+}
+@media (max-width: 991.98px) {
+  .page-main-why__panel-list-item {
+    padding: 10px 0;
+  }
 }
 .page-main-why__panel-list-item-arrow {
   font-size: 13px;
@@ -12544,11 +12710,31 @@ main {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 991.98px) {
+  .page-main-why__nav {
+    position: relative;
+    order: 1;
+    flex-direction: row;
+    gap: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    margin-left: calc(var(--bs-gutter-x, 1.5rem) * -0.5);
+    margin-right: calc(var(--bs-gutter-x, 1.5rem) * -0.5);
+    padding-left: calc(var(--bs-gutter-x, 1.5rem) * 0.5);
+    padding-right: calc(var(--bs-gutter-x, 1.5rem) * 0.5);
+    scroll-padding-left: calc(var(--bs-gutter-x, 1.5rem) * 0.5);
+  }
+  .page-main-why__nav::-webkit-scrollbar {
+    display: none;
+  }
+}
 .page-main-why__nav-item {
   display: grid;
   grid-template-columns: 46px 1fr;
   gap: 10px;
-  align-items: center;
+  align-items: start;
   padding: 20px 22px;
   border: 0;
   border-top: 1px solid rgba(31, 32, 34, 0.1019607843);
@@ -12556,9 +12742,27 @@ main {
   color: #1F2022;
   text-align: left;
   cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 .page-main-why__nav-item:last-of-type {
   border-bottom: 1px solid rgba(31, 32, 34, 0.1019607843);
+}
+@media (max-width: 991.98px) {
+  .page-main-why__nav-item {
+    grid-template-columns: 1fr;
+    gap: 0;
+    flex: 0 0 260px;
+    padding: 16px;
+    border: 0;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-main-why__nav-item {
+    flex-basis: 224px;
+    padding: 12px;
+  }
 }
 .page-main-why__nav-item.is-active {
   background-color: #1F2022;
@@ -12572,6 +12776,17 @@ main {
   line-height: 13px;
   opacity: 0.5;
 }
+@media (max-width: 991.98px) {
+  .page-main-why__nav-item-index {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-main-why__nav-item-index {
+    margin-bottom: 14px;
+  }
+}
 .page-main-why__nav-item-title {
   display: block;
   font-family: "Geologica";
@@ -12579,6 +12794,11 @@ main {
   font-weight: 600;
   font-size: 19px;
   line-height: 1.2;
+}
+@media (max-width: 991.98px) {
+  .page-main-why__nav-item-title {
+    font-size: 16px;
+  }
 }
 .page-main-why__nav-item-text {
   display: block;
@@ -12589,6 +12809,12 @@ main {
   font-size: 14px;
   line-height: 1.35;
   opacity: 0.6;
+}
+@media (max-width: 991.98px) {
+  .page-main-why__nav-item-text {
+    margin-top: 3px;
+    font-size: 12px;
+  }
 }
 
 .page-main-stats {
@@ -12649,6 +12875,7 @@ main {
   color: rgba(255, 255, 255, 0.5);
 }
 .page-main-stats__cta {
+  border-radius: 100px;
   flex-shrink: 0;
   white-space: nowrap;
   padding: 0 40px;
@@ -12878,6 +13105,7 @@ main {
   width: 62px;
   height: 62px;
   border: 1px solid rgba(31, 32, 34, 0.25);
+  border-radius: 100px;
   background: none;
   color: #1F2022;
   font-size: 18px;
@@ -12922,11 +13150,6 @@ main {
   overflow: hidden;
   cursor: pointer;
   text-align: start;
-}
-@media (max-width: 991.98px) {
-  .page-main-production__video {
-    min-height: 320px;
-  }
 }
 .page-main-production__video-cover {
   position: absolute;
@@ -13084,6 +13307,7 @@ main {
   color: rgba(31, 32, 34, 0.55);
 }
 .page-main-news__all-link {
+  border-radius: 100px;
   flex-shrink: 0;
   white-space: nowrap;
   padding: 0 40px;
@@ -13118,6 +13342,13 @@ main {
     flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    margin-left: calc(var(--bs-gutter-x, 1.5rem) * -0.5);
+    margin-right: calc(var(--bs-gutter-x, 1.5rem) * -0.5);
+    padding-left: calc(var(--bs-gutter-x, 1.5rem) * 0.5);
+    padding-right: calc(var(--bs-gutter-x, 1.5rem) * 0.5);
+    scroll-padding-left: calc(var(--bs-gutter-x, 1.5rem) * 0.5);
   }
   .page-main-news__filters::-webkit-scrollbar {
     display: none;
@@ -13127,13 +13358,20 @@ main {
   flex-shrink: 0;
   padding: 12px 22px;
   border: 1px solid rgba(31, 32, 34, 0.22);
+  border-radius: 100px;
   background: none;
   color: #1F2022;
+  white-space: nowrap;
   font-family: "Geologica";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
+}
+@media (max-width: 767.98px) {
+  .page-main-news__filter {
+    scroll-snap-align: start;
+  }
 }
 .page-main-news__filter.is-active {
   border-color: #1F2022;
@@ -13141,21 +13379,34 @@ main {
   color: #fff;
 }
 .page-main-news__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   margin-top: 28px;
-  row-gap: 20px;
+}
+@media (max-width: 991.98px) {
+  .page-main-news__grid {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 767.98px) {
   .page-main-news__grid {
+    gap: 12px;
     margin-top: 20px;
-    row-gap: 12px;
   }
 }
 .page-main-news__main {
+  grid-row: span 3;
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: 24px;
   background-color: #fff;
+}
+@media (max-width: 991.98px) {
+  .page-main-news__main {
+    grid-row: auto;
+  }
 }
 @media (max-width: 767.98px) {
   .page-main-news__main {
@@ -13229,18 +13480,11 @@ main {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.page-main-news__side {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  height: 100%;
-}
 .page-main-news__card {
   display: grid;
   grid-template-columns: 110px 1fr;
   gap: 22px;
   align-items: center;
-  flex: 1 1 0;
   padding: 22px;
   background-color: #fff;
 }
@@ -13302,159 +13546,11 @@ main {
   }
 }
 
-.page-main-contact {
-  margin-top: 120px;
-  background-color: rgba(31, 32, 34, 0.1019607843);
-}
-@media (max-width: 991.98px) {
-  .page-main-contact {
-    margin-top: 72px;
-  }
-}
-@media (max-width: 767.98px) {
-  .page-main-contact {
-    margin-top: 48px;
-  }
-}
-.page-main-contact__row {
-  padding-top: 92px;
-  padding-bottom: 92px;
-}
-@media (max-width: 991.98px) {
-  .page-main-contact__row {
-    padding-top: 48px;
-    padding-bottom: 0;
-  }
-}
-.page-main-contact__title {
-  font-family: "Geologica";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 1.05;
-  max-width: 620px;
-}
-@media (max-width: 991.98px) {
-  .page-main-contact__title {
-    font-size: 36px;
-  }
-}
-@media (max-width: 767.98px) {
-  .page-main-contact__title {
-    font-size: 26px;
-  }
-}
-.page-main-contact__text {
-  margin-top: 20px;
-  max-width: 470px;
-  font-family: "Geologica";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 1.5;
-  color: rgba(31, 32, 34, 0.6);
-}
-.page-main-contact__form {
-  margin-top: 52px;
-  max-width: 520px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-@media (max-width: 767.98px) {
-  .page-main-contact__form {
-    margin-top: 32px;
-    gap: 20px;
-  }
-}
-.page-main-contact__form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-@media (max-width: 575.98px) {
-  .page-main-contact__form-row {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-.page-main-contact__form-label {
-  display: flex;
-  flex-direction: column;
-}
-.page-main-contact__form-input {
-  border: 0;
-  border-bottom: 1px solid rgba(31, 32, 34, 0.28);
-  background: none;
-  padding: 0 0 12px;
-  color: #1F2022;
-  font-family: "Geologica";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
-}
-.page-main-contact__form-input::placeholder {
-  color: #1F2022;
-  opacity: 1;
-}
-.page-main-contact__form-input:focus {
-  outline: none;
-  border-bottom-color: #1F2022;
-}
-.page-main-contact__form-check {
-  margin-top: 10px;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-family: "Geologica";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 1.3;
-  color: rgba(31, 32, 34, 0.55);
-}
-.page-main-contact__form-button {
-  margin-top: 6px;
-  width: 100%;
-  height: 66px;
-  text-transform: uppercase;
-  font-family: "Geologica";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
-  letter-spacing: 0.08em;
-}
-@media (max-width: 767.98px) {
-  .page-main-contact__form-button {
-    height: 48px;
-  }
-}
-.page-main-contact__photo {
-  height: 100%;
-  min-height: 320px;
-  overflow: hidden;
-  background-color: rgba(31, 32, 34, 0.1019607843);
-}
-.page-main-contact__photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media (max-width: 991.98px) {
-  .page-main-contact__photo {
-    margin-top: 40px;
-    min-height: 260px;
-  }
-}
-
 .page-main-next-steps {
   border-top: 1px solid rgba(31, 32, 34, 0.1019607843);
   padding: 54px 0;
   display: grid;
-  grid-template-columns: 300px repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: 300px repeat(5, 1fr);
   align-items: center;
 }
 @media (max-width: 991.98px) {
@@ -13462,6 +13558,9 @@ main {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 32px 0;
+  }
+  .page-main-next-steps .page-main-next-steps__arrow {
+    display: none;
   }
 }
 .page-main-next-steps__title {
@@ -13478,43 +13577,18 @@ main {
   }
 }
 .page-main-next-steps__item {
-  display: flex;
-  align-items: center;
-  gap: 24px;
   font-family: "Geologica";
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
   line-height: 1.35;
 }
-.page-main-next-steps__item-arrow {
+.page-main-next-steps__arrow {
   color: rgba(31, 32, 34, 0.35);
   font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.page-main-video-modal .modal-dialog {
-  max-width: 900px;
-  margin: 40px auto;
-}
-.page-main-video-modal .modal-content {
-  border-radius: 0;
-  border: 0;
-  background-color: #1F2022;
-}
-.page-main-video-modal .modal-header {
-  border: 0;
-  padding: 20px 20px 0;
-}
-.page-main-video-modal .modal-header .btn-close {
-  filter: invert(1);
-  opacity: 0.8;
-}
-.page-main-video-modal .modal-body {
-  padding: 20px;
-}
-.page-main-video-modal__player {
-  display: block;
-  width: 100%;
-  max-height: 80vh;
-  background-color: #1F2022;
-}
+/*# sourceMappingURL=index.css.map */
