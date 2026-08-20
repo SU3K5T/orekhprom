@@ -163,7 +163,12 @@
       height: 46px;
       background-color: $color-light;
       color: $color-dark;
-      font-size: 13px;
+
+      svg {
+        width: 16px;
+        height: 16px;
+        margin-left: 2px;
+      }
     }
 
     &-text {
