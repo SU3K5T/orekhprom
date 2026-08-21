@@ -69,9 +69,13 @@
     align-items: stretch;
 
     @include media-breakpoint-down(lg) {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 16px;
       margin-top: 28px;
+    }
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -82,11 +86,12 @@
     background-color: $color-gray-dark;
 
     @include media-breakpoint-down(lg) {
-      order: 3;
+      order: 2;
       min-height: 320px;
     }
 
     @include media-breakpoint-down(md) {
+      order: 3;
       min-height: 200px;
     }
 
@@ -113,11 +118,12 @@
     color: $color-light;
 
     @include media-breakpoint-down(lg) {
-      order: 2;
+      order: 3;
       padding: 28px;
     }
 
     @include media-breakpoint-down(md) {
+      order: 2;
       padding: 18px;
     }
 
@@ -202,6 +208,7 @@
     @include media-breakpoint-down(lg) {
       position: relative;
       order: 1;
+      grid-column: 1 / -1;
       flex-direction: row;
       gap: 12px;
       overflow-x: auto;

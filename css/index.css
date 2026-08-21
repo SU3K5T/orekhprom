@@ -12574,9 +12574,14 @@ main {
 }
 @media (max-width: 991.98px) {
   .page-main-why__body {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
     margin-top: 28px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-main-why__body {
+    grid-template-columns: 1fr;
   }
 }
 .page-main-why__visual {
@@ -12587,12 +12592,13 @@ main {
 }
 @media (max-width: 991.98px) {
   .page-main-why__visual {
-    order: 3;
+    order: 2;
     min-height: 320px;
   }
 }
 @media (max-width: 767.98px) {
   .page-main-why__visual {
+    order: 3;
     min-height: 200px;
   }
 }
@@ -12617,12 +12623,13 @@ main {
 }
 @media (max-width: 991.98px) {
   .page-main-why__panel {
-    order: 2;
+    order: 3;
     padding: 28px;
   }
 }
 @media (max-width: 767.98px) {
   .page-main-why__panel {
+    order: 2;
     padding: 18px;
   }
 }
@@ -12719,6 +12726,7 @@ main {
   .page-main-why__nav {
     position: relative;
     order: 1;
+    grid-column: 1/-1;
     flex-direction: row;
     gap: 12px;
     overflow-x: auto;
@@ -13395,13 +13403,9 @@ main {
   gap: 20px;
   margin-top: 28px;
 }
-@media (max-width: 991.98px) {
-  .page-main-news__grid {
-    grid-template-columns: 1fr;
-  }
-}
 @media (max-width: 767.98px) {
   .page-main-news__grid {
+    grid-template-columns: 1fr;
     gap: 12px;
     margin-top: 20px;
   }
@@ -13414,13 +13418,9 @@ main {
   padding: 24px;
   background-color: #fff;
 }
-@media (max-width: 991.98px) {
-  .page-main-news__main {
-    grid-row: auto;
-  }
-}
 @media (max-width: 767.98px) {
   .page-main-news__main {
+    grid-row: auto;
     padding: 16px;
   }
 }
@@ -13566,9 +13566,22 @@ main {
 }
 @media (max-width: 991.98px) {
   .page-main-next-steps {
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 24px;
+    padding: 40px 0;
+  }
+  .page-main-next-steps .page-main-next-steps__title {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-main-next-steps {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 32px 0;
+  }
+  .page-main-next-steps .page-main-next-steps__title {
+    grid-column: auto;
   }
   .page-main-next-steps .page-main-next-steps__arrow {
     display: none;
