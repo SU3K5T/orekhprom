@@ -12655,6 +12655,12 @@ main {
     font-size: 22px;
   }
 }
+.page-main-why__panel-content {
+  display: none;
+}
+.page-main-why__panel-content.is-active {
+  display: contents;
+}
 .page-main-why__panel-text {
   margin-top: 16px;
   max-width: 520px;

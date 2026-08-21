@@ -3,8 +3,8 @@ class WhySteps {
     this.target = target;
     this.navItems = [...target.querySelectorAll('.js-page-main-why-nav-item')];
     this.visuals = [...target.querySelectorAll('.js-page-main-why-visual')];
+    this.panelContents = [...target.querySelectorAll('.js-page-main-why-panel-content')];
     this.stepLabel = target.querySelector('.js-page-main-why-step');
-    this.panelTitle = target.querySelector('.js-page-main-why-panel-title');
     this.stepsCount = this.navItems.length;
     this.init();
   }
@@ -28,13 +28,12 @@ class WhySteps {
       visual.classList.toggle('is-active', visual.dataset.step === step);
     });
 
+    this.panelContents.forEach((content) => {
+      content.classList.toggle('is-active', content.dataset.step === step);
+    });
+
     if (this.stepLabel) {
       this.stepLabel.textContent = `Этап ${step.padStart(2, '0')} / ${String(this.stepsCount).padStart(2, '0')}`;
-    }
-
-    if (this.panelTitle) {
-      const title = activeItem.querySelector('.js-page-main-why-nav-title')?.textContent.trim();
-      if (title) this.panelTitle.textContent = title;
     }
   }
 }
