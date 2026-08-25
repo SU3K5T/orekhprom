@@ -28,7 +28,7 @@
   }
 
   &__title {
-    @include typography("Geologica", normal, 600, 52px, 1.05);
+    @include typography("Musticapro", normal, 600, 52px, 1.05);
 
     @include media-breakpoint-down(lg) {
       font-size: 38px;
@@ -41,7 +41,7 @@
 
   &__subtitle {
     margin-top: 14px;
-    @include typography("Geologica", normal, 400, 16px, 1.4);
+    @include typography("Inter", normal, 400, 16px, 1.4);
     color: rgba($color-light, 0.5);
   }
 

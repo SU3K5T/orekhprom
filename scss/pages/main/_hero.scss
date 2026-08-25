@@ -37,7 +37,7 @@
   }
 
   &__title {
-    @include typography("Geologica", normal, 600, 68px, 1);
+    @include typography("Musticapro", normal, 600, 68px, 1);
     max-width: 900px;
 
     @include media-breakpoint-down(lg) {
