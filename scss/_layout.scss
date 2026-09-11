@@ -10,6 +10,8 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Remove default margin in favour of better control in authored CSS */
@@ -102,6 +104,8 @@ textarea:not([rows]) {
 body {
   margin-right: var(--modal-scrollbar-compensate);
   background-color: $color-gray;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 button {
@@ -308,4 +312,8 @@ input[type="checkbox"] {
   @include media-breakpoint-down(sm) {
     height: 48px;
   }
+}
+
+.main-sneki {
+  overflow: auto;
 }

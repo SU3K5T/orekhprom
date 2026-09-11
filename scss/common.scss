@@ -1,0 +1,11 @@
+// Общий бандл — одинаковый на всех страницах, подключается один раз
+// через css/common.css. Содержит всё, что раньше дублировалось в
+// каждом css/{page}.css: reset, Bootstrap, шрифты/типографику,
+// .button/.layout-*, шапку, подвал, модалки и общий блок .feedback.
+@import 'tokens';
+@import 'base';
+@import 'layout';
+@import 'header';
+@import 'footer';
+@import 'modals';
+@import 'pages/sneki/feedback';

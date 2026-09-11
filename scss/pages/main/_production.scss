@@ -208,6 +208,7 @@
     width: 100%;
     min-width: 0;
     padding-bottom: 4px;
+    clip-path: inset(0 -100vw 0 0);
   }
 
   &__gallery-item {
