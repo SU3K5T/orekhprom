@@ -3,6 +3,7 @@
 // в scss-точки входа отдельных страниц (см. _tokens.scss для этого).
 @import "tokens";
 
+@import "../bootstrap/root";
 @import "../bootstrap/utilities/api";
 @import "../bootstrap/containers";
 @import "../bootstrap/grid";
@@ -15,6 +16,7 @@
 @import "../bootstrap/close";
 @import "../bootstrap/modal";
 @import "../bootstrap/offcanvas";
+@import "../bootstrap/helpers";
 
 // Наши видео (hero/production) — вертикальные ролики 1080x1920,
 // у Fancybox по умолчанию бокс под альбомное видео (960x540)
