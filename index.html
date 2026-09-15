@@ -459,7 +459,6 @@
           <a href="#news" class="page-main-news__all-link">Все материалы</a>
         </div>
 
-        <!-- TODO: блок статичный (демо), в проде подставляется из блога WinterCMS -->
         <div class="page-main-news__filters">
           <button type="button" class="page-main-news__filter js-page-main-news-filter is-active" data-category="all">Все материалы</button>
           <button type="button" class="page-main-news__filter js-page-main-news-filter" data-category="trends">Тренды рынка</button>
@@ -518,30 +517,29 @@
         </div>
         <div class="row">
           <div class="col-12 col-lg-6 col-xxl-5 offset-xl-1">
-            <!-- TODO: подставить реальные form_id и имена полей form_text_NN из WinterCMS (см. пример в salt.html) -->
             <form action="/ajax/sendForm.php" class="d-flex flex-column js-ajax-from feedback__form" method="POST">
               <input type="hidden" name="recaptcha_response" value="" class="visually-hidden">
-              <input type="hidden" name="form_id" value="TODO" class="visually-hidden">
+              <input type="hidden" name="form_id" class="visually-hidden">
 
               <label class="feedback__form-label">
                 <span class="visually-hidden">Имя</span>
-                <input type="text" name="form_text_TODO" placeholder="Имя" class="w-100 feedback__form-input" required>
+                <input type="text" name="form_text_82" placeholder="Имя" class="w-100 feedback__form-input" required>
               </label>
 
               <label class="feedback__form-label">
                 <span class="visually-hidden">Компания</span>
-                <input type="text" name="form_text_TODO" placeholder="Компания" class="w-100 feedback__form-input" required>
+                <input type="text" name="form_text_83" placeholder="Компания" class="w-100 feedback__form-input" required>
               </label>
 
               <div class="d-xxl-flex justify-content-between">
                 <label class="w-100 w-xxl-auto feedback__form-label">
                   <span class="visually-hidden">Телефон</span>
-                  <input type="tel" name="form_text_TODO" placeholder="Телефон" imask-phone class="w-100 w-xxl-auto feedback__form-input" required>
+                  <input type="tel" name="form_text_84" placeholder="Телефон" imask-phone class="w-100 w-xxl-auto feedback__form-input" required>
                 </label>
 
                 <label class="w-100 w-xxl-auto feedback__form-label">
                   <span class="visually-hidden">Email</span>
-                  <input type="email" name="form_text_TODO" placeholder="Email" class="w-100 w-xxl-auto feedback__form-input" required>
+                  <input type="email" name="form_text_85" placeholder="Email" class="w-100 w-xxl-auto feedback__form-input" required>
                 </label>
               </div>
 
