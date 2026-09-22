@@ -1,0 +1,244 @@
+.page-em-catalog {
+  padding: 120px 0;
+
+  @include media-breakpoint-down(md) {
+    padding: 64px 0;
+  }
+
+  &__head {
+    margin-bottom: 48px;
+  }
+
+  &__eyebrow {
+    @include typography("Geologica", normal, 400, 15px, 100%);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $color-dark-light;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    @include typography("Musticapro", normal, 600, 52px, 85%);
+    letter-spacing: -0.05em;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 40px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 28px;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 48px;
+  }
+
+  &__tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 48px;
+    padding: 0 22px;
+    border-radius: 100px;
+    border: 1px solid $color-dark;
+    background-color: transparent;
+    color: $color-dark;
+    @include typography("Geologica", normal, 400, 15px, 100%);
+    transition: 0.3s background-color ease-in-out, 0.3s color ease-in-out;
+    cursor: pointer;
+
+    &.active {
+      background-color: $color-dark;
+      color: $color-light;
+    }
+
+    @include media-breakpoint-down(md) {
+      height: 40px;
+      padding: 0 16px;
+      font-size: 13px;
+    }
+  }
+
+  &__tab-soon {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 8px;
+    border-radius: 100px;
+    background-color: rgba($color-dark, 0.1);
+    color: rgba($color-dark, 0.55);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__tab.active &__tab-soon {
+    background-color: rgba($color-light, 0.22);
+    color: $color-light;
+  }
+
+  &__panel {
+    display: none;
+    align-items: center;
+    row-gap: 32px;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__kicker {
+    @include typography("Geologica", normal, 400, 15px, 100%);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $color-dark-light;
+    margin-bottom: 20px;
+  }
+
+  &__info-title {
+    @include typography("Musticapro", normal, 600, 44px, 110%);
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+
+    @include media-breakpoint-down(xl) {
+      font-size: 36px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      font-size: 28px;
+    }
+  }
+
+  &__info-text {
+    @include typography("Geologica", normal, 400, 19px, 140%);
+    color: rgba($color-dark, 0.7);
+    margin-bottom: 36px;
+    max-width: 46ch;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+    }
+  }
+
+  &__cta {
+    height: 64px;
+    padding: 0 36px;
+    text-transform: uppercase;
+    @include typography-body;
+
+    @include media-breakpoint-down(md) {
+      height: 48px;
+      width: 100%;
+    }
+  }
+
+  &__cta-disabled {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    padding: 0 36px;
+    border-radius: 100px;
+    border: 1px solid rgba($color-dark, 0.2);
+    color: rgba($color-dark, 0.4);
+    @include typography-body;
+    text-transform: uppercase;
+
+    @include media-breakpoint-down(md) {
+      height: 48px;
+      width: 100%;
+    }
+  }
+
+  &__soon-note {
+    @include typography("Geologica", normal, 400, 13px, 130%);
+    color: $color-dark-light;
+    margin-top: 12px;
+  }
+
+  // Gallery's own width comes from the bootstrap column it's placed in
+  // (col-lg-5 etc. in the HTML) — nothing here sets width, so it never
+  // fights that. The gallery's HEIGHT is fixed here instead of derived
+  // from the primary cell's aspect-ratio, so a video panel (9:16) and a
+  // photo-only panel (3:4) render at the same height when their tab is
+  // active — media just gets cropped to fill via object-fit: cover. The
+  // side column stretches to match (flex default align-items: stretch),
+  // splitting it evenly between its 2-3 cells.
+  &__gallery {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    height: 640px;
+
+    @include media-breakpoint-down(xl) {
+      height: 560px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      height: 480px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+
+  &__gallery-primary {
+    flex: 0 0 66%;
+    overflow: hidden;
+    background-color: $color-gray;
+
+    img,
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-basis: auto;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+
+      &--story {
+        aspect-ratio: 9 / 16;
+      }
+    }
+  }
+
+  &__gallery-side {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: row;
+    }
+  }
+
+  &__gallery-cell {
+    flex: 1 1 0;
+    min-height: 0;
+    overflow: hidden;
+    background-color: $color-gray;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @include media-breakpoint-down(sm) {
+      aspect-ratio: 1 / 1;
+      height: auto;
+    }
+  }
+}

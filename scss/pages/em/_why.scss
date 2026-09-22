@@ -1,0 +1,194 @@
+.page-em-why {
+  padding: 120px 0;
+  position: relative;
+  z-index: 7;
+  background-color: $color-gray;
+
+  @include media-breakpoint-down(lg) {
+    padding: 110px 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 56px 0 66px 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1164px;
+  }
+
+  &__decor {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
+  }
+
+  &__decor-item {
+    position: absolute;
+    max-width: none;
+    border-radius: 50%;
+    object-fit: cover;
+
+    &--1 {
+      top: -40px;
+      right: 7%;
+      width: 220px;
+      height: 220px;
+    }
+
+    &--2 {
+      bottom: -70px;
+      left: 3%;
+      width: 260px;
+      height: 260px;
+    }
+
+    &--3 {
+      top: 46%;
+      right: -70px;
+      width: 170px;
+      height: 170px;
+    }
+  }
+
+  &__title {
+    @include typography("Musticapro", normal, 600, 52px, 100%);
+    letter-spacing: 0.85%;
+    // Musticapro's line-box has a lot of built-in leading above the cap
+    // height even at line-height: 100%, so at the same box top it still
+    // reads lower than __list's first item — nudge it up to align the
+    // visible glyph tops instead of the box tops.
+    margin-top: -10px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 40px;
+      margin-top: -8px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 32px;
+      line-height: 110%;
+      letter-spacing: -5%;
+      margin-top: -6px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  // .row + col-12 col-lg-5/7 in the HTML own the width split — nothing
+  // here sets it, so it can't fight bootstrap's grid. --bs-gutter-x is
+  // bootstrap's own column-gap variable (used by the row's negative
+  // margin + column padding), overriding it here widens the gap between
+  // the two columns without fighting that mechanism.
+  &__row {
+    --bs-gutter-x: 95px;
+    row-gap: 40px;
+
+    @include media-breakpoint-down(lg) {
+      --bs-gutter-x: 60px;
+    }
+
+    @include media-breakpoint-down(md) {
+      --bs-gutter-x: 24px;
+    }
+  }
+
+  &__col--left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  &__item {
+    @include typography("Musticapro", normal, 600, 20px, 100%);
+    letter-spacing: -0.4%;
+    color: #D4D4D4;
+    transition: 0.2s color ease-in-out;
+
+    &.active {
+      color: $color-dark;
+    }
+  }
+
+  // All description texts stack in the same grid cell so the block's
+  // height is always the tallest one, no matter the column's width —
+  // no more guessing a fixed px height for a crossfade like before.
+  &__description {
+
+    &-block {
+      display: grid;
+    }
+
+    &-text {
+      grid-area: 1 / 1;
+      opacity: 0;
+      transition: 0.4s opacity ease-in-out;
+
+      @include typography("Musticapro", normal, 600, 32px, 110%);
+      letter-spacing: 1.1%;
+      max-width: 40ch;
+
+      @include media-breakpoint-down(md) {
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: -0.4%;
+      }
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-top: 32px;
+    border-top: 1px solid rgba($color-dark, 0.1);
+
+    .button {
+      height: 60px;
+      padding: 0 32px;
+      text-transform: uppercase;
+      @include typography-body;
+      flex-shrink: 0;
+
+      @include media-breakpoint-down(md) {
+        height: 48px;
+        width: 100%;
+      }
+    }
+
+    p {
+      @include typography("Geologica", normal, 400, 15px, 130%);
+      color: rgba($color-dark, 0.7);
+      max-width: 44ch;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,1057 @@
+.page-em-hero {
+  padding: 160px 0 100px;
+  overflow: hidden;
+}
+@media (max-width: 991.98px) {
+  .page-em-hero {
+    padding-bottom: 72px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-em-hero {
+    padding: 24px 0 48px;
+  }
+}
+.page-em-hero__eyebrow {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ADADAD;
+  margin-bottom: 28px;
+}
+.page-em-hero__title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  margin-bottom: 40px;
+}
+@media (max-width: 991.98px) {
+  .page-em-hero__title {
+    font-size: 40px;
+    margin-bottom: 28px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-em-hero__title {
+    font-size: 28px;
+    line-height: 110%;
+  }
+}
+.page-em-hero__lead {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+}
+.page-em-hero__text {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 130%;
+  color: rgba(31, 32, 34, 0.7);
+  margin-bottom: 36px;
+  max-width: 52ch;
+}
+.page-em-hero__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 8px;
+}
+.page-em-hero__button {
+  height: 60px;
+  padding: 0 32px;
+  text-transform: uppercase;
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+}
+@media (max-width: 991.98px) {
+  .page-em-hero__button {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .page-em-hero__button {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-em-hero__button {
+    height: 48px;
+    width: 100%;
+  }
+}
+.page-em-hero__note {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 130%;
+  color: #ADADAD;
+  max-width: 220px;
+}
+.page-em-hero__visual {
+  position: relative;
+  min-height: 560px;
+  margin-top: 40px;
+}
+@media (max-width: 991.98px) {
+  .page-em-hero__visual {
+    min-height: 420px;
+  }
+}
+@media (max-width: 575.98px) {
+  .page-em-hero__visual {
+    min-height: 300px;
+  }
+}
+.page-em-hero__jar {
+  position: absolute;
+  will-change: transform;
+  transform-origin: center;
+  animation: page-em-hero-float var(--dur, 7s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+.page-em-hero__jar img {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(0 22px 26px rgba(31, 32, 34, 0.2));
+}
+.page-em-hero__jar--pistachio {
+  left: 24%;
+  top: 14%;
+  width: 44%;
+  z-index: 5;
+  --rot: -4deg;
+  --dur: 7.2s;
+  --delay: 0s;
+}
+.page-em-hero__jar--ube {
+  left: 0;
+  top: 4%;
+  width: 25%;
+  z-index: 3;
+  --rot: -11deg;
+  --dur: 6.6s;
+  --delay: 1.1s;
+}
+.page-em-hero__jar--coconut {
+  left: 4%;
+  top: 54%;
+  width: 27%;
+  z-index: 3;
+  --rot: 6deg;
+  --dur: 7.6s;
+  --delay: 0.3s;
+}
+.page-em-hero__jar--banana {
+  left: 60%;
+  top: 52%;
+  width: 29%;
+  z-index: 4;
+  --rot: -7deg;
+  --dur: 6.9s;
+  --delay: 0.8s;
+}
+.page-em-hero__jar--mango {
+  left: 36%;
+  top: 66%;
+  width: 23%;
+  z-index: 2;
+  --rot: 9deg;
+  --dur: 8.4s;
+  --delay: 1.4s;
+}
+.page-em-hero__jar--sakura {
+  left: 80%;
+  top: 32%;
+  width: 19%;
+  z-index: 2;
+  --rot: -13deg;
+  --dur: 7s;
+  --delay: 0.2s;
+}
+@keyframes page-em-hero-float {
+  0%, 100% {
+    transform: translateY(0) rotate(var(--rot, 0deg));
+  }
+  50% {
+    transform: translateY(-14px) rotate(var(--rot, 0deg));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-em-hero__jar {
+    animation: none;
+  }
+}
+
+.page-em-why {
+  padding: 120px 0;
+  position: relative;
+  z-index: 7;
+  background-color: #F7F7F7;
+}
+@media (max-width: 991.98px) {
+  .page-em-why {
+    padding: 110px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-em-why {
+    padding: 56px 0 66px 0;
+  }
+}
+.page-em-why .container {
+  position: relative;
+  z-index: 1;
+  max-width: 1164px;
+}
+.page-em-why__decor {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+@media (max-width: 1199.98px) {
+  .page-em-why__decor {
+    display: none;
+  }
+}
+.page-em-why__decor-item {
+  position: absolute;
+  max-width: none;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.page-em-why__decor-item--1 {
+  top: -40px;
+  right: 7%;
+  width: 220px;
+  height: 220px;
+}
+.page-em-why__decor-item--2 {
+  bottom: -70px;
+  left: 3%;
+  width: 260px;
+  height: 260px;
+}
+.page-em-why__decor-item--3 {
+  top: 46%;
+  right: -70px;
+  width: 170px;
+  height: 170px;
+}
+.page-em-why__title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 100%;
+  letter-spacing: 0.85%;
+  margin-top: -10px;
+}
+@media (max-width: 991.98px) {
+  .page-em-why__title {
+    font-size: 40px;
+    margin-top: -8px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-em-why__title {
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: -5%;
+    margin-top: -6px;
+  }
+}
+.page-em-why__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.page-em-why__row {
+  --bs-gutter-x: 95px;
+  row-gap: 40px;
+}
+@media (max-width: 991.98px) {
+  .page-em-why__row {
+    --bs-gutter-x: 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-em-why__row {
+    --bs-gutter-x: 24px;
+  }
+}
+.page-em-why__col--left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.page-em-why__body {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.page-em-why__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.page-em-why__item {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: -0.4%;
+  color: #D4D4D4;
+  transition: 0.2s color ease-in-out;
+}
+.page-em-why__item.active {
+  color: #1F2022;
+}
+.page-em-why__description-block {
+  display: grid;
+}
+.page-em-why__description-text {
+  grid-area: 1/1;
+  opacity: 0;
+  transition: 0.4s opacity ease-in-out;
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 1.1%;
+  max-width: 40ch;
+}
+@media (max-width: 767.98px) {
+  .page-em-why__description-text {
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: -0.4%;
+  }
+}
+.page-em-why__description-text.active {
+  opacity: 1;
+}
+.page-em-why__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-top: 32px;
+  border-top: 1px solid rgba(31, 32, 34, 0.1);
+}
+.page-em-why__cta .button {
+  height: 60px;
+  padding: 0 32px;
+  text-transform: uppercase;
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+}
+@media (max-width: 991.98px) {
+  .page-em-why__cta .button {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .page-em-why__cta .button {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.page-em-why__cta .button {
+  flex-shrink: 0;
+}
+@media (max-width: 767.98px) {
+  .page-em-why__cta .button {
+    height: 48px;
+    width: 100%;
+  }
+}
+.page-em-why__cta p {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 130%;
+  color: rgba(31, 32, 34, 0.7);
+  max-width: 44ch;
+  margin: 0;
+}
+
+.page-em-catalog {
+  padding: 120px 0;
+}
+@media (max-width: 767.98px) {
+  .page-em-catalog {
+    padding: 64px 0;
+  }
+}
+.page-em-catalog__head {
+  margin-bottom: 48px;
+}
+.page-em-catalog__eyebrow {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ADADAD;
+  margin-bottom: 16px;
+}
+.page-em-catalog__title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 85%;
+  letter-spacing: -0.05em;
+}
+@media (max-width: 991.98px) {
+  .page-em-catalog__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-em-catalog__title {
+    font-size: 28px;
+  }
+}
+.page-em-catalog__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 48px;
+}
+.page-em-catalog__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 22px;
+  border-radius: 100px;
+  border: 1px solid #1F2022;
+  background-color: transparent;
+  color: #1F2022;
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  transition: 0.3s background-color ease-in-out, 0.3s color ease-in-out;
+  cursor: pointer;
+}
+.page-em-catalog__tab.active {
+  background-color: #1F2022;
+  color: #fff;
+}
+@media (max-width: 767.98px) {
+  .page-em-catalog__tab {
+    height: 40px;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+}
+.page-em-catalog__tab-soon {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 100px;
+  background-color: rgba(31, 32, 34, 0.1);
+  color: rgba(31, 32, 34, 0.55);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.page-em-catalog__tab.active .page-em-catalog__tab-soon {
+  background-color: rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+.page-em-catalog__panel {
+  display: none;
+  align-items: center;
+  row-gap: 32px;
+}
+.page-em-catalog__panel.active {
+  display: flex;
+}
+.page-em-catalog__kicker {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ADADAD;
+  margin-bottom: 20px;
+}
+.page-em-catalog__info-title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 110%;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+}
+@media (max-width: 1199.98px) {
+  .page-em-catalog__info-title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 991.98px) {
+  .page-em-catalog__info-title {
+    font-size: 28px;
+  }
+}
+.page-em-catalog__info-text {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 140%;
+  color: rgba(31, 32, 34, 0.7);
+  margin-bottom: 36px;
+  max-width: 46ch;
+}
+@media (max-width: 991.98px) {
+  .page-em-catalog__info-text {
+    font-size: 16px;
+  }
+}
+.page-em-catalog__cta {
+  height: 64px;
+  padding: 0 36px;
+  text-transform: uppercase;
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+}
+@media (max-width: 991.98px) {
+  .page-em-catalog__cta {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .page-em-catalog__cta {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-em-catalog__cta {
+    height: 48px;
+    width: 100%;
+  }
+}
+.page-em-catalog__cta-disabled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  padding: 0 36px;
+  border-radius: 100px;
+  border: 1px solid rgba(31, 32, 34, 0.2);
+  color: rgba(31, 32, 34, 0.4);
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+}
+@media (max-width: 991.98px) {
+  .page-em-catalog__cta-disabled {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .page-em-catalog__cta-disabled {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.page-em-catalog__cta-disabled {
+  text-transform: uppercase;
+}
+@media (max-width: 767.98px) {
+  .page-em-catalog__cta-disabled {
+    height: 48px;
+    width: 100%;
+  }
+}
+.page-em-catalog__soon-note {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 130%;
+  color: #ADADAD;
+  margin-top: 12px;
+}
+.page-em-catalog__gallery {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  height: 640px;
+}
+@media (max-width: 1199.98px) {
+  .page-em-catalog__gallery {
+    height: 560px;
+  }
+}
+@media (max-width: 991.98px) {
+  .page-em-catalog__gallery {
+    height: 480px;
+  }
+}
+@media (max-width: 575.98px) {
+  .page-em-catalog__gallery {
+    flex-direction: column;
+    height: auto;
+  }
+}
+.page-em-catalog__gallery-primary {
+  flex: 0 0 66%;
+  overflow: hidden;
+  background-color: #F7F7F7;
+}
+.page-em-catalog__gallery-primary img,
+.page-em-catalog__gallery-primary video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 575.98px) {
+  .page-em-catalog__gallery-primary {
+    flex-basis: auto;
+    width: 100%;
+    aspect-ratio: 3/4;
+  }
+  .page-em-catalog__gallery-primary--story {
+    aspect-ratio: 9/16;
+  }
+}
+.page-em-catalog__gallery-side {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 575.98px) {
+  .page-em-catalog__gallery-side {
+    flex-direction: row;
+  }
+}
+.page-em-catalog__gallery-cell {
+  flex: 1 1 0;
+  min-height: 0;
+  overflow: hidden;
+  background-color: #F7F7F7;
+}
+.page-em-catalog__gallery-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 575.98px) {
+  .page-em-catalog__gallery-cell {
+    aspect-ratio: 1/1;
+    height: auto;
+  }
+}
+
+.page-em-faq {
+  padding: 120px 0;
+}
+@media (max-width: 767.98px) {
+  .page-em-faq {
+    padding: 64px 0;
+  }
+}
+.page-em-faq__title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 85%;
+  letter-spacing: -0.05em;
+  margin-bottom: 60px;
+}
+@media (max-width: 991.98px) {
+  .page-em-faq__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-em-faq__title {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+}
+.page-em-faq__accordion-item {
+  background-color: transparent !important;
+  border: none !important;
+  border-top: 1px solid rgba(31, 32, 34, 0.1) !important;
+  border-radius: 0 !important;
+}
+.page-em-faq__accordion-item:hover .page-em-faq__accordion-toggle {
+  border-color: #000000;
+}
+.page-em-faq__accordion-item:last-child {
+  border-bottom: 1px solid rgba(31, 32, 34, 0.1) !important;
+}
+.page-em-faq__accordion-header {
+  margin-bottom: 0;
+}
+.page-em-faq__accordion-button {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 100px;
+  padding: 0;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: #1F2022;
+}
+.page-em-faq__accordion-button::after {
+  display: none;
+}
+.page-em-faq__accordion-main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 20px 0;
+}
+.page-em-faq__accordion-title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+@media (max-width: 991.98px) {
+  .page-em-faq__accordion-title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-em-faq__accordion-title {
+    font-size: 16px;
+  }
+}
+.page-em-faq__accordion-tag {
+  display: none;
+  margin-left: auto;
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(31, 32, 34, 0.16);
+}
+@media (min-width: 992px) {
+  .page-em-faq__accordion-tag {
+    display: block;
+  }
+}
+.page-em-faq__accordion-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100px;
+  border: 1px solid rgba(31, 32, 34, 0.1);
+  border-radius: 50%;
+  margin-left: 20px;
+}
+.page-em-faq__accordion-toggle svg {
+  transition: transform 0.3s ease;
+}
+@media (max-width: 767.98px) {
+  .page-em-faq__accordion-toggle {
+    width: 56px;
+  }
+}
+.page-em-faq__accordion-button:not(.collapsed) {
+  color: #1F2022;
+}
+.page-em-faq__accordion-button:not(.collapsed) .page-em-faq__accordion-toggle {
+  border-color: #000000;
+}
+.page-em-faq__accordion-button:not(.collapsed) .page-em-faq__accordion-toggle svg {
+  transform: rotate(180deg);
+}
+.page-em-faq__accordion-body {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  max-width: 690px;
+  margin-left: auto;
+  padding: 40px 0 48px 0;
+}
+@media (max-width: 991.98px) {
+  .page-em-faq__accordion-body {
+    margin-left: 0;
+    max-width: none;
+  }
+}
+
+.page-em-reviews {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+@media (max-width: 991.98px) {
+  .page-em-reviews {
+    padding-top: 90px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-em-reviews {
+    padding-top: 64px;
+    padding-bottom: 48px;
+  }
+}
+.page-em-reviews__eyebrow {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ADADAD;
+  margin-bottom: 16px;
+}
+.page-em-reviews__title {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 85%;
+  letter-spacing: -0.05em;
+  max-width: 900px;
+  margin-bottom: 56px;
+}
+@media (max-width: 991.98px) {
+  .page-em-reviews__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-em-reviews__title {
+    font-size: 28px;
+  }
+}
+.page-em-reviews__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+@media (max-width: 767.98px) {
+  .page-em-reviews__stats {
+    gap: 28px;
+    margin-bottom: 40px;
+  }
+}
+.page-em-reviews__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.page-em-reviews__stat-value {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+}
+@media (max-width: 991.98px) {
+  .page-em-reviews__stat-value {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 575.98px) {
+  .page-em-reviews__stat-value {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.page-em-reviews__stat-label {
+  font-family: "Geologica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  color: rgba(31, 32, 34, 0.7);
+}
+.page-em-reviews__slide {
+  height: 280px;
+  width: 620px;
+  background-color: #fff;
+  padding: 40px;
+  position: relative;
+}
+@media (max-width: 991.98px) {
+  .page-em-reviews__slide {
+    width: 500px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-em-reviews__slide {
+    width: 300px;
+    height: 220px;
+    padding: 28px;
+  }
+}
+.page-em-reviews__slide-text {
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+}
+@media (max-width: 991.98px) {
+  .page-em-reviews__slide-text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-em-reviews__slide-text {
+    font-size: 15px;
+    line-height: 130%;
+  }
+}
+.page-em-reviews__slide-img {
+  position: absolute;
+  bottom: -10px;
+  right: 40px;
+  width: 96px;
+  height: 77px;
+}
+@media (max-width: 767.98px) {
+  .page-em-reviews__slide-img {
+    width: 64px;
+    height: 51px;
+    right: 16px;
+  }
+}
+.page-em-reviews .swiper-wrapper {
+  transition-timing-function: linear !important;
+  pointer-events: none;
+}
+.page-em-reviews__foot {
+  display: flex;
+  justify-content: center;
+  margin-top: 56px;
+}
+.page-em-reviews__foot-button {
+  height: 56px;
+  padding: 0 32px;
+  text-transform: uppercase;
+  font-family: "Musticapro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+}
+@media (max-width: 991.98px) {
+  .page-em-reviews__foot-button {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .page-em-reviews__foot-button {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-em-reviews__foot-button {
+    height: 48px;
+    width: 100%;
+  }
+}
