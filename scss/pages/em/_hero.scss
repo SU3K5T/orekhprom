@@ -3,11 +3,34 @@
   overflow: hidden;
 
   @include media-breakpoint-down(lg) {
-    padding-bottom: 72px;
+    padding-top: 64px;
+    padding-bottom: 48px;
   }
 
   @include media-breakpoint-down(md) {
     padding: 24px 0 48px;
+  }
+
+  // Below lg the two grid columns stack; break the content column open so its
+  // children (incl. __actions) become direct flex items of the row and can be
+  // reordered independently of the visual column, moving the button after it.
+  &__col-content {
+    @include media-breakpoint-down(lg) {
+      display: contents;
+
+      > * {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+      }
+    }
+  }
+
+  &__col-visual {
+    @include media-breakpoint-down(lg) {
+      order: 2;
+    }
   }
 
   &__eyebrow {
@@ -53,6 +76,11 @@
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 8px;
+
+    @include media-breakpoint-down(lg) {
+      order: 3;
+      margin-top: 24px;
+    }
   }
 
   &__button {
@@ -71,6 +99,13 @@
     @include typography("Geologica", normal, 400, 13px, 130%);
     color: $color-dark-light;
     max-width: 220px;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      max-width: none;
+      text-align: center;
+      margin: 0 auto;
+    }
   }
 
   &__visual {

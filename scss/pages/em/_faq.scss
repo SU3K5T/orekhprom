@@ -1,7 +1,7 @@
 .page-em-faq {
   padding: 120px 0;
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     padding: 64px 0;
   }
 
@@ -104,10 +104,6 @@
 
     svg {
       transition: transform 0.3s ease;
-    }
-
-    @include media-breakpoint-down(md) {
-      width: 56px;
     }
   }
 
