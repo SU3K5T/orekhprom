@@ -50,8 +50,67 @@ class CatalogTabs {
   }
 }
 
+// Clicking a thumbnail swaps its media with the big one; clicking the big
+// one opens the panel's media (in their current order) in Fancybox.
+class CatalogGallery {
+  constructor({ target }) {
+    this.target = target;
+    this.primary = target.querySelector('.js-page-em-catalog-primary');
+    this.cells = [...target.querySelectorAll('.js-page-em-catalog-cell')];
+    this.init();
+  }
+
+  init() {
+    if (!this.primary) return;
+
+    this.cells.forEach((cell) => {
+      cell.addEventListener('click', () => this.swap(cell));
+    });
+
+    this.primary.addEventListener('click', () => this.open());
+  }
+
+  getMedia(el) {
+    return el.querySelector('img, video');
+  }
+
+  swap(cell) {
+    const big = this.getMedia(this.primary);
+    const small = this.getMedia(cell);
+    if (!big || !small) return;
+
+    this.primary.appendChild(small);
+    cell.appendChild(big);
+
+    // Moving a <video> in the DOM pauses it.
+    [big, small].forEach((media) => {
+      if (media.tagName === 'VIDEO') media.play().catch(() => {});
+    });
+
+    gsap.fromTo([big, small], { opacity: 0 }, { opacity: 1, duration: 0.3, ease: 'power1.out' });
+  }
+
+  open() {
+    if (!window.Fancybox) return;
+
+    const items = [this.primary, ...this.cells].map((el) => {
+      const media = this.getMedia(el);
+      if (media.tagName === 'VIDEO') {
+        return { src: media.currentSrc || media.getAttribute('src'), thumb: media.poster };
+      }
+      return { src: media.currentSrc || media.getAttribute('src'), thumb: media.currentSrc || media.getAttribute('src') };
+    });
+
+    Fancybox.show(items, { placeFocusBack: false });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.page-em-catalog').forEach((target) => {
     new CatalogTabs({ target });
+  });
+
+  document.querySelectorAll('.js-page-em-catalog-panel').forEach((target) => {
+    new CatalogGallery({ target });
   });
 });

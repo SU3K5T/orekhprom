@@ -33,14 +33,6 @@
     }
   }
 
-  &__eyebrow {
-    @include typography("Geologica", normal, 400, 15px, 100%);
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: $color-dark-light;
-    margin-bottom: 28px;
-  }
-
   &__title {
     @include typography("Musticapro", normal, 600, 56px, 100%);
     letter-spacing: -0.03em;
@@ -108,8 +100,12 @@
     }
   }
 
+  // The jars' shadow lives here, on the static parent, not on each animated
+  // jar: iOS Safari renders filter: drop-shadow on an animated/composited
+  // element as a translucent rectangle around the image.
   &__visual {
     position: relative;
+    filter: drop-shadow(0 22px 26px rgba($color-dark, 0.2));
     min-height: 560px;
     margin-top: 40px;
 
@@ -124,7 +120,6 @@
 
   &__jar {
     position: absolute;
-    will-change: transform;
     transform-origin: center;
     animation: page-em-hero-float var(--dur, 7s) ease-in-out infinite;
     animation-delay: var(--delay, 0s);
@@ -132,7 +127,6 @@
     img {
       width: 100%;
       display: block;
-      filter: drop-shadow(0 22px 26px rgba($color-dark, 0.2));
     }
 
     &--pistachio {
@@ -186,8 +180,10 @@
     }
 
     &--sakura {
-      left: 80%;
-      top: 32%;
+      // Mirrors --ube: same 1% overlap with --pistachio (24% + 44% = 68%),
+      // just on its right side.
+      left: 67%;
+      top: 4%;
       width: 19%;
       z-index: 2;
       --rot: -13deg;

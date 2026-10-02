@@ -13,14 +13,6 @@
     }
   }
 
-  &__eyebrow {
-    @include typography("Geologica", normal, 400, 15px, 100%);
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: $color-dark-light;
-    margin-bottom: 16px;
-  }
-
   &__title {
     @include typography("Musticapro", normal, 600, 52px, 85%);
     letter-spacing: -0.05em;
@@ -269,6 +261,7 @@
     flex: 0 0 66%;
     overflow: hidden;
     background-color: $color-gray;
+    cursor: zoom-in;
 
     img,
     video {
@@ -305,8 +298,11 @@
     min-height: 0;
     overflow: hidden;
     background-color: $color-gray;
+    cursor: pointer;
 
-    img {
+    // video too — a thumbnail swap can move the primary's video in here
+    img,
+    video {
       width: 100%;
       height: 100%;
       object-fit: cover;
