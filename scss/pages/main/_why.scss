@@ -10,12 +10,10 @@
   }
 
   &__head {
-    text-align: right;
     padding-bottom: 18px;
     border-bottom: 1px solid $color-gray-dark;
 
     @include media-breakpoint-down(md) {
-      text-align: left;
       padding-bottom: 12px;
     }
   }
@@ -47,15 +45,12 @@
   }
 
   &__subtitle {
-    margin: 20px 0 0 auto;
+    margin-top: 20px;
     max-width: 520px;
-    text-align: right;
     @include typography("Inter", normal, 400, 17px, 1.5);
     color: rgba($color-dark, 0.6);
 
     @include media-breakpoint-down(md) {
-      margin-left: 0;
-      text-align: left;
       font-size: 15px;
       margin-top: 12px;
     }

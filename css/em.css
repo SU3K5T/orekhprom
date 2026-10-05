@@ -29,17 +29,6 @@
     order: 2;
   }
 }
-.page-em-hero__eyebrow {
-  font-family: "Geologica";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 100%;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: #ADADAD;
-  margin-bottom: 28px;
-}
 .page-em-hero__title {
   font-family: "Musticapro";
   font-style: normal;
@@ -146,6 +135,7 @@
 }
 .page-em-hero__visual {
   position: relative;
+  filter: drop-shadow(0 22px 26px rgba(31, 32, 34, 0.2));
   min-height: 560px;
   margin-top: 40px;
 }
@@ -161,7 +151,6 @@
 }
 .page-em-hero__jar {
   position: absolute;
-  will-change: transform;
   transform-origin: center;
   animation: page-em-hero-float var(--dur, 7s) ease-in-out infinite;
   animation-delay: var(--delay, 0s);
@@ -169,7 +158,6 @@
 .page-em-hero__jar img {
   width: 100%;
   display: block;
-  filter: drop-shadow(0 22px 26px rgba(31, 32, 34, 0.2));
 }
 .page-em-hero__jar--pistachio {
   left: 24%;
@@ -217,8 +205,8 @@
   --delay: 1.4s;
 }
 .page-em-hero__jar--sakura {
-  left: 80%;
-  top: 32%;
+  left: 67%;
+  top: 4%;
   width: 19%;
   z-index: 2;
   --rot: -13deg;
@@ -393,8 +381,7 @@
 .page-em-why__cta {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  gap: 20px;
   flex-wrap: wrap;
   padding-top: 32px;
   border-top: 1px solid rgba(31, 32, 34, 0.1);
@@ -462,17 +449,6 @@
   .page-em-catalog__head {
     margin-bottom: 28px;
   }
-}
-.page-em-catalog__eyebrow {
-  font-family: "Geologica";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 100%;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: #ADADAD;
-  margin-bottom: 16px;
 }
 .page-em-catalog__title {
   font-family: "Musticapro";
@@ -770,6 +746,7 @@
   flex: 0 0 66%;
   overflow: hidden;
   background-color: #F7F7F7;
+  cursor: zoom-in;
 }
 .page-em-catalog__gallery-primary img,
 .page-em-catalog__gallery-primary video {
@@ -804,8 +781,10 @@
   min-height: 0;
   overflow: hidden;
   background-color: #F7F7F7;
+  cursor: pointer;
 }
-.page-em-catalog__gallery-cell img {
+.page-em-catalog__gallery-cell img,
+.page-em-catalog__gallery-cell video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -830,20 +809,39 @@
   font-family: "Musticapro";
   font-style: normal;
   font-weight: 600;
-  font-size: 52px;
-  line-height: 85%;
-  letter-spacing: -0.05em;
-  margin-bottom: 60px;
+  font-size: 72px;
+  line-height: 72px;
 }
 @media (max-width: 991.98px) {
   .page-em-faq__title {
-    font-size: 40px;
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 60px;
   }
+}
+@media (max-width: 575.98px) {
+  .page-em-faq__title {
+    font-family: "Musticapro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 110%;
+  }
+}
+.page-em-faq__title {
+  margin-bottom: 100px;
 }
 @media (max-width: 767.98px) {
   .page-em-faq__title {
-    font-size: 28px;
-    margin-bottom: 32px;
+    text-align: end;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .page-em-faq__title {
+    margin-bottom: 20px;
   }
 }
 .page-em-faq__accordion-item {
@@ -967,17 +965,6 @@
     padding-top: 64px;
     padding-bottom: 48px;
   }
-}
-.page-em-reviews__eyebrow {
-  font-family: "Geologica";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 100%;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: #ADADAD;
-  margin-bottom: 16px;
 }
 .page-em-reviews__title {
   font-family: "Musticapro";

@@ -635,13 +635,11 @@
   }
 }
 .page-main-why__head {
-  text-align: right;
   padding-bottom: 18px;
   border-bottom: 1px solid rgba(31, 32, 34, 0.1019607843);
 }
 @media (max-width: 767.98px) {
   .page-main-why__head {
-    text-align: left;
     padding-bottom: 12px;
   }
 }
@@ -682,9 +680,8 @@
   }
 }
 .page-main-why__subtitle {
-  margin: 20px 0 0 auto;
+  margin-top: 20px;
   max-width: 520px;
-  text-align: right;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -694,8 +691,6 @@
 }
 @media (max-width: 767.98px) {
   .page-main-why__subtitle {
-    margin-left: 0;
-    text-align: left;
     font-size: 15px;
     margin-top: 12px;
   }
