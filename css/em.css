@@ -570,22 +570,6 @@
     order: 3;
   }
 }
-.page-em-catalog__kicker {
-  font-family: "Geologica";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 100%;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #ADADAD;
-  margin-bottom: 20px;
-}
-@media (max-width: 767.98px) {
-  .page-em-catalog__kicker {
-    margin-bottom: 0;
-  }
-}
 .page-em-catalog__info-title {
   font-family: "Musticapro";
   font-style: normal;

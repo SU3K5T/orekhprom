@@ -144,18 +144,6 @@
     }
   }
 
-  &__kicker {
-    @include typography("Geologica", normal, 400, 15px, 100%);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: $color-dark-light;
-    margin-bottom: 20px;
-
-    @include media-breakpoint-down(md) {
-      margin-bottom: 0;
-    }
-  }
-
   &__info-title {
     @include typography("Musticapro", normal, 600, 44px, 110%);
     letter-spacing: -0.01em;
